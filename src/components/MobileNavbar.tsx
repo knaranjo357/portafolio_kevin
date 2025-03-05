@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Home, User, Code, Briefcase, MessageSquare } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const MobileNavbar: React.FC = () => {
   const { t } = useTranslation();
@@ -16,27 +17,35 @@ const MobileNavbar: React.FC = () => {
   ];
 
   return (
-    <motion.nav 
-      className="mobile-nav md:hidden"
-      initial={{ y: 100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.3 }}
-    >
-      <div className="grid grid-cols-5">
-        {navItems.map((item) => (
-          <NavLink
-            key={item.path}
-            to={item.path}
-            className={({ isActive }) =>
-              `mobile-nav-item ${isActive ? 'active' : ''}`
-            }
-          >
-            {item.icon}
-            <span className="mt-1">{item.label}</span>
-          </NavLink>
-        ))}
+    <>
+      {/* Language Switcher for Mobile */}
+      <div className="fixed top-4 right-4 z-50 md:hidden">
+        <LanguageSwitcher />
       </div>
-    </motion.nav>
+
+      {/* Mobile Navigation Bar */}
+      <motion.nav 
+        className="mobile-nav md:hidden"
+        initial={{ y: 100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.3 }}
+      >
+        <div className="grid grid-cols-5">
+          {navItems.map((item) => (
+            <NavLink
+              key={item.path}
+              to={item.path}
+              className={({ isActive }) =>
+                `mobile-nav-item ${isActive ? 'active' : ''}`
+              }
+            >
+              {item.icon}
+              <span className="mt-1">{item.label}</span>
+            </NavLink>
+          ))}
+        </div>
+      </motion.nav>
+    </>
   );
 };
 

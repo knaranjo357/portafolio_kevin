@@ -32,6 +32,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'ClashDisplay', sans-serif;
 }
 
+/* Add text justification for content */
+p {
+  @apply text-justify;
+}
+
 .gradient-text {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-violet-600;
 }

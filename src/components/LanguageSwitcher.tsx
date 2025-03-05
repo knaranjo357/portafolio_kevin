@@ -19,7 +19,7 @@ const LanguageSwitcher: React.FC = () => {
       transition={{ duration: 0.5, delay: 0.3 }}
     >
       <button 
-        className="flex items-center gap-1 px-3 py-2 rounded-full text-slate-700 hover:text-blue-600 transition-colors"
+        className="flex items-center gap-1 px-3 py-2 rounded-full bg-white/90 backdrop-blur-sm shadow-md hover:bg-white transition-colors"
         aria-label="Change language"
       >
         <Globe size={18} />
