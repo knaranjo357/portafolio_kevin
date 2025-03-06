@@ -1,4 +1,7 @@
 {
+  "meta": {
+    "keywords": "Kevin Naranjo, Software Development, Artificial Intelligence, Machine Learning, Computer Vision, React Developer, Full Stack Developer, AI Expert, Colombia Developer, Mechatronics Engineer, Software Engineer, Tech Lead, Development Leader, Web Development, Python Developer, JavaScript Developer, TypeScript, Node.js, React.js, Computer Vision Expert, Machine Learning Engineer"
+  },
   "nav": {
     "home": "Home",
     "about": "About me",
@@ -7,7 +10,7 @@
     "contact": "Contact"
   },
   "home": {
-    "title": "Hello I'm Kevin Naranjo",
+    "title": "Kevin Naranjo | Software Developer & AI Expert",
     "subtitle": "Mechatronics Engineer and Development Leader",
     "description": "Over 4 years of experience in software development and artificial intelligence, creating innovative technological solutions that make a positive impact.",
     "contactMe": "Contact Me",

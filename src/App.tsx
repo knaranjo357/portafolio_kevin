@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
+import SEOHelmet from './components/SEOHelmet';
 
 // Components
 import Navbar from './components/Navbar';
@@ -29,11 +29,7 @@ const App: React.FC = () => {
 
   return (
     <div className="flex flex-col min-h-screen relative overflow-hidden">
-      <Helmet>
-        <html lang={i18n.language} />
-        <meta name="description" content="Kevin Alejandro Naranjo Reyes - Ingeniero Mecatrónico y Líder de Desarrollo con más de 4 años de experiencia en software, inteligencia artificial y tecnologías innovadoras." />
-        <meta name="keywords" content="Kevin Naranjo, Desarrollo de Software, Inteligencia Artificial, Machine Learning, Visión por Computadora, Ingeniero Mecatrónico, Colombia" />
-      </Helmet>
+      <SEOHelmet />
       <Navbar />
       <main className="flex-grow pt-16 pb-20 md:pb-0">
         <AnimatePresence mode="wait">

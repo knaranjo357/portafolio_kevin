@@ -1,4 +1,7 @@
 {
+  "meta": {
+    "keywords": "Kevin Naranjo, Desarrollo de Software, Inteligencia Artificial, Machine Learning, Visión por Computadora, Desarrollador React, Desarrollador Full Stack, Experto en IA, Desarrollador Colombia, Ingeniero Mecatrónico, Ingeniero de Software, Líder Técnico, Líder de Desarrollo, Desarrollo Web, Desarrollador Python, Desarrollador JavaScript, TypeScript, Node.js, React.js, Experto en Visión por Computadora, Ingeniero de Machine Learning"
+  },
   "nav": {
     "home": "Inicio",
     "about": "Sobre mí",
@@ -7,7 +10,7 @@
     "contact": "Contacto"
   },
   "home": {
-    "title": "Hola soy Kevin Naranjo",
+    "title": "Kevin Naranjo | Desarrollador de Software y Experto en IA",
     "subtitle": "Ingeniero Mecatrónico y Líder de Desarrollo",
     "description": "Más de 4 años de experiencia en desarrollo de software e inteligencia artificial, creando soluciones tecnológicas innovadoras que impactan positivamente.",
     "contactMe": "Contáctame",

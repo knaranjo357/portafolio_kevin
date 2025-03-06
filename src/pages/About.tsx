@@ -6,6 +6,8 @@ import { useTranslation } from 'react-i18next';
 import SectionTitle from '../components/SectionTitle';
 import AnimatedText from '../components/AnimatedText';
 import CVDownloadButton from '../components/CVDownloadButton';
+import GeometricShapes from '../components/GeometricShapes';
+import ExperienceCounter from '../components/ExperienceCounter';
 
 const About: React.FC = () => {
   const { t } = useTranslation();
@@ -13,8 +15,9 @@ const About: React.FC = () => {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-slate-50 to-slate-100 py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-b from-slate-50 to-slate-100 py-20 relative overflow-hidden">
+        <GeometricShapes variant="dark" />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <motion.h1
               initial={{ opacity: 0, y: -20 }}
@@ -97,7 +100,7 @@ const About: React.FC = () => {
                 viewport={{ once: true }}
                 className="absolute -bottom-6 -right-6 bg-white p-6 rounded-lg shadow-lg"
               >
-                <p className="text-blue-600 font-bold text-4xl">4+</p>
+                <ExperienceCounter />
                 <p className="text-slate-600">{t('about.experience')}</p>
               </motion.div>
             </motion.div>

@@ -6,6 +6,7 @@ import SectionTitle from '../components/SectionTitle';
 import ContactForm from '../components/ContactForm';
 import AnimatedText from '../components/AnimatedText';
 import BackgroundParticles from '../components/BackgroundParticles';
+import GeometricShapes from '../components/GeometricShapes';
 
 const Contact: React.FC = () => {
   const { t } = useTranslation();
@@ -30,8 +31,9 @@ const Contact: React.FC = () => {
       <BackgroundParticles />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-slate-50 to-slate-100 py-20 relative">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-b from-slate-50 to-slate-100 py-20 relative overflow-hidden">
+        <GeometricShapes />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <motion.h1
               initial={{ opacity: 0, y: -20 }}

@@ -18,8 +18,8 @@ const CVDownloadButton: React.FC<CVDownloadButtonProps> = ({
   const toggleDropdown = () => setIsOpen(!isOpen);
 
   const cvLinks = {
-    es: "https://drive.google.com/file/d/1_aLJnccl0iJXmd6eEvIXzq27Pb2dGXVd/view?usp=sharing",
-    en: "https://drive.google.com/file/d/1fmGcZzM3vxNya_f5cJrwL5ZDMS-kavRR/view?usp=sharing"
+    es: "https://drive.google.com/file/d/1fmGcZzM3vxNya_f5cJrwL5ZDMS-kavRR/view?usp=sharing",
+    en: "https://drive.google.com/file/d/1_aLJnccl0iJXmd6eEvIXzq27Pb2dGXVd/view?usp=sharing"
   };
 
   return (

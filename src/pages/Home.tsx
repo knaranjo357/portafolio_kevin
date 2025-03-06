@@ -7,6 +7,8 @@ import AnimatedText from '../components/AnimatedText';
 import SectionTitle from '../components/SectionTitle';
 import SkillCard from '../components/SkillCard';
 import CVDownloadButton from '../components/CVDownloadButton';
+import GeometricShapes from '../components/GeometricShapes';
+import ExperienceCounter from '../components/ExperienceCounter';
 
 const Home: React.FC = () => {
   const { t } = useTranslation();
@@ -14,8 +16,9 @@ const Home: React.FC = () => {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="min-h-[90vh] flex items-center bg-gradient-to-b from-slate-50 to-slate-100">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <section className="min-h-[90vh] flex items-center bg-gradient-to-b from-slate-50 to-slate-100 relative overflow-hidden">
+        <GeometricShapes />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -77,7 +80,9 @@ const Home: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-8">
                   <p className="text-white text-xl font-semibold">Kevin Alejandro Naranjo Reyes</p>
-                  <p className="text-slate-200">4 Años de Experiencia</p>
+                  <div className="text-slate-200">
+                    <ExperienceCounter /> {t('about.experience')}
+                  </div>
                 </div>
               </div>
               

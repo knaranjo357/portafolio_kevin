@@ -6,6 +6,7 @@ import { Search, ArrowRight } from 'lucide-react';
 import SectionTitle from '../components/SectionTitle';
 import AnimatedText from '../components/AnimatedText';
 import BackgroundParticles from '../components/BackgroundParticles';
+import GeometricShapes from '../components/GeometricShapes';
 
 const Projects: React.FC = () => {
   const { t } = useTranslation();
@@ -86,8 +87,9 @@ const Projects: React.FC = () => {
       <BackgroundParticles />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-slate-50 to-slate-100 py-20 relative">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-b from-slate-50 to-slate-100 py-20 relative overflow-hidden">
+        <GeometricShapes />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <motion.h1
               initial={{ opacity: 0, y: -20 }}
@@ -103,33 +105,6 @@ const Projects: React.FC = () => {
             />
           </div>
         </div>
-        
-        {/* Decorative elements */}
-        <motion.div 
-          className="absolute -left-20 top-20 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl hidden lg:block"
-          animate={{ 
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3]
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div 
-          className="absolute -right-20 bottom-0 w-60 h-60 bg-purple-500/10 rounded-full blur-3xl hidden lg:block"
-          animate={{ 
-            scale: [1, 1.3, 1],
-            opacity: [0.2, 0.4, 0.2]
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1
-          }}
-        />
       </section>
 
       {/* Projects Section */}
