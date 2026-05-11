@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
     },
     {
       name: 'LinkedIn',
-      icon: <Linkedin size={ 20} />,
+      icon: <Linkedin size={20} />,
       url: 'https://www.linkedin.com/in/kevin-alejandro-naranjo-reyes-2573351a2/',
     },
   ];
@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-50 text-slate-900 pt-24 pb-12 relative overflow-hidden border-t border-slate-100">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1 bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
-      
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
           {/* Logo and Description */}
@@ -105,7 +105,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-4">
               <li>
                 <p className="text-slate-400 text-[10px] font-black uppercase tracking-widest mb-1">Email</p>
-                <a href="mailto:knaranjo357@gmail.com" className="text-slate-900 hover:text-gold text-sm font-bold transition-colors">knaranjo357@gmail.com</a>
+                <a href="mailto:alejandronaranjo357@gmail.com" className="text-slate-900 hover:text-gold text-sm font-bold transition-colors">alejandronaranjo357@gmail.com</a>
               </li>
               <li>
                 <p className="text-slate-400 text-[10px] font-black uppercase tracking-widest mb-1">WhatsApp</p>
