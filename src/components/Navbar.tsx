@@ -42,10 +42,10 @@ const Navbar: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 hidden md:block ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-lg py-3'
-          : 'bg-transparent py-5'
+          ? 'bg-white/80 backdrop-blur-2xl border-b border-slate-100 py-3 shadow-sm'
+          : 'bg-transparent py-6'
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,25 +53,21 @@ const Navbar: React.FC = () => {
           {/* Brand Name */}
           <NavLink
             to="/"
-            className="text-xl font-bold"
+            className="group"
             aria-label="Kevin Naranjo"
           >
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="relative"
+              className="flex items-center gap-3"
             >
-              <span className="relative inline-block">
-                <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 bg-clip-text text-transparent text-2xl font-bold">
-                  Kevin<span className="font-extrabold">Naranjo</span>
-                </span>
-                <motion.span 
-                  className="absolute -bottom-1 left-0 right-0 h-[3px] bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 rounded-full"
-                  initial={{ width: 0, left: '50%' }}
-                  animate={{ width: '100%', left: 0 }}
-                  transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-                />
+              <div className="relative">
+                <img src="/logo.png" alt="KN Logo" className="h-10 w-10 object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gold/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              </div>
+              <span className="text-slate-900 text-2xl font-black tracking-tighter hidden lg:block">
+                KEVIN<span className="text-gold">NARANJO</span>
               </span>
             </motion.div>
           </NavLink>
@@ -81,33 +77,31 @@ const Navbar: React.FC = () => {
             <motion.div
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6 }}
-              className="flex items-center"
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex items-center gap-8"
             >
-              <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-full p-1.5 mr-6 shadow-lg border border-slate-200/50">
+              <div className="flex items-center bg-slate-50 backdrop-blur-3xl rounded-full p-1 border border-slate-100 shadow-sm">
                 {navLinks.map((link) => (
                   <NavLink
                     key={link.name}
                     to={link.path}
                     className={({ isActive }) => `
-                      relative px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ease-in-out
+                      relative px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-widest transition-all duration-500
                       ${isActive 
-                        ? 'text-white bg-gradient-to-r from-blue-600 to-violet-600 shadow-md' 
-                        : 'text-slate-700 hover:text-slate-900 hover:bg-slate-100/80'
+                        ? 'text-white bg-slate-900 shadow-xl' 
+                        : 'text-slate-500 hover:text-slate-900 hover:bg-slate-100'
                       }
                     `}
                   >
                     {link.name}
                   </NavLink>
                 ))}
+                <div className="mx-2 w-px h-4 bg-slate-200"></div>
                 <LanguageSwitcher />
               </div>
 
               {/* WhatsApp Button */}
               <motion.div
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -115,27 +109,25 @@ const Navbar: React.FC = () => {
                   href="https://wa.me/573175816061"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative overflow-hidden bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-2.5 rounded-full font-medium inline-flex items-center shadow-md hover:shadow-lg hover:shadow-green-500/30 transition-all duration-300"
-                  aria-label="WhatsApp"
+                  className="bg-slate-50 backdrop-blur-3xl border border-slate-100 text-slate-900 px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-widest hover:bg-gold hover:text-white hover:border-gold transition-all duration-500 shadow-sm"
                 >
-                  <span className="relative z-10">WhatsApp</span>
-                  <span className="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                  <span className="absolute -inset-px rounded-full blur opacity-0 group-hover:opacity-30 transition-opacity duration-300 bg-green-400"></span>
+                  {t('home.whatsapp')}
                 </a>
               </motion.div>
             </motion.div>
           </div>
+
 
           {/* Mobile Menu Button - Only visible on tablet, not on mobile */}
           <motion.button
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="md:hidden sm:block hidden text-slate-800 focus:outline-none"
+            className="md:hidden sm:block hidden text-slate-900 focus:outline-none"
             onClick={toggleMenu}
             aria-label={isOpen ? 'Close menu' : 'Open menu'}
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
           </motion.button>
         </nav>
       </div>
@@ -147,25 +139,25 @@ const Navbar: React.FC = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden sm:block hidden bg-white shadow-lg"
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            className="md:hidden sm:block hidden bg-white/95 backdrop-blur-3xl border-b border-slate-100"
           >
-            <div className="container mx-auto px-4 py-4">
-              <ul className="flex flex-col space-y-3">
+            <div className="container mx-auto px-4 py-12">
+              <ul className="flex flex-col space-y-6">
                 {navLinks.map((link, index) => (
                   <motion.li
                     key={link.name}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
                     <NavLink
                       to={link.path}
                       className={({ isActive }) =>
-                        `block py-2.5 px-4 rounded-lg transition-colors ${
+                        `block py-4 px-6 rounded-2xl transition-all duration-500 text-sm font-black uppercase tracking-widest ${
                           isActive
-                            ? 'bg-gradient-to-r from-blue-600/10 to-violet-600/10 text-blue-600 font-medium'
-                            : 'text-slate-800 hover:bg-slate-100'
+                            ? 'bg-slate-900 text-white shadow-xl'
+                            : 'text-slate-500 hover:text-slate-900 hover:bg-slate-100'
                         }`
                       }
                       onClick={() => setIsOpen(false)}
@@ -175,10 +167,10 @@ const Navbar: React.FC = () => {
                   </motion.li>
                 ))}
                 <motion.li
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{
-                    duration: 0.3,
+                    duration: 0.5,
                     delay: navLinks.length * 0.1,
                   }}
                 >
@@ -186,10 +178,10 @@ const Navbar: React.FC = () => {
                     href="https://wa.me/573175816061"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block py-2.5 px-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg text-center shadow-md"
+                    className="block py-5 px-6 bg-slate-50 border border-slate-100 text-slate-900 rounded-2xl text-center font-black uppercase tracking-widest hover:bg-gold hover:text-white hover:border-gold transition-all duration-500 shadow-sm"
                     aria-label="WhatsApp"
                   >
-                    WhatsApp
+                    {t('home.whatsapp')}
                   </a>
                 </motion.li>
               </ul>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { DivideIcon as LucideIcon } from 'lucide-react';
 
 interface SkillCardProps {
   title: string;
@@ -15,20 +14,23 @@ const SkillCard: React.FC<SkillCardProps> = ({
   description,
   icon,
   delay = 0,
-  color = 'border-blue-500',
 }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay }}
+      transition={{ duration: 0.8, delay, ease: [0.22, 1, 0.36, 1] }}
       viewport={{ once: true }}
-      whileHover={{ y: -5 }}
-      className={`skill-card ${color}`}
+      className="premium-card p-10 group bg-white"
     >
-      <div className="mb-4 text-blue-600">{icon}</div>
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p className="text-slate-600">{description}</p>
+      <div className="mb-8 p-4 bg-slate-50 border border-slate-100 rounded-2xl inline-block text-gold group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
+        {icon}
+      </div>
+      <h3 className="text-2xl font-black mb-4 text-slate-900 tracking-tight group-hover:text-gold transition-colors">{title}</h3>
+      <p className="text-slate-500 leading-relaxed font-light">{description}</p>
+      
+      {/* Decorative accent */}
+      <div className="mt-8 h-1 w-12 bg-gradient-to-r from-gold to-transparent rounded-full opacity-30 group-hover:w-24 transition-all duration-500"></div>
     </motion.div>
   );
 };

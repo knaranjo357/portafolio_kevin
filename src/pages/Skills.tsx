@@ -8,55 +8,17 @@ import {
   Eye, 
   Database, 
   Server, 
-  Globe, 
-  Cpu, 
-  BarChart, 
   Terminal,
   Layers,
   Cloud,
   GitBranch,
-  Figma,
-  LineChart,
+  BarChart,
   Smartphone,
   Zap
 } from 'lucide-react';
 import SectionTitle from '../components/SectionTitle';
-import AnimatedText from '../components/AnimatedText';
 import BackgroundParticles from '../components/BackgroundParticles';
 import GeometricShapes from '../components/GeometricShapes';
-
-interface SkillItemProps {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  delay?: number;
-  color?: string;
-}
-
-const SkillItem: React.FC<SkillItemProps> = ({ 
-  icon, 
-  title, 
-  description, 
-  delay = 0,
-  color = 'bg-blue-500' 
-}) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay }}
-      viewport={{ once: true }}
-      whileHover={{ y: -5 }}
-      className="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 premium-gradient-border"
-    >
-      <div className={`w-16 h-16 ${color} text-white rounded-full flex items-center justify-center mb-4`}>
-        {icon}
-      </div>
-      <h3 className="text-xl font-semibold mb-2 text-center">{title}</h3>
-      <p className="text-slate-600 text-center text-sm">{description}</p>
-    </motion.div>
-  );
-};
 
 const Skills: React.FC = () => {
   const { t } = useTranslation();
@@ -107,7 +69,7 @@ const Skills: React.FC = () => {
           color: "bg-amber-500"
         },
         {
-          icon: <LineChart size={28} />,
+          icon: <BarChart size={28} />,
           title: t('skills.dataScience'),
           description: t('skills.dsDesc'),
           color: "bg-cyan-500"
@@ -167,333 +129,161 @@ const Skills: React.FC = () => {
   ];
 
   return (
-    <div className="pt-16 relative overflow-hidden">
+    <div className="pt-16 mesh-gradient min-h-screen">
       <BackgroundParticles />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-slate-50 to-slate-100 py-20 relative overflow-hidden">
+      <section className="py-24 relative overflow-hidden">
         <GeometricShapes />
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <motion.h1
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="text-4xl md:text-5xl font-bold mb-6 text-gradient"
-            >
-              {t('skills.title')}
-            </motion.h1>
-            <AnimatedText
-              text={t('skills.subtitle')}
-              className="text-xl text-slate-600 mb-8"
-            />
-          </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+          >
+            <h1 className="text-5xl md:text-7xl font-black mb-6 text-slate-900 tracking-tighter">
+              {t('skills.expertToolset').split(' ').map((word, i) => (
+                <span key={i} className={word.toLowerCase().includes('tool') ? 'text-gold italic' : ''}>
+                  {word}{' '}
+                </span>
+              ))}
+            </h1>
+            <p className="text-slate-500 text-xl md:text-2xl max-w-2xl mx-auto font-light leading-relaxed">
+              {t('skills.subtitle')}
+            </p>
+          </motion.div>
         </div>
-        
-        {/* Floating elements */}
-        <motion.div
-          className="absolute top-20 left-10 hidden lg:block"
-          animate={{ 
-            y: [0, -15, 0],
-            rotate: [0, 5, 0]
-          }}
-          transition={{ 
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        >
-          <div className="w-16 h-16 bg-blue-500/20 backdrop-blur-sm rounded-2xl" />
-        </motion.div>
-        
-        <motion.div
-          className="absolute bottom-10 right-20 hidden lg:block"
-          animate={{ 
-            y: [0, 15, 0],
-            rotate: [0, -5, 0]
-          }}
-          transition={{ 
-            duration: 7,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1
-          }}
-        >
-          <div className="w-20 h-20 bg-purple-500/20 backdrop-blur-sm rounded-full" />
-        </motion.div>
       </section>
 
       {/* Skills Grid Section */}
       {skillCategories.map((category, categoryIndex) => (
-        <section key={category.title} className={`py-16 ${categoryIndex % 2 === 0 ? 'bg-white' : 'bg-slate-50'} relative`}>
+        <section key={category.title} className="py-20 relative overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <SectionTitle
-              title={category.title}
-              subtitle={t('skills.techSubtitle')}
-              center={true}
-            />
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter flex items-center gap-6">
+                <span className="text-gold">0{categoryIndex + 1}.</span>
+                {category.title}
+              </h2>
+              <div className="h-1 w-32 bg-gradient-to-r from-gold to-transparent mt-4"></div>
+            </motion.div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
               {category.skills.map((skill, index) => (
-                <SkillItem
+                <motion.div
                   key={skill.title}
-                  icon={skill.icon}
-                  title={skill.title}
-                  description={skill.description}
-                  delay={index * 0.1}
-                  color={skill.color}
-                />
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="premium-card p-8 group bg-white"
+                >
+                  <div className="w-16 h-16 bg-slate-50 border border-slate-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gold group-hover:text-white transition-all duration-500 shadow-xl group-hover:shadow-gold/20">
+                    {skill.icon}
+                  </div>
+                  <h3 className="text-xl font-black mb-4 text-slate-900 tracking-tight">{skill.title}</h3>
+                  <p className="text-slate-500 text-sm leading-relaxed font-light">{skill.description}</p>
+                </motion.div>
               ))}
             </div>
           </div>
-          
-          {/* Decorative elements */}
-          {categoryIndex % 2 === 0 && (
-            <>
-              <motion.div 
-                className="absolute -left-16 top-1/3 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl hidden lg:block"
-                animate={{ 
-                  scale: [1, 1.2, 1],
-                  opacity: [0.5, 0.8, 0.5]
-                }}
-                transition={{
-                  duration: 8,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              />
-              <motion.div 
-                className="absolute -right-16 bottom-1/4 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl hidden lg:block"
-                animate={{ 
-                  scale: [1, 1.3, 1],
-                  opacity: [0.5, 0.7, 0.5]
-                }}
-                transition={{
-                  duration: 10,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 1
-                }}
-              />
-            </>
-          )}
         </section>
       ))}
 
       {/* Tools Section */}
-      <section className="py-16 bg-white relative">
+      <section className="py-32 relative bg-slate-50 border-y border-slate-100">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionTitle
-            title={t('skills.technologies')}
-            subtitle={t('skills.techSubtitle')}
-            center={true}
-          />
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-black text-slate-900 tracking-tighter mb-4">{t('skills.technologies')}</h2>
+            <div className="w-24 h-1 bg-gold mx-auto rounded-full"></div>
+          </div>
           
-          <div className="flex flex-wrap justify-center gap-3 mt-12">
+          <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
             {tools.map((tool, index) => (
               <motion.div
                 key={tool.name}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5, scale: 1.05 }}
-                className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-full shadow-sm premium-gradient-border"
+                className="flex items-center gap-3 px-6 py-3 bg-white border border-slate-100 rounded-full hover:border-gold/50 hover:bg-gold/5 transition-all duration-300 shadow-sm"
               >
-                <span className="text-blue-600">{tool.icon}</span>
-                <span className="font-medium">{tool.name}</span>
+                <span className="text-gold">{tool.icon}</span>
+                <span className="text-slate-600 font-bold text-xs uppercase tracking-widest">{tool.name}</span>
               </motion.div>
             ))}
           </div>
         </div>
-        
-        {/* Decorative elements */}
-        <motion.div 
-          className="absolute right-10 top-20 w-24 h-24 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-xl hidden lg:block"
-          animate={{ 
-            y: [0, -20, 0],
-            x: [0, 10, 0]
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
       </section>
 
       {/* Experience Highlights */}
-      <section className="py-16 bg-slate-50 relative">
+      <section className="py-32 relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             title={t('skills.experience')}
             subtitle={t('skills.expSubtitle')}
           />
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="bg-white p-6 rounded-xl shadow-md premium-card"
-            >
-              <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-4">
-                <Brain size={24} />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">{t('skills.aiExp')}</h3>
-              <ul className="space-y-2 text-slate-600">
-                <li className="flex items-start">
-                  <span className="text-blue-500 mr-2">✓</span>
-                  {t('skills.aiExp1')}
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-500 mr-2">✓</span>
-                  {t('skills.aiExp2')}
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-500 mr-2">✓</span>
-                  {t('skills.aiExp3')}
-                </li>
-              </ul>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="bg-white p-6 rounded-xl shadow-md premium-card"
-            >
-              <div className="w-12 h-12 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mb-4">
-                <Code size={24} />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">{t('skills.softwareExp')}</h3>
-              <ul className="space-y-2 text-slate-600">
-                <li className="flex items-start">
-                  <span className="text-purple-500 mr-2">✓</span>
-                  {t('skills.softwareExp1')}
-                </li>
-                <li className="flex items-start">
-                  <span className="text-purple-500 mr-2">✓</span>
-                  {t('skills.softwareExp2')}
-                </li>
-                <li className="flex items-start">
-                  <span className="text-purple-500 mr-2">✓</span>
-                  {t('skills.softwareExp3')}
-                </li>
-              </ul>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="bg-white p-6 rounded-xl shadow-md premium-card"
-            >
-              <div className="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mb-4">
-                <Zap size={24} />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">{t('skills.leadershipExp')}</h3>
-              <ul className="space-y-2 text-slate-600">
-                <li className="flex items-start">
-                  <span className="text-emerald-500 mr-2">✓</span>
-                  {t('skills.leadershipExp1')}
-                </li>
-                <li className="flex items-start">
-                  <span className="text-emerald-500 mr-2">✓</span>
-                  {t('skills.leadershipExp2')}
-                </li>
-                <li className="flex items-start">
-                  <span className="text-emerald-500 mr-2">✓</span>
-                  {t('skills.leadershipExp3')}
-                </li>
-              </ul>
-            </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+            {[
+              { title: t('skills.aiExp'), icon: <Brain size={28} />, items: [t('skills.aiExp1'), t('skills.aiExp2'), t('skills.aiExp3')] },
+              { title: t('skills.softwareExp'), icon: <Code size={28} />, items: [t('skills.softwareExp1'), t('skills.softwareExp2'), t('skills.softwareExp3')] },
+              { title: t('skills.leadershipExp'), icon: <Zap size={28} />, items: [t('skills.leadershipExp1'), t('skills.leadershipExp2'), t('skills.leadershipExp3')] }
+            ].map((box, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: i * 0.2 }}
+                viewport={{ once: true }}
+                className="premium-card p-10 group bg-white"
+              >
+                <div className="w-14 h-14 bg-slate-50 border border-slate-100 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                  <div className="text-gold">{box.icon}</div>
+                </div>
+                <h3 className="text-2xl font-black mb-6 text-slate-900 tracking-tight">{box.title}</h3>
+                <ul className="space-y-4">
+                  {box.items.map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-3 text-slate-500 text-sm font-light leading-relaxed">
+                      <span className="text-gold mt-1">✓</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
           </div>
         </div>
-        
-        {/* Decorative elements */}
-        <motion.div 
-          className="absolute left-0 bottom-0 w-full h-40 bg-gradient-to-t from-slate-100/50 to-transparent hidden lg:block"
-        />
-        <motion.div 
-          className="absolute left-10 bottom-20 w-20 h-20 bg-blue-500/10 rounded-full blur-xl hidden lg:block"
-          animate={{ 
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.6, 0.3]
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-violet-600 text-white relative overflow-hidden">
+      <section className="py-32 relative overflow-hidden bg-slate-50 border-t border-slate-100">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-3xl font-bold mb-6"
-          >
-            {t('skills.skillsAction')}
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto"
-          >
-            {t('skills.skillsActionDesc')}
-          </motion.p>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            transition={{ duration: 1 }}
             viewport={{ once: true }}
           >
-            <Link
-              to="/projects"
-              className="btn bg-white text-blue-600 hover:bg-blue-50 premium-button"
-            >
-              {t('home.viewProjects')}
-            </Link>
+            <h2 className="text-4xl md:text-6xl font-black mb-8 text-slate-900 tracking-tighter">
+              {t('home.readyToBuild')}
+            </h2>
+            <div className="flex flex-wrap justify-center gap-6">
+              <Link to="/projects" className="btn btn-primary">
+                {t('home.viewProjects')}
+              </Link>
+              <Link to="/contact" className="btn btn-outline border-slate-200 text-slate-900 hover:border-gold hover:text-white transition-all duration-500">
+                {t('home.contactMe')}
+              </Link>
+            </div>
           </motion.div>
         </div>
-        
-        {/* Decorative elements */}
-        <motion.div 
-          className="absolute -right-20 -top-20 w-80 h-80 bg-blue-500/30 rounded-full blur-3xl"
-          animate={{ 
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3]
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div 
-          className="absolute -left-20 -bottom-20 w-80 h-80 bg-violet-500/30 rounded-full blur-3xl"
-          animate={{ 
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3]
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2
-          }}
-        />
       </section>
     </div>
   );

@@ -25,7 +25,7 @@ const ExperienceCounter: React.FC<ExperienceCounterProps> = ({ className = '' })
       transition={{ duration: 0.5 }}
       className={className}
     >
-      <p className="text-blue-600 font-bold text-4xl">{experience}+</p>
+      <p className="text-gold font-bold text-4xl">{experience}+</p>
     </motion.div>
   );
 };

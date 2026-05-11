@@ -9,11 +9,11 @@ const MobileNavbar: React.FC = () => {
   const { t } = useTranslation();
   
   const navItems = [
-    { path: '/', icon: <Home size={20} />, label: t('nav.home') },
-    { path: '/about', icon: <User size={20} />, label: t('nav.about') },
-    { path: '/skills', icon: <Code size={20} />, label: t('nav.skills') },
-    { path: '/projects', icon: <Briefcase size={20} />, label: t('nav.projects') },
-    { path: '/contact', icon: <MessageSquare size={20} />, label: t('nav.contact') },
+    { path: '/', icon: <Home size={18} />, label: t('nav.home') },
+    { path: '/about', icon: <User size={18} />, label: t('nav.about') },
+    { path: '/skills', icon: <Code size={18} />, label: t('nav.skills') },
+    { path: '/projects', icon: <Briefcase size={18} />, label: t('nav.projects') },
+    { path: '/contact', icon: <MessageSquare size={18} />, label: t('nav.contact') },
   ];
 
   return (

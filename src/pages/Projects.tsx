@@ -3,68 +3,24 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Search, ArrowRight } from 'lucide-react';
-import SectionTitle from '../components/SectionTitle';
-import AnimatedText from '../components/AnimatedText';
-import BackgroundParticles from '../components/BackgroundParticles';
 import GeometricShapes from '../components/GeometricShapes';
+import BackgroundParticles from '../components/BackgroundParticles';
 
 const Projects: React.FC = () => {
   const { t } = useTranslation();
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('todos');
 
-  const projects = [
-    {
-      id: 1,
-      title: 'Datalogger con Plataforma de Configuración',
-      description: 'Diseñé y desarrollé una herramienta de configuración frontend y backend para dispositivos de adquisición de datos ambientales, mejorando la usabilidad y monitoreo de datos.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-      category: 'desarrollo web',
-    },
-    {
-      id: 2,
-      title: 'Cámara Adaptable para Conteo Vehicular',
-      description: 'Desarrollé una solución de visión por computador para detección de vehículos y personas, implementada para la CAR Bogotá para correlacionar datos de tráfico con métricas de calidad del aire.',
-      image: 'https://images.unsplash.com/photo-1566618501422-e11289d1bf4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-      category: 'visión por computadora',
-    },
-    {
-      id: 3,
-      title: 'Pronóstico de Variables Ambientales',
-      description: 'Implementé modelos de machine learning y deep learning (LSTM) para predicciones precisas de calidad del aire, generando escenarios predictivos para la toma de decisiones.',
-      image: 'https://images.unsplash.com/photo-1576400883215-7083980b6193?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-      category: 'machine learning',
-    },
-    {
-      id: 4,
-      title: 'Clasificación de Fraudes Eléctricos',
-      description: 'Desarrollé un programa para ENEL Perú que incrementó la detección de fraudes eléctricos en un 150%, optimizando la recuperación de energía.',
-      image: 'https://images.unsplash.com/photo-1544724569-5f546fd6f2b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-      category: 'machine learning',
-    },
-    {
-      id: 5,
-      title: 'Automatización de Reportes Periódicos',
-      description: 'Automatización de procesos de reporte periódico, reduciendo el tiempo de generación de reportes diarios de 3 horas a unos pocos minutos, aumentando significativamente la eficiencia del equipo.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-      category: 'automatización',
-    },
-    {
-      id: 6,
-      title: 'Consultoría Personalizada en IA para Empresas',
-      description: 'Consultoría personalizada de inteligencia artificial para empresas como Antamina, asesorando en la implementación de herramientas de IA para agregar valor a sus datos e infraestructura.',
-      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-      category: 'consultoría',
-    },
-  ];
+  // Fetch projects from translation file
+  const projects = t('projectsData', { returnObjects: true }) as any[];
 
   const categories = [
     { id: 'todos', name: t('projects.all') },
-    { id: 'desarrollo web', name: t('projects.webDev') },
-    { id: 'machine learning', name: t('projects.machineLearning') },
-    { id: 'visión por computadora', name: t('projects.computerVision') },
-    { id: 'automatización', name: t('projects.automation') },
-    { id: 'consultoría', name: t('projects.consulting') },
+    { id: 'web', name: t('projects.webDev') },
+    { id: 'ml', name: t('projects.machineLearning') },
+    { id: 'vision', name: t('projects.computerVision') },
+    { id: 'auto', name: t('projects.automation') },
+    { id: 'consulting', name: t('projects.consulting') },
   ];
 
   // Filter projects based on search term and category
@@ -83,44 +39,47 @@ const Projects: React.FC = () => {
   );
 
   return (
-    <div className="pt-16 relative overflow-hidden">
+    <div className="pt-16 mesh-gradient min-h-screen">
       <BackgroundParticles />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-slate-50 to-slate-100 py-20 relative overflow-hidden">
+      <section className="py-24 relative overflow-hidden">
         <GeometricShapes />
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <motion.h1
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="text-4xl md:text-5xl font-bold mb-6 text-gradient"
-            >
-              {t('projects.title')}
-            </motion.h1>
-            <AnimatedText
-              text={t('projects.subtitle')}
-              className="text-xl text-slate-600 mb-8"
-            />
-          </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+          >
+            <h1 className="text-5xl md:text-7xl font-black mb-6 text-slate-900 tracking-tighter">
+              {t('projects.featuredSolutions').split(' ').map((word, i) => (
+                <span key={i} className={word.toLowerCase().includes('solu') ? 'text-gold italic' : ''}>
+                  {word}{' '}
+                </span>
+              ))}
+            </h1>
+            <p className="text-slate-500 text-xl md:text-2xl max-w-2xl mx-auto font-light leading-relaxed">
+              {t('projects.subtitle')}
+            </p>
+          </motion.div>
         </div>
       </section>
 
       {/* Projects Section */}
-      <section className="py-16 bg-white relative">
+      <section className="py-16 relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Search and Filter */}
-          <div className="flex flex-col md:flex-row gap-6 mb-12 justify-between items-center">
+          <div className="flex flex-col lg:flex-row gap-8 mb-16 justify-between items-center">
             {/* Search Bar */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="w-full md:w-1/2"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="w-full lg:w-1/3"
             >
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <div className="relative group">
+                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none group-focus-within:text-gold transition-colors">
                   <Search size={20} className="text-slate-400" />
                 </div>
                 <input
@@ -128,26 +87,27 @@ const Projects: React.FC = () => {
                   placeholder={t('projects.search')}
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent premium-input"
+                  className="w-full pl-12 pr-6 py-4 rounded-full bg-white border border-slate-100 text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#d4af37] focus:border-[#d4af37] transition-all duration-500 placeholder-slate-300 shadow-sm"
                 />
               </div>
             </motion.div>
 
             {/* Category Filters */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="flex flex-wrap gap-2 justify-center"
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="flex flex-wrap gap-3 justify-center bg-slate-50 p-2 rounded-full border border-slate-100 shadow-sm"
             >
-              {categories.map((category, index) => (
+              {categories.map((category) => (
                 <button
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  className={`px-6 py-2 rounded-full text-xs font-black uppercase tracking-widest transition-all duration-500 ${
                     activeCategory === category.id
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                      ? 'bg-slate-900 text-white shadow-xl scale-105'
+                      : 'text-slate-500 hover:text-slate-900 hover:bg-white'
                   }`}
                 >
                   {category.name}
@@ -157,156 +117,89 @@ const Projects: React.FC = () => {
           </div>
 
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {filteredProjects.map((project, index) => (
               <motion.div
                 key={project.id}
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-                className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 premium-card"
+                className="group"
               >
-                <div className="relative overflow-hidden h-48">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                  />
-                  <div className="absolute top-3 right-3">
-                    <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">
-                      {project.category.charAt(0).toUpperCase() + project.category.slice(1)}
-                    </span>
+                <Link to={`/projects/${project.id}`}>
+                  <div className="premium-card h-full bg-white">
+                    <div className="relative h-64 overflow-hidden">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end translate-y-10 group-hover:translate-y-0 transition-transform duration-500">
+                        <span className="px-4 py-1.5 bg-gold text-white rounded-full text-[10px] font-black uppercase tracking-widest">
+                          {project.categoryName}
+                        </span>
+                      </div>
+                    </div>
+                    
+                    <div className="p-8">
+                      <h3 className="text-2xl font-black mb-4 text-slate-900 tracking-tight group-hover:text-gold transition-colors">
+                        {project.title}
+                      </h3>
+                      <p className="text-slate-500 text-sm font-light leading-relaxed mb-8 line-clamp-3">
+                        {project.description}
+                      </p>
+                      <div className="flex items-center gap-2 text-gold font-black text-xs uppercase tracking-widest group-hover:gap-4 transition-all">
+                        {t('projects.viewDetails')} <ArrowRight size={16} />
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                  <p className="text-slate-600 mb-4 line-clamp-3">{project.description}</p>
-                  <Link
-                    to={`/projects/${project.id}`}
-                    className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors font-medium"
-                  >
-                    {t('projects.viewDetails')} <ArrowRight size={16} className="ml-1" />
-                  </Link>
-                </div>
+                </Link>
               </motion.div>
             ))}
           </div>
 
-          {/* No Results Message */}
+          {/* No Results */}
           {filteredProjects.length === 0 && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="text-center py-12"
+              className="text-center py-32"
             >
-              <p className="text-xl text-slate-600">
-                {t('projects.noResults')}
-              </p>
+              <h3 className="text-3xl font-black text-slate-900 mb-4">{t('projects.noResults')}</h3>
+              <button
+                onClick={() => {
+                  setSearchTerm('');
+                  setActiveCategory('todos');
+                }}
+                className="text-gold font-black uppercase tracking-widest border-b-2 border-gold/20 hover:border-gold transition-all"
+              >
+                {t('projects.clearFilters')}
+              </button>
             </motion.div>
           )}
-        </div>
-        
-        {/* Decorative elements */}
-        <motion.div 
-          className="absolute right-0 top-1/4 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl hidden lg:block"
-          animate={{ 
-            y: [0, -30, 0],
-            opacity: [0.3, 0.5, 0.3]
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div 
-          className="absolute left-0 bottom-1/3 w-40 h-40 bg-purple-500/5 rounded-full blur-2xl hidden lg:block"
-          animate={{ 
-            y: [0, 30, 0],
-            opacity: [0.2, 0.4, 0.2]
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2
-          }}
-        />
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-violet-600 text-white relative overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-3xl font-bold mb-6"
-          >
-            {t('projects.projectIdea')}
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto"
-          >
-            {t('projects.projectDesc')}
-          </motion.p>
+          {/* CTA */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="flex flex-wrap justify-center gap-4"
+            className="mt-32 p-16 bg-slate-50 rounded-[3rem] border border-slate-100 text-center relative overflow-hidden"
           >
-            <Link
-              to="/contact"
-              className="btn bg-white text-blue-600 hover:bg-blue-50 premium-button"
-            >
+            <div className="absolute top-0 right-0 w-64 h-64 bg-gold/5 blur-[80px] rounded-full translate-x-1/2 -translate-y-1/2"></div>
+            <h2 className="text-4xl md:text-6xl font-black mb-8 text-slate-900 tracking-tighter relative z-10">
+              {t('projects.projectIdea')}
+            </h2>
+            <p className="text-slate-500 text-lg max-w-2xl mx-auto mb-10 font-light relative z-10">
+              {t('projects.projectDesc')}
+            </p>
+            <Link to="/contact" className="btn btn-primary relative z-10">
               {t('home.contactMe')}
             </Link>
-            <a
-              href="https://wa.me/573175816061"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn bg-green-500 text-white hover:bg-green-600 premium-button"
-            >
-              {t('home.whatsapp')}
-            </a>
           </motion.div>
         </div>
-        
-        {/* Decorative elements */}
-        <motion.div 
-          className="absolute -right-20 -top-20 w-80 h-80 bg-blue-500/30 rounded-full blur-3xl"
-          animate={{ 
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3]
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div 
-          className="absolute -left-20 -bottom-20 w-80 h-80 bg-violet-500/30 rounded-full blur-3xl"
-          animate={{ 
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3]
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2
-          }}
-        />
       </section>
     </div>
   );

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Github, Linkedin } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
+import { calculateExperience } from '../utils/experienceCalculator';
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
@@ -31,38 +32,40 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-slate-900 text-white pt-12 pb-6 md:pb-6">
+    <footer className="bg-slate-50 text-slate-900 pt-24 pb-12 relative overflow-hidden border-t border-slate-100">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1 bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
+      
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
           {/* Logo and Description */}
-          <div className="col-span-1">
+          <div className="md:col-span-2">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="mb-4 flex items-center gap-3"
+              className="mb-8 flex items-center gap-4"
             >
-              <NavLink to="/" className="text-2xl font-bold">
-                Kevin<span className="text-blue-500">Naranjo</span>
+              <NavLink to="/" className="text-3xl font-black tracking-tighter uppercase group">
+                KEVIN<span className="text-gold group-hover:text-slate-900 transition-colors">NARANJO</span>
               </NavLink>
               <LanguageSwitcher />
             </motion.div>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
               viewport={{ once: true }}
-              className="text-slate-400 mb-4"
+              className="text-slate-500 text-lg max-w-md font-light leading-relaxed mb-8"
             >
-              {t('footer.description')}
+              {t('footer.description', { count: Math.floor(calculateExperience()) })}
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="flex space-x-4"
+              className="flex gap-4"
             >
               {socialLinks.map((link) => (
                 <a
@@ -70,7 +73,7 @@ const Footer: React.FC = () => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-white transition-colors"
+                  className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:border-gold hover:text-gold hover:bg-gold/5 transition-all duration-300"
                   aria-label={link.name}
                 >
                   {link.icon}
@@ -80,97 +83,47 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="col-span-1">
-            <motion.h3
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="text-lg font-semibold mb-4"
-            >
-              {t('footer.navigation')}
-            </motion.h3>
-            <ul className="space-y-2">
-              {navLinks.map((link, index) => (
-                <motion.li
-                  key={link.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
+          <div>
+            <h3 className="text-slate-900 text-xs font-black uppercase tracking-widest mb-8">{t('footer.navigation')}</h3>
+            <ul className="space-y-4">
+              {navLinks.map((link) => (
+                <li key={link.name}>
                   <NavLink
                     to={link.path}
-                    className="text-slate-400 hover:text-white transition-colors"
+                    className="text-slate-500 hover:text-gold text-sm font-bold uppercase tracking-wider transition-colors"
                   >
                     {link.name}
                   </NavLink>
-                </motion.li>
+                </li>
               ))}
             </ul>
           </div>
 
-          {/* Contact Information */}
-          <div className="col-span-1">
-            <motion.h3
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="text-lg font-semibold mb-4"
-            >
-              {t('footer.contact')}
-            </motion.h3>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="text-slate-400 mb-2"
-            >
-              <p>Colombia, Santander</p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="text-slate-400 mb-2"
-            >
-              <a
-                href="mailto:alejandronaranjo357@gmail.com"
-                className="hover:text-white transition-colors"
-              >
-                alejandronaranjo357@gmail.com
-              </a>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="text-slate-400"
-            >
-              <a
-                href="tel:+573175816061"
-                className="hover:text-white transition-colors"
-              >
-                +57 3175816061
-              </a>
-            </motion.div>
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-slate-900 text-xs font-black uppercase tracking-widest mb-8">{t('footer.contact')}</h3>
+            <ul className="space-y-4">
+              <li>
+                <p className="text-slate-400 text-[10px] font-black uppercase tracking-widest mb-1">Email</p>
+                <a href="mailto:knaranjo357@gmail.com" className="text-slate-900 hover:text-gold text-sm font-bold transition-colors">knaranjo357@gmail.com</a>
+              </li>
+              <li>
+                <p className="text-slate-400 text-[10px] font-black uppercase tracking-widest mb-1">WhatsApp</p>
+                <a href="https://wa.me/573175816061" target="_blank" rel="noopener noreferrer" className="text-slate-900 hover:text-gold text-sm font-bold transition-colors">+57 317 5816061</a>
+              </li>
+            </ul>
           </div>
         </div>
 
-        {/* Copyright */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="pt-6 border-t border-slate-800 text-center text-slate-500 text-sm"
-        >
-          <p>Copyright © {currentYear} Kevin Naranjo. {t('footer.rights')}</p>
-        </motion.div>
+        <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-slate-400 text-xs font-medium uppercase tracking-widest">
+            © {currentYear} Kevin Naranjo. {t('footer.rights')}
+          </p>
+          <div className="flex gap-8">
+            <a href="#" className="text-slate-400 hover:text-gold text-[10px] font-black uppercase tracking-widest transition-colors">Privacy Policy</a>
+            <a href="#" className="text-slate-400 hover:text-gold text-[10px] font-black uppercase tracking-widest transition-colors">Terms of Service</a>
+          </div>
+        </div>
       </div>
     </footer>
   );

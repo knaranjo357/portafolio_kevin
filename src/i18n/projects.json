@@ -1,0 +1,312 @@
+[
+  {
+    "id": 7,
+    "title": { "en": "Alliafood - WhatsApp Ecosystem", "es": "Alliafood - Ecosistema WhatsApp" },
+    "description": {
+      "en": "Comprehensive restaurant automation system integrating WhatsApp API, thermal hardware, and real-time analytics.",
+      "es": "Sistema integral de automatización para restaurantes que integra WhatsApp API, hardware térmico y analítica en tiempo real."
+    },
+    "category": "web",
+    "categoryName": { "en": "web development", "es": "desarrollo web" },
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
+    "fullDescription": {
+      "en": "Alliafood is a mission-critical system for modern gastronomy. It transforms WhatsApp into a powerful ordering engine, fully integrated with POS hardware and kitchen display systems. It handles the entire lifecycle of a restaurant order, from customer interaction to delivery tracking and revenue analytics.",
+      "es": "Alliafood es un sistema de misión crítica para la gastronomía moderna. Transforma WhatsApp en un potente motor de pedidos, totalmente integrado con hardware POS y sistemas de visualización en cocina. Maneja todo el ciclo de vida de un pedido, desde la interacción con el cliente hasta el seguimiento de entrega y analítica de ingresos."
+    },
+    "technologies": ["React", "Node.js", "PostgreSQL", "WhatsApp API", "Socket.io", "Thermal Printing", "Docker"],
+    "challenges": {
+      "en": [
+        "Real-time synchronization across multi-device environments",
+        "Hardware-level integration with various thermal printers",
+        "Managing high-concurrency order spikes",
+        "Automating customer loyalty workflows"
+      ],
+      "es": [
+        "Sincronización en tiempo real en entornos multidispositivo",
+        "Integración a nivel de hardware con diversas impresoras térmicas",
+        "Gestión de picos de pedidos de alta concurrencia",
+        "Automatización de flujos de fidelización de clientes"
+      ]
+    },
+    "solutions": {
+      "en": [
+        "Event-driven architecture for instant order notification",
+        "Custom print drivers for browser-to-hardware communication",
+        "Optimized administrative dashboard for lightning-fast operations",
+        "Advanced marketing database for automated retention"
+      ],
+      "es": [
+        "Arquitectura basada en eventos para notificación instantánea de pedidos",
+        "Controladores de impresión personalizados para comunicación navegador-a-hardware",
+        "Panel administrativo optimizado para operaciones ultrarrápidas",
+        "Base de datos de marketing avanzada para retención automatizada"
+      ]
+    },
+    "results": {
+      "en": [
+        "40% reduction in order processing time",
+        "100% elimination of manual command errors",
+        "Significant increase in customer re-order rates",
+        "Successful deployment across multiple leading restaurants"
+      ],
+      "es": [
+        "Reducción del 40% en el tiempo de procesamiento de pedidos",
+        "Eliminación del 100% de errores en comandas manuales",
+        "Aumento significativo en las tasas de repetición de pedidos",
+        "Despliegue exitoso en múltiples restaurantes líderes"
+      ]
+    },
+    "date": { "en": "Oct 2023 - Present", "es": "Oct 2023 - Actualidad" },
+    "client": { "en": "Multiple Partners", "es": "Múltiples Socios" },
+    "role": { "en": "Architect & Lead Developer", "es": "Arquitecto y Desarrollador Líder" },
+    "link": "https://alliafood.com"
+  },
+  {
+    "id": 8,
+    "title": { "en": "Xactus - AI Diagnostic Engine", "es": "Xactus - Motor de Diagnóstico IA" },
+    "description": {
+      "en": "Enterprise-grade diagnostic tool leveraging LLMs to analyze business challenges and prioritize high-impact projects.",
+      "es": "Herramienta de diagnóstico empresarial que utiliza LLMs para analizar desafíos de negocio y priorizar proyectos de alto impacto."
+    },
+    "category": "ml",
+    "categoryName": { "en": "machine learning", "es": "machine learning" },
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
+    "fullDescription": {
+      "en": "At Xactus, I engineered an AI-driven platform that decodes complex business qualitative data into strategic roadmaps. Using advanced NLP, the system evaluates organizational bottlenecks and generates interactive impact-effort matrices, allowing leaders to focus on truly disruptive initiatives.",
+      "es": "En Xactus, diseñé una plataforma impulsada por IA que decodifica datos cualitativos empresariales complejos en hojas de ruta estratégicas. Utilizando NLP avanzado, el sistema evalúa cuellos de botella organizacionales y genera matrices interactivas de impacto-esfuerzo, permitiendo a los líderes enfocarse en iniciativas verdaderamente disruptivas."
+    },
+    "technologies": ["React", "Python", "OpenAI API", "n8n", "PostgreSQL", "Tailwind CSS", "Vite"],
+    "challenges": {
+      "en": [
+        "Processing unstructured qualitative data into structured logic",
+        "Dynamic visualization of strategic matrices",
+        "Ensuring enterprise-level data security and isolation",
+        "Optimizing prompt efficiency for cost-effective scaling"
+      ],
+      "es": [
+        "Procesamiento de datos cualitativos no estructurados en lógica estructurada",
+        "Visualización dinámica de matrices estratégicas",
+        "Garantizar la seguridad y el aislamiento de datos corporativos",
+        "Optimización de la eficiencia de prompts para escalado rentable"
+      ]
+    },
+    "solutions": {
+      "en": [
+        "Advanced prompt engineering for hyper-accurate categorization",
+        "Interactive D3/Recharts data visualizations",
+        "Webhook-based async processing for complex AI tasks",
+        "Role-based access control for sensitive corporate data"
+      ],
+      "es": [
+        "Ingeniería de prompts avanzada para categorización hiper-precisa",
+        "Visualizaciones de datos interactivas con D3/Recharts",
+        "Procesamiento asíncrono basado en webhooks para tareas complejas de IA",
+        "Control de acceso basado en roles para datos corporativos sensibles"
+      ]
+    },
+    "results": {
+      "en": [
+        "Complete automation of initial diagnostic phases",
+        "Strategic roadmap generation in under 60 seconds",
+        "60% improvement in project prioritization accuracy",
+        "Core tool for Xactus high-level consultancy"
+      ],
+      "es": [
+        "Automatización completa de las fases iniciales de diagnóstico",
+        "Generación de hojas de ruta estratégicas en menos de 60 segundos",
+        "Mejora del 60% en la precisión de priorización de proyectos",
+        "Herramienta core para la consultoría de alto nivel de Xactus"
+      ]
+    },
+    "date": { "en": "Nov 2023 - Present", "es": "Nov 2023 - Actualidad" },
+    "client": { "en": "Xactus S.A.S", "es": "Xactus S.A.S" },
+    "role": { "en": "Software Lead & AI Expert", "es": "Líder de Software y Experto en IA" },
+    "link": "https://xactus.com"
+  },
+  {
+    "id": 9,
+    "title": { "en": "Wiltech - Technical Ecosystem", "es": "Wiltech - Ecosistema Técnico" },
+    "description": {
+      "en": "High-precision diagnostic platform for mobile hardware repair, featuring dynamic logic flows and n8n integration.",
+      "es": "Plataforma de diagnóstico de alta precisión para reparación de hardware móvil, con flujos lógicos dinámicos e integración con n8n."
+    },
+    "category": "web",
+    "categoryName": { "en": "web development", "es": "desarrollo web" },
+    "image": "https://images.unsplash.com/photo-1512428559087-560fa5ceab42?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
+    "fullDescription": {
+      "en": "Developed a specialized diagnostic suite for Wiltech to standardize smartphone repairs. The platform guides technicians through complex hardware tests using interactive decision trees, drastically reducing diagnostic time and improving repair success rates globally.",
+      "es": "Desarrollé una suite de diagnóstico especializada para Wiltech para estandarizar las reparaciones de smartphones. La plataforma guía a los técnicos a través de pruebas de hardware complejas utilizando árboles de decisión interactivos, reduciendo drásticamente el tiempo de diagnóstico y mejorando las tasas de éxito de reparación a nivel global."
+    },
+    "technologies": ["React", "TypeScript", "Node.js", "n8n", "Firebase", "Tailwind CSS"],
+    "challenges": {
+      "en": [
+        "Creating a visual editor for technical logic flows",
+        "Real-time inventory and knowledge base synchronization",
+        "Designing a UI for high-intensity lab environments",
+        "Scalability for global technician teams"
+      ],
+      "es": [
+        "Creación de un editor visual para flujos lógicos técnicos",
+        "Sincronización en tiempo real de inventario y base de conocimientos",
+        "Diseño de una interfaz de usuario para entornos de laboratorio de alta intensidad",
+        "Escalabilidad para equipos globales de técnicos"
+      ]
+    },
+    "solutions": {
+      "en": [
+        "Custom-built visual logic flow engine",
+        "Firebase-powered real-time data sync",
+        "High-contrast, utility-first UI design",
+        "Multi-region i18n support for global rollout"
+      ],
+      "es": [
+        "Motor de flujo lógico visual hecho a medida",
+        "Sincronización de datos en tiempo real potenciada por Firebase",
+        "Diseño de interfaz de usuario de alto contraste y utilidad",
+        "Soporte multi-región i18n para despliegue global"
+      ]
+    },
+    "results": {
+      "en": [
+        "50% faster hardware diagnostic cycles",
+        "Global standardization of repair procedures",
+        "Dramatically improved repair success metrics",
+        "Rapid onboarding for new technical staff"
+      ],
+      "es": [
+        "Ciclos de diagnóstico de hardware un 50% más rápidos",
+        "Estandarización global de procedimientos de reparación",
+        "Mejora drástica en las métricas de éxito de reparación",
+        "Incorporación rápida de nuevo personal técnico"
+      ]
+    },
+    "date": { "en": "Jan 2024 - Apr 2024", "es": "Ene 2024 - Abr 2024" },
+    "client": { "en": "Wiltech", "es": "Wiltech" },
+    "role": { "en": "Lead Developer", "es": "Desarrollador Líder" },
+    "link": "https://wiltech.com"
+  },
+  {
+    "id": 10,
+    "title": { "en": "ENEL - Global IoT Architecture", "es": "ENEL - Arquitectura IoT Global" },
+    "description": {
+      "en": "Scalable AWS-based infrastructure for real-time monitoring and configuration of energy grid IoT devices.",
+      "es": "Infraestructura escalable basada en AWS para el monitoreo y configuración en tiempo real de dispositivos IoT de la red eléctrica."
+    },
+    "category": "auto",
+    "categoryName": { "en": "automation & cloud", "es": "automatización y cloud" },
+    "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
+    "fullDescription": {
+      "en": "For ENEL, I architected a robust cloud-native ecosystem to manage thousands of IoT devices. The solution enables engineers to visualize critical grid data and perform remote configurations with ultra-low latency, ensuring high availability and security for critical national infrastructure.",
+      "es": "Para ENEL, arquitecturé un ecosistema cloud-native robusto para gestionar miles de dispositivos IoT. La solución permite a los ingenieros visualizar datos críticos de la red y realizar configuraciones remotas con ultra baja latencia, garantizando alta disponibilidad y seguridad para infraestructura nacional crítica."
+    },
+    "technologies": ["AWS (Lambda, IoT Core, DynamoDB)", "Node.js", "React", "Python", "Terraform", "Docker"],
+    "challenges": {
+      "en": [
+        "Managing massive data ingestion from thousands of concurrent sensors",
+        "Ensuring sub-second latency for remote device commands",
+        "Strict compliance with international cybersecurity standards",
+        "Architecting for 99.99% uptime in critical environments"
+      ],
+      "es": [
+        "Gestión de ingesta masiva de datos de miles de sensores concurrentes",
+        "Garantizar latencia inferior al segundo para comandos remotos",
+        "Cumplimiento estricto de estándares internacionales de ciberseguridad",
+        "Arquitectura para tiempo de actividad del 99.99% en entornos críticos"
+      ]
+    },
+    "solutions": {
+      "en": [
+        "Serverless architecture for auto-scaling capabilities",
+        "MQTT protocol optimization for efficient device communication",
+        "Real-time dashboards with WebSocket integration",
+        "Automated CI/CD pipelines for secure global deployments"
+      ],
+      "es": [
+        "Arquitectura serverless para capacidades de auto-escalado",
+        "Optimización del protocolo MQTT para comunicación eficiente",
+        "Paneles en tiempo real con integración de WebSockets",
+        "Pipelines de CI/CD automatizados para despliegues globales seguros"
+      ]
+    },
+    "results": {
+      "en": [
+        "Successful management of 10,000+ IoT nodes",
+        "90% reduction in manual on-site maintenance calls",
+        "Enhanced real-time visibility for grid operations",
+        "Scalable foundation for future smart grid initiatives"
+      ],
+      "es": [
+        "Gestión exitosa de más de 10,000 nodos IoT",
+        "Reducción del 90% en llamadas de mantenimiento manual en sitio",
+        "Visibilidad mejorada en tiempo real para operaciones de red",
+        "Base escalable para futuras iniciativas de redes inteligentes"
+      ]
+    },
+    "date": { "en": "Jul 2021 - Nov 2023", "es": "Jul 2021 - Nov 2023" },
+    "client": { "en": "ENEL Global", "es": "ENEL Global" },
+    "role": { "en": "AWS Architect & Developer", "es": "Arquitecto AWS y Desarrollador" },
+    "link": "#"
+  },
+  {
+    "id": 11,
+    "title": { "en": "Premium Baby Shower Platform", "es": "Plataforma Baby Shower Premium" },
+    "description": {
+      "en": "High-fidelity digital ecosystem for event management, featuring guest tracking, gift registry, and automated WhatsApp invites.",
+      "es": "Ecosistema digital de alta fidelidad para gestión de eventos, con seguimiento de invitados, mesa de regalos e invitaciones automáticas."
+    },
+    "category": "web",
+    "categoryName": { "en": "web engineering", "es": "ingeniería web" },
+    "image": "https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
+    "fullDescription": {
+      "en": "Developed a boutique event platform that redefines the digital invitation experience. The system includes a stunning public interface with countdowns and interactive maps, alongside a powerful administrative dashboard for guest list management and gift coordination via WhatsApp automation.",
+      "es": "Desarrollé una plataforma de eventos boutique que redefine la experiencia de invitación digital. El sistema incluye una interfaz pública impresionante con cuentas regresivas y mapas interactivos, junto con un potente panel administrativo para la gestión de invitados y coordinación de regalos mediante automatización de WhatsApp."
+    },
+    "technologies": ["React", "Tailwind CSS", "Framer Motion", "Firebase", "n8n", "Lucide Icons"],
+    "challenges": {
+      "en": [
+        "Creating a premium, cinematic UI for mobile devices",
+        "Real-time guest RSVP synchronization",
+        "Integrating dynamic WhatsApp message templates",
+        "Simplified UX for non-technical users"
+      ],
+      "es": [
+        "Creación de una interfaz cinemática premium para dispositivos móviles",
+        "Sincronización de confirmaciones (RSVP) en tiempo real",
+        "Integración de plantillas dinámicas de mensajes de WhatsApp",
+        "UX simplificada para usuarios no técnicos"
+      ]
+    },
+    "solutions": {
+      "en": [
+        "Glassmorphism and fluid animations for a high-end feel",
+        "Firebase Firestore for instant data updates",
+        "Automated workflows with n8n for guest notification",
+        "Responsive, card-based mobile administrative view"
+      ],
+      "es": [
+        "Glassmorphism y animaciones fluidas para una sensación premium",
+        "Firebase Firestore para actualizaciones instantáneas de datos",
+        "Flujos de trabajo automatizados con n8n para notificaciones",
+        "Vista administrativa móvil receptiva basada en tarjetas"
+      ]
+    },
+    "results": {
+      "en": [
+        "Seamless coordination for 100+ guests",
+        "100% positive feedback on user experience",
+        "Drastic reduction in administrative overhead",
+        "Scalable architecture for future events"
+      ],
+      "es": [
+        "Coordinación fluida para más de 100 invitados",
+        "100% de comentarios positivos sobre la experiencia de usuario",
+        "Reducción drástica en la carga administrativa",
+        "Arquitectura escalable para futuros eventos"
+      ]
+    },
+    "date": { "en": "May 2024", "es": "Mayo 2024" },
+    "client": { "en": "Private Client", "es": "Cliente Privado" },
+    "role": { "en": "Full Stack Architect", "es": "Arquitecto Full Stack" },
+    "link": "#"
+  }
+]

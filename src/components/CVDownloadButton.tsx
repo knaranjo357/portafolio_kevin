@@ -41,27 +41,27 @@ const CVDownloadButton: React.FC<CVDownloadButtonProps> = ({
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 10 }}
           transition={{ duration: 0.2 }}
-          className="absolute z-50 mt-2 w-48 bg-white rounded-lg shadow-xl overflow-hidden"
+          className="absolute z-50 mt-4 w-56 bg-white rounded-xl shadow-2xl overflow-hidden border border-slate-100"
         >
           <a
             href={cvLinks.es}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-3 text-slate-700 hover:bg-slate-50 transition-colors"
+            className="flex items-center gap-4 px-6 py-4 text-slate-500 hover:text-gold hover:bg-slate-50 transition-all duration-300 border-b border-slate-50"
             onClick={() => setIsOpen(false)}
           >
-            <span className="text-lg">🇪🇸</span>
-            <span>{t('about.cvSpanish')}</span>
+            <span className="text-xl">🇪🇸</span>
+            <span className="font-bold uppercase tracking-widest text-xs">{t('about.cvSpanish')}</span>
           </a>
           <a
             href={cvLinks.en}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-3 text-slate-700 hover:bg-slate-50 transition-colors"
+            className="flex items-center gap-4 px-6 py-4 text-slate-500 hover:text-gold hover:bg-slate-50 transition-all duration-300"
             onClick={() => setIsOpen(false)}
           >
-            <span className="text-lg">🇺🇸</span>
-            <span>{t('about.cvEnglish')}</span>
+            <span className="text-xl">🇺🇸</span>
+            <span className="font-bold uppercase tracking-widest text-xs">{t('about.cvEnglish')}</span>
           </a>
         </motion.div>
       )}

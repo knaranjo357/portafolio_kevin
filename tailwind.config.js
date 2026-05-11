@@ -33,6 +33,16 @@ export default {
           900: '#064e3b',
           950: '#022c22',
         },
+        dark: {
+          900: '#020617',
+          950: '#0a192f',
+        },
+        gold: '#d4af37',
+        silver: '#c0c0c0',
+        accent: {
+          gold: '#d4af37',
+          silver: '#c0c0c0',
+        },
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',

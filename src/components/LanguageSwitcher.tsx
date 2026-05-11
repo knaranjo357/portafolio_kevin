@@ -6,40 +6,27 @@ import { Globe } from 'lucide-react';
 const LanguageSwitcher: React.FC = () => {
   const { i18n, t } = useTranslation();
 
-  const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
-    localStorage.setItem('preferredLanguage', lng);
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'en' ? 'es' : 'en';
+    i18n.changeLanguage(newLang);
+    localStorage.setItem('preferredLanguage', newLang);
   };
 
   return (
     <motion.div 
-      className="relative group"
+      className="relative"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, delay: 0.3 }}
     >
       <button 
-        className="flex items-center gap-1 px-3 py-2 rounded-full bg-white/90 backdrop-blur-sm shadow-md hover:bg-white transition-colors"
-        aria-label="Change language"
+        onClick={toggleLanguage}
+        className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-md border border-slate-100 text-slate-900 hover:bg-white hover:border-gold transition-all duration-300 shadow-sm group active:scale-95"
+        aria-label="Toggle language"
       >
-        <Globe size={18} />
-        <span className="text-sm font-medium">{i18n.language === 'en' ? 'EN' : 'ES'}</span>
+        <Globe size={16} className="text-gold group-hover:rotate-12 transition-transform duration-500" />
+        <span className="text-[10px] font-black uppercase tracking-widest">{i18n.language === 'en' ? 'ES' : 'EN'}</span>
       </button>
-      
-      <div className="absolute right-0 mt-2 w-36 bg-white rounded-lg shadow-lg overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-        <button
-          onClick={() => changeLanguage('es')}
-          className={`w-full text-left px-4 py-2 text-sm ${i18n.language === 'es' ? 'bg-blue-50 text-blue-600 font-medium' : 'text-slate-700 hover:bg-slate-50'}`}
-        >
-          🇪🇸 {t('language.es')}
-        </button>
-        <button
-          onClick={() => changeLanguage('en')}
-          className={`w-full text-left px-4 py-2 text-sm ${i18n.language === 'en' ? 'bg-blue-50 text-blue-600 font-medium' : 'text-slate-700 hover:bg-slate-50'}`}
-        >
-          🇺🇸 {t('language.en')}
-        </button>
-      </div>
     </motion.div>
   );
 };

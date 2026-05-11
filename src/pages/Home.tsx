@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Code, Brain, Monitor } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import AnimatedText from '../components/AnimatedText';
 import SectionTitle from '../components/SectionTitle';
 import SkillCard from '../components/SkillCard';
 import CVDownloadButton from '../components/CVDownloadButton';
@@ -14,273 +13,274 @@ const Home: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="pt-16">
+    <div className="pt-16 mesh-gradient min-h-screen">
       {/* Hero Section */}
-      <section className="min-h-[90vh] flex items-center bg-gradient-to-b from-slate-50 to-slate-100 relative overflow-hidden">
+      <section className="min-h-screen flex items-center relative overflow-hidden">
         <GeometricShapes />
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        
+        {/* Cinematic Background Elements */}
+        <motion.div 
+          animate={{ 
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.5, 0.3]
+          }}
+          transition={{ duration: 10, repeat: Infinity }}
+          className="absolute top-1/4 -right-1/4 w-[800px] h-[800px] bg-blue-50 rounded-full blur-[150px]"
+        />
+        <motion.div 
+          animate={{ 
+            scale: [1, 1.1, 1],
+            opacity: [0.2, 0.4, 0.2]
+          }}
+          transition={{ duration: 8, repeat: Infinity, delay: 1 }}
+          className="absolute -bottom-1/4 -left-1/4 w-[600px] h-[600px] bg-gold/5 rounded-full blur-[120px]"
+        />
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             >
-              <motion.span
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-6"
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                className="inline-flex items-center gap-3 px-5 py-2 bg-white backdrop-blur-2xl border border-slate-100 text-gold rounded-full text-sm font-bold tracking-widest uppercase mb-8 shadow-sm"
               >
-                Software Developer & AI Expert
-              </motion.span>
-              <AnimatedText
-                text={t('home.title')}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
-              />
-              <AnimatedText
-                text={t('home.subtitle')}
-                className="text-xl md:text-2xl text-slate-600 mb-8"
-                once={false}
-              />
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-gold"></span>
+                </span>
+                {t('home.role')}
+              </motion.div>
+              
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-tight tracking-tighter text-slate-900">
+                <span className="block">{t('home.title').split('|')[0]}</span>
+                <span className="block text-gold text-glow-gold italic">{t('home.title').split('|')[1]}</span>
+              </h1>
+
               <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-                className="text-slate-600 mb-8 text-lg"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.8 }}
+                className="text-slate-500 text-xl md:text-2xl mb-12 max-w-2xl font-light leading-relaxed"
               >
                 {t('home.description')}
               </motion.p>
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.8 }}
-                className="flex flex-wrap gap-4"
+                transition={{ duration: 0.8, delay: 1.2 }}
+                className="flex flex-wrap gap-6"
               >
-                <Link to="/contact" className="btn btn-primary">
-                  {t('home.contactMe')}
+                <Link to="/contact" className="btn btn-primary group">
+                  <span className="relative z-10 flex items-center gap-2">
+                    {t('home.contactMe')} <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                  </span>
                 </Link>
-                <Link to="/projects" className="btn btn-outline">
+                <Link to="/projects" className="btn btn-outline border-slate-200 text-slate-900 hover:border-gold hover:text-gold transition-all duration-500">
                   {t('home.viewProjects')}
                 </Link>
-                <CVDownloadButton className="btn bg-slate-800 text-white hover:bg-slate-900" />
               </motion.div>
             </motion.div>
+
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
+              initial={{ opacity: 0, scale: 0.9, rotate: 5 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
               className="relative hidden lg:block"
             >
-              <div className="relative w-full h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src="https://media.licdn.com/dms/image/v2/D4E03AQGz9Hn9h2qPrA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1694973929346?e=1746662400&v=beta&t=rWPTpX0hd9tBxU2lxPEeHNZk-MitLkGAcxJvBWnwCe8"
-                  alt="Kevin Naranjo"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-8">
-                  <p className="text-white text-xl font-semibold">Kevin Alejandro Naranjo Reyes</p>
-                  <div className="text-slate-200">
-                    <ExperienceCounter /> {t('about.experience')}
-                  </div>
+              <div className="relative w-full h-[650px] rounded-[2rem] overflow-hidden shadow-2xl border-gold-gradient group p-1 bg-white">
+                <div className="w-full h-full rounded-[1.9rem] overflow-hidden relative bg-white">
+                  <img
+                    src="https://media.licdn.com/dms/image/v2/D4E03AQGz9Hn9h2qPrA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1694973929346?e=1746662400&v=beta&t=rWPTpX0hd9tBxU2lxPEeHNZk-MitLkGAcxJvBWnwCe8"
+                    alt="Kevin Alejandro Naranjo Reyes"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-60"></div>
                 </div>
               </div>
               
-              {/* Floating elements */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1 }}
-                className="absolute -top-6 -left-6 bg-white p-4 rounded-lg shadow-lg"
-                animate={{ y: [0, -10, 0] }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 4,
-                }}
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, delay: 1.5 }}
+                className="absolute -bottom-10 -right-10 bg-white backdrop-blur-3xl p-10 rounded-3xl shadow-2xl border border-slate-100"
               >
-                <Code size={24} className="text-blue-600" />
-              </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.2 }}
-                className="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg"
-                animate={{ y: [0, 10, 0] }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 5,
-                  delay: 1,
-                }}
-              >
-                <Brain size={24} className="text-purple-600" />
+                <div className="flex items-center gap-6">
+                  <div>
+                    <ExperienceCounter className="text-5xl font-black text-gold mb-1" />
+                    <p className="text-slate-400 text-[10px] font-black uppercase tracking-widest">{t('about.experience')}</p>
+                  </div>
+                  <div className="w-px h-12 bg-slate-100"></div>
+                  <div>
+                    <p className="text-2xl font-black text-slate-900 mb-1">100+</p>
+                    <p className="text-slate-400 text-[10px] font-black uppercase tracking-widest">{t('home.projectsDelivered')}</p>
+                  </div>
+                </div>
               </motion.div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* About Section Preview */}
-      <section className="py-20 bg-white">
+      {/* About Preview */}
+      <section className="py-32 relative bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionTitle
-            title={t('home.aboutTitle')}
-            subtitle={t('about.subtitle')}
-          />
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="order-2 md:order-1"
             >
-              <p className="text-slate-600 mb-6">
-                {t('home.aboutDescription1')}
-              </p>
-              <p className="text-slate-600 mb-8">
+              <SectionTitle
+                title={t('home.aboutTitle')}
+                subtitle={t('home.aboutDescription1')}
+              />
+              <p className="text-slate-500 text-lg mb-10 font-light leading-relaxed">
                 {t('home.aboutDescription2')}
               </p>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Link
-                  to="/about"
-                  className="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors"
-                >
-                  {t('home.learnMore')} <ArrowRight size={16} className="ml-2" />
-                </Link>
-              </motion.div>
+              <Link to="/about" className="btn btn-outline border-slate-200 text-slate-900 group">
+                <span className="flex items-center gap-3">
+                  {t('home.learnMore')} <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                </span>
+              </Link>
             </motion.div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="order-1 md:order-2"
-            >
-              <div className="relative">
-                <div className="relative rounded-xl overflow-hidden shadow-xl h-[400px]">
-                  <img
-                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                    alt="Kevin trabajando"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+            
+            <div className="grid grid-cols-2 gap-6">
+              {[
+                { label: 'Visionary', icon: <Monitor size={32} /> },
+                { label: 'Strategic', icon: <Brain size={32} /> },
+                { label: 'Technical', icon: <Code size={32} /> },
+                { label: 'Results', icon: <ArrowRight size={32} /> }
+              ].map((item, index) => (
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
+                  key={item.label}
+                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.5 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="absolute -bottom-6 -right-6 bg-white p-6 rounded-lg shadow-lg"
+                  className="p-8 bg-slate-50 border border-slate-100 rounded-3xl group hover:bg-gold transition-all duration-500"
                 >
-                  <p className="text-blue-600 font-bold text-4xl">4+</p>
-                  <p className="text-slate-600">{t('about.experience')}</p>
+                  <div className="text-gold group-hover:text-white transition-colors mb-4">{item.icon}</div>
+                  <p className="text-slate-900 group-hover:text-white font-black uppercase tracking-widest text-xs">{item.label}</p>
                 </motion.div>
-              </div>
-            </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Skills Section Preview */}
-      <section className="py-20 bg-slate-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Skills Showcase */}
+      <section className="py-32 relative bg-slate-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center mb-20">
           <SectionTitle
             title={t('home.skillsTitle')}
             subtitle={t('home.skillsSubtitle')}
             center={true}
           />
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        </div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <SkillCard
+              icon={<Code size={32} />}
               title={t('home.softwareDev')}
               description={t('home.softwareDesc')}
-              icon={<Code size={36} />}
               delay={0.1}
             />
             <SkillCard
+              icon={<Brain size={32} />}
               title={t('home.machineLearning')}
               description={t('home.mlDesc')}
-              icon={<Brain size={36} />}
               delay={0.2}
-              color="border-purple-500"
             />
             <SkillCard
+              icon={<Monitor size={32} />}
               title={t('home.computerVision')}
               description={t('home.cvDesc')}
-              icon={<Monitor size={36} />}
               delay={0.3}
-              color="border-emerald-500"
             />
             <SkillCard
+              icon={<Code size={32} />}
               title={t('home.webDev')}
               description={t('home.webDevDesc')}
-              icon={<Code size={36} />}
               delay={0.4}
-              color="border-amber-500"
             />
           </div>
           
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mt-12"
+            className="text-center mt-20"
           >
-            <Link to="/skills" className="btn btn-primary">
+            <Link to="/skills" className="btn btn-outline border-slate-200 text-slate-900">
               {t('home.exploreSkills')}
             </Link>
           </motion.div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-violet-600 text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold mb-6"
-          >
-            {t('home.readyToWork')}
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto"
-          >
-            {t('home.contactDesc')}
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="flex flex-wrap justify-center gap-4"
-          >
-            <Link
-              to="/contact"
-              className="btn bg-white text-blue-600 hover:bg-blue-50"
+      {/* Experience Highlights */}
+      <section className="py-32 relative bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="lg:col-span-1"
             >
-              {t('home.contactMe')}
-            </Link>
-            <a
-              href="https://wa.me/573175816061"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn bg-green-500 text-white hover:bg-green-600"
-            >
-              {t('home.whatsapp')}
-            </a>
-          </motion.div>
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter mb-8 leading-tight">
+                {t('home.readyToWork')}
+              </h2>
+              <p className="text-slate-500 text-lg mb-10 font-light leading-relaxed">
+                {t('home.contactDesc')}
+              </p>
+              <div className="flex flex-col gap-4">
+                <a href="https://wa.me/573175816061" target="_blank" rel="noopener noreferrer" className="btn btn-primary w-full text-center">
+                  {t('home.whatsapp')}
+                </a>
+                <CVDownloadButton className="btn btn-outline border-slate-200 text-slate-900 w-full text-center" />
+              </div>
+            </motion.div>
+
+            <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="premium-card p-10 bg-slate-50"
+              >
+                <div className="text-gold mb-6"><Brain size={48} /></div>
+                <h3 className="text-2xl font-black text-slate-900 mb-4 tracking-tight">{t('home.aiCardTitle')}</h3>
+                <p className="text-slate-500 font-light leading-relaxed">
+                  {t('home.aiCardDesc')}
+                </p>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="premium-card p-10 bg-slate-50"
+              >
+                <div className="text-gold mb-6"><Code size={48} /></div>
+                <h3 className="text-2xl font-black text-slate-900 mb-4 tracking-tight">{t('home.cloudCardTitle')}</h3>
+                <p className="text-slate-500 font-light leading-relaxed">
+                  {t('home.cloudCardDesc')}
+                </p>
+              </motion.div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
