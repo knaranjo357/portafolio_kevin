@@ -70,7 +70,9 @@
     "aiCardTitle": { "en": "AI & Machine Learning", "es": "IA y Machine Learning" },
     "aiCardDesc": { "en": "Predictive modeling, NLP, and deep learning architectures tailored for business impact.", "es": "Modelado predictivo, NLP y arquitecturas de deep learning adaptadas para el impacto empresarial." },
     "cloudCardTitle": { "en": "Cloud Native Apps", "es": "Apps Cloud Native" },
-    "cloudCardDesc": { "en": "Scalable web ecosystems built with React, Node.js, and AWS infrastructure.", "es": "Ecosistemas web escalables construidos con React, Node.js e infraestructura AWS." }
+    "cloudCardDesc": { "en": "Scalable web ecosystems built with React, Node.js, and AWS infrastructure.", "es": "Ecosistemas web escalables construidos con React, Node.js e infraestructura AWS." },
+    "featuredTitle": { "en": "Impact Solutions", "es": "Soluciones de Impacto" },
+    "featuredSubtitle": { "en": "A selection of mission-critical projects delivered for global industry leaders.", "es": "Una selección de proyectos de misión crítica entregados para líderes globales de la industria." }
   },
   "about": {
     "title": { "en": "My Profile", "es": "Mi Perfil" },
@@ -208,6 +210,12 @@
     "projectNotFound": { "en": "Project Not Found", "es": "Proyecto no Encontrado" },
     "projectNotFoundDesc": { "en": "The project you are looking for does not exist or has been removed.", "es": "El proyecto que estás buscando no existe o ha sido eliminado." },
     "noResults": { "en": "No projects match your current filters.", "es": "Ningún proyecto coincide con los filtros actuales." },
+    "clearFilters": { "en": "Clear Filters", "es": "Limpiar Filtros" },
+    "resultCount": { "en": "solutions found", "es": "soluciones encontradas" },
+    "sortBy": { "en": "Sort by", "es": "Ordenar por" },
+    "sortNewest": { "en": "Newest", "es": "Más recientes" },
+    "gridView": { "en": "Grid", "es": "Cuadrícula" },
+    "listView": { "en": "List", "es": "Lista" },
     "projectIdea": { "en": "Have a complex challenge?", "es": "¿Tienes un desafío complejo?" },
     "projectDesc": { "en": "Let's collaborate to build a custom solution that drives your business forward.", "es": "Colaboremos para construir una solución personalizada que impulse tu negocio." }
   },

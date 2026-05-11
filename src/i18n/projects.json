@@ -1,5 +1,341 @@
 [
   {
+    "id": 1,
+    "title": { "en": "DatumX - IoT Datalogger & Config Platform", "es": "Datalogger DatumX y Plataforma de Configuración" },
+    "description": {
+      "en": "Full-stack configuration ecosystem for environmental data acquisition devices, optimizing firmware updates and real-time monitoring.",
+      "es": "Ecosistema completo de configuración para dispositivos de adquisición de datos ambientales, optimizando actualizaciones de firmware y monitoreo en tiempo real."
+    },
+    "category": "web",
+    "categoryName": { "en": "web engineering", "es": "ingeniería web" },
+    "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc48?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
+    "fullDescription": {
+      "en": "Engineered a robust web platform to manage and configure industrial IoT Dataloggers (DatumX). The system handles complex serial communication protocols, firmware deployment, and provides a sleek dashboard for environmental sensor data visualization.",
+      "es": "Diseñé una plataforma web robusta para gestionar y configurar Dataloggers IoT industriales (DatumX). El sistema maneja protocolos complejos de comunicación serial, despliegue de firmware y proporciona un panel intuitivo para la visualización de datos de sensores ambientales."
+    },
+    "technologies": ["React", "Python", "Flask", "MQTT", "C++ (Firmware)", "PostgreSQL", "Docker"],
+    "challenges": {
+      "en": [
+        "Ensuring reliable serial communication with varied hardware revisions",
+        "Managing large-scale environmental data ingestion",
+        "Implementing secure over-the-air (OTA) updates"
+      ],
+      "es": [
+        "Garantizar comunicación serial confiable con diversas revisiones de hardware",
+        "Gestionar la ingesta masiva de datos ambientales",
+        "Implementar actualizaciones seguras por aire (OTA)"
+      ]
+    },
+    "solutions": {
+      "en": [
+        "Custom communication drivers for serial-to-web bridging",
+        "Scalable database architecture for high-frequency time-series data",
+        "Intuitive UI for non-technical operators to configure complex parameters"
+      ],
+      "es": [
+        "Controladores de comunicación personalizados para puente serial-a-web",
+        "Arquitectura de base de datos escalable para datos de series temporales de alta frecuencia",
+        "Interfaz de usuario intuitiva para que operadores no técnicos configuren parámetros complejos"
+      ]
+    },
+    "results": {
+      "en": [
+        "90% faster configuration cycle for new devices",
+        "Real-time monitoring of over 50 environmental variables",
+        "Successful deployment across critical industrial sites"
+      ],
+      "es": [
+        "Ciclo de configuración 90% más rápido para nuevos dispositivos",
+        "Monitoreo en tiempo real de más de 50 variables ambientales",
+        "Despliegue exitoso en sitios industriales críticos"
+      ]
+    },
+    "date": { "en": "Feb 2023 - Present", "es": "Feb 2023 - Actualidad" },
+    "client": { "en": "Xactus S.A.S", "es": "Xactus S.A.S" },
+    "role": { "en": "Lead Developer & IoT Architect", "es": "Desarrollador Líder y Arquitecto IoT" },
+    "link": "#"
+  },
+  {
+    "id": 2,
+    "title": { "en": "SmartVision - Vehicle Counting AI", "es": "Cámara Adaptable para Conteo Vehicular" },
+    "description": {
+      "en": "Advanced computer vision solution implemented for CAR Bogotá to correlate traffic patterns with air quality metrics.",
+      "es": "Solución avanzada de visión artificial implementada para la CAR Bogotá para correlacionar patrones de tráfico con métricas de calidad del aire."
+    },
+    "category": "vision",
+    "categoryName": { "en": "computer vision", "es": "visión por computadora" },
+    "image": "https://images.unsplash.com/photo-1545179605-1296651e9d43?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
+    "fullDescription": {
+      "en": "Developed a custom computer vision system deployed on Jetson Nano hardware. Using YOLO and FastMOT, the system counts vehicles and people in real-time, providing crucial data to the CAR (Corporación Autónoma Regional) for environmental impact studies.",
+      "es": "Desarrollé un sistema de visión artificial personalizado desplegado en hardware Jetson Nano. Usando YOLO y FastMOT, el sistema cuenta vehículos y personas en tiempo real, proporcionando datos cruciales a la CAR para estudios de impacto ambiental."
+    },
+    "technologies": ["Python", "YOLO", "OpenCV", "Jetson Nano", "FastMOT", "Deep Learning"],
+    "challenges": {
+      "en": [
+        "Optimizing high-accuracy models for edge computing hardware",
+        "Maintaining tracking stability in diverse weather and lighting conditions",
+        "Real-time data transmission from remote monitoring stations"
+      ],
+      "es": [
+        "Optimización de modelos de alta precisión para hardware de computación en el borde",
+        "Mantener la estabilidad del seguimiento en diversas condiciones climáticas y de iluminación",
+        "Transmisión de datos en tiempo real desde estaciones de monitoreo remotas"
+      ]
+    },
+    "solutions": {
+      "en": [
+        "TensorRT optimization for maximum FPS on Jetson Nano",
+        "Robust tracking algorithms to minimize double-counting",
+        "Automated self-healing scripts for remote deployments"
+      ],
+      "es": [
+        "Optimización TensorRT para máximos FPS en Jetson Nano",
+        "Algoritmos de seguimiento robustos para minimizar el doble conteo",
+        "Scripts de auto-recuperación automatizados para despliegues remotos"
+      ]
+    },
+    "results": {
+      "en": [
+        "98% accuracy in vehicle classification",
+        "Automated correlation between traffic density and CO2 levels",
+        "Permanent installation in strategic Bogotá corridors"
+      ],
+      "es": [
+        "98% de precisión en la clasificación de vehículos",
+        "Correlación automatizada entre densidad de tráfico y niveles de CO2",
+        "Instalación permanente en corredores estratégicos de Bogotá"
+      ]
+    },
+    "date": { "en": "Aug 2023 - Jan 2024", "es": "Ago 2023 - Ene 2024" },
+    "client": { "en": "CAR Bogotá", "es": "CAR Bogotá" },
+    "role": { "en": "AI & Computer Vision Engineer", "es": "Ingeniero de IA y Visión Artificial" },
+    "link": "#"
+  },
+  {
+    "id": 3,
+    "title": { "en": "EcoForecast - Environmental ML", "es": "Pronóstico de Variables Ambientales" },
+    "description": {
+      "en": "Predictive modeling using LSTM and Deep Learning to forecast air quality and environmental contaminants.",
+      "es": "Modelado predictivo utilizando LSTM y Deep Learning para pronosticar la calidad del aire y contaminantes ambientales."
+    },
+    "category": "ml",
+    "categoryName": { "en": "machine learning", "es": "machine learning" },
+    "image": "https://images.unsplash.com/photo-1498084393753-b411b2d26b34?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
+    "fullDescription": {
+      "en": "Implemented state-of-the-art Deep Learning models (LSTM) to predict air quality indices. The project involved processing massive historical datasets to provide government agencies with a 48-hour predictive window for environmental alerts.",
+      "es": "Implementé modelos de Deep Learning de vanguardia (LSTM) para predecir índices de calidad del aire. El proyecto involucró el procesamiento de conjuntos de datos históricos masivos para proporcionar a las agencias gubernamentales una ventana predictiva de 48 horas para alertas ambientales."
+    },
+    "technologies": ["Python", "TensorFlow/Keras", "Pandas", "LSTM", "AWS EC2", "Scikit-learn"],
+    "challenges": {
+      "en": [
+        "Handling missing or noisy data from distributed sensor networks",
+        "Optimizing model parameters for non-linear weather patterns",
+        "Deploying scalable training pipelines on AWS"
+      ],
+      "es": [
+        "Manejo de datos faltantes o ruidosos de redes de sensores distribuidas",
+        "Optimización de parámetros del modelo para patrones climáticos no lineales",
+        "Despliegue de pipelines de entrenamiento escalables en AWS"
+      ]
+    },
+    "solutions": {
+      "en": [
+        "Advanced data imputation techniques for high-fidelity training",
+        "Multi-variate LSTM architectures including wind and humidity variables",
+        "Automated model retraining via AWS SageMaker"
+      ],
+      "es": [
+        "Técnicas avanzadas de imputación de datos para entrenamiento de alta fidelidad",
+        "Arquitecturas LSTM multivariadas que incluyen variables de viento y humedad",
+        "Reentrenamiento automatizado del modelo a través de AWS SageMaker"
+      ]
+    },
+    "results": {
+      "en": [
+        "85% accuracy in 24h particulate matter prediction",
+        "Early warning system for environmental emergencies",
+        "Used as a primary decision tool for local environmental authorities"
+      ],
+      "es": [
+        "85% de precisión en la predicción de material particulado a 24h",
+        "Sistema de alerta temprana para emergencias ambientales",
+        "Utilizado como herramienta principal de decisión por las autoridades ambientales locales"
+      ]
+    },
+    "date": { "en": "Jan 2023 - Jun 2023", "es": "Ene 2023 - Jun 2023" },
+    "client": { "en": "Government Agencies / CAR", "es": "Agencias Gubernamentales / CAR" },
+    "role": { "en": "Lead Machine Learning Engineer", "es": "Ingeniero Líder de Machine Learning" },
+    "link": "#"
+  },
+  {
+    "id": 4,
+    "title": { "en": "ENEL Perú - Fraud Detection Engine", "es": "Clasificación de Fraudes Eléctricos" },
+    "description": {
+      "en": "ML-driven classification system for ENEL Perú that drastically increased energy recovery via automated fraud detection.",
+      "es": "Sistema de clasificación basado en ML para ENEL Perú que aumentó drásticamente la recuperación de energía mediante la detección automatizada de fraudes."
+    },
+    "category": "ml",
+    "categoryName": { "en": "machine learning", "es": "machine learning" },
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
+    "fullDescription": {
+      "en": "Engineered a high-performance classification model to identify non-technical losses (fraud) in the electrical grid of ENEL Perú. The system analyzes consumption patterns of thousands of users to flag high-probability fraudulent accounts for technical inspection.",
+      "es": "Diseñé un modelo de clasificación de alto rendimiento para identificar pérdidas no técnicas (fraude) en la red eléctrica de ENEL Perú. El sistema analiza los patrones de consumo de miles de usuarios para marcar cuentas fraudulentas de alta probabilidad para inspección técnica."
+    },
+    "technologies": ["Python", "XGBoost", "PostgreSQL", "Pandas", "ETL Pipelines", "Docker"],
+    "challenges": {
+      "en": [
+        "Extremely imbalanced datasets (fraud vs normal users)",
+        "Processing millions of records in limited time windows",
+        "Reducing false positives to optimize field inspection costs"
+      ],
+      "es": [
+        "Conjuntos de datos extremadamente desbalanceados (fraude vs usuarios normales)",
+        "Procesamiento de millones de registros en ventanas de tiempo limitadas",
+        "Reducción de falsos positivos para optimizar los costos de inspección en campo"
+      ]
+    },
+    "solutions": {
+      "en": [
+        "SMOTE and cost-sensitive learning for data balancing",
+        "Advanced feature engineering based on historical consumption anomalies",
+        "Seamless integration with enterprise database systems"
+      ],
+      "es": [
+        "SMOTE y aprendizaje sensible al costo para el balanceo de datos",
+        "Ingeniería de características avanzada basada en anomalías de consumo históricas",
+        "Integración fluida con sistemas de bases de datos empresariales"
+      ]
+    },
+    "results": {
+      "en": [
+        "150% increase in fraudulent account detection",
+        "Significant reduction in energy recovery time",
+        "Deployment as a core strategic tool for ENEL's loss control team"
+      ],
+      "es": [
+        "Aumento del 150% en la detección de cuentas fraudulentas",
+        "Reducción significativa en el tiempo de recuperación de energía",
+        "Despliegue como herramienta estratégica central para el equipo de control de pérdidas de ENEL"
+      ]
+    },
+    "date": { "en": "Oct 2023 - Present", "es": "Oct 2023 - Actualidad" },
+    "client": { "en": "ENEL Perú", "es": "ENEL Perú" },
+    "role": { "en": "ML Architect", "es": "Arquitecto de ML" },
+    "link": "#"
+  },
+  {
+    "id": 5,
+    "title": { "en": "AutoReport - Intelligent Automation", "es": "Automatización de Reportes Periódicos" },
+    "description": {
+      "en": "Automation ecosystem that reduced daily reporting time from 3 hours to minutes using Python and AI.",
+      "es": "Ecosistema de automatización que redujo el tiempo de reporte diario de 3 horas a minutos usando Python e IA."
+    },
+    "category": "auto",
+    "categoryName": { "en": "automation", "es": "automatización" },
+    "image": "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
+    "fullDescription": {
+      "en": "Developed a comprehensive automation suite to handle complex reporting tasks for engineering teams. The system scrapes data, performs statistical analysis, and generates professional PDF/Excel reports autonomously, eliminating manual overhead.",
+      "es": "Desarrollé una suite de automatización integral para manejar tareas de reporte complejas para equipos de ingeniería. El sistema extrae datos, realiza análisis estadísticos y genera reportes profesionales en PDF/Excel de forma autónoma, eliminando la carga manual."
+    },
+    "technologies": ["Python", "Selenium", "Pandas", "OpenPyXL", "Matplotlib", "AI Prompting"],
+    "challenges": {
+      "en": [
+        "Parsing unstructured data from various legacy platforms",
+        "Ensuring 100% data accuracy in financial and technical reports",
+        "Creating a simple interface for scheduled execution"
+      ],
+      "es": [
+        "Análisis de datos no estructurados de varias plataformas heredadas",
+        "Garantizar el 100% de precisión de los datos en informes financieros y técnicos",
+        "Creación de una interfaz sencilla para la ejecución programada"
+      ]
+    },
+    "solutions": {
+      "en": [
+        "Robust scraping logic with error handling and retry mechanisms",
+        "Automated data validation layers",
+        "Modular architecture to easily add new report types"
+      ],
+      "es": [
+        "Lógica de scraping robusta con manejo de errores y mecanismos de reintento",
+        "Capas de validación de datos automatizadas",
+        "Arquitectura modular para agregar fácilmente nuevos tipos de reportes"
+      ]
+    },
+    "results": {
+      "en": [
+        "Reduced 3 hours of manual work to 2 minutes per report",
+        "Zero error rate in technical documentation",
+        "Implemented across multiple departments for peak efficiency"
+      ],
+      "es": [
+        "Reducción de 3 horas de trabajo manual a 2 minutos por reporte",
+        "Tasa de error cero en la documentación técnica",
+        "Implementado en múltiples departamentos para una eficiencia máxima"
+      ]
+    },
+    "date": { "en": "Nov 2023 - Feb 2024", "es": "Nov 2023 - Feb 2024" },
+    "client": { "en": "Xactus / Internal", "es": "Xactus / Interno" },
+    "role": { "en": "Automation Specialist", "es": "Especialista en Automatización" },
+    "link": "#"
+  },
+  {
+    "id": 6,
+    "title": { "en": "Antamina - Strategic AI Consulting", "es": "Consultoría Personalizada en IA para Empresas" },
+    "description": {
+      "en": "High-level technical advisory for Antamina, identifying AI opportunities to add value to data infrastructure.",
+      "es": "Asesoría técnica de alto nivel para Antamina, identificando oportunidades de IA para agregar valor a la infraestructura de datos."
+    },
+    "category": "consulting",
+    "categoryName": { "en": "consulting", "es": "consultoría" },
+    "image": "https://images.unsplash.com/photo-1454165833767-131ef24893bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
+    "fullDescription": {
+      "en": "Provided strategic consulting for major mining operations like Antamina. The goal was to audit existing data architectures and design roadmaps for implementing AI-driven predictive maintenance and operational optimization.",
+      "es": "Proporcioné consultoría estratégica para importantes operaciones mineras como Antamina. El objetivo fue auditar las arquitecturas de datos existentes y diseñar hojas de ruta para implementar mantenimiento predictivo y optimización operativa impulsados por IA."
+    },
+    "technologies": ["Strategic Planning", "AI Roadmaps", "Data Architecture", "Predictive Maintenance"],
+    "challenges": {
+      "en": [
+        "Identifying high-ROI AI use cases in traditional mining environments",
+        "Bridging the gap between legacy data storage and modern AI requirements",
+        "Ensuring data privacy and enterprise security standards"
+      ],
+      "es": [
+        "Identificar casos de uso de IA con alto ROI en entornos mineros tradicionales",
+        "Cerrar la brecha entre el almacenamiento de datos heredado y los requisitos modernos de IA",
+        "Garantizar la privacidad de los datos y los estándares de seguridad empresarial"
+      ]
+    },
+    "solutions": {
+      "en": [
+        "Comprehensive data audit and quality assessment",
+        "Step-by-step implementation roadmap focused on business value",
+        "Executive workshops to align leadership on AI capabilities"
+      ],
+      "es": [
+        "Auditoría integral de datos y evaluación de calidad",
+        "Hoja de ruta de implementación paso a paso centrada en el valor de negocio",
+        "Talleres ejecutivos para alinear al liderazgo sobre las capacidades de la IA"
+      ]
+    },
+    "results": {
+      "en": [
+        "Defined 3-year AI transformation strategy",
+        "Identified immediate cost-saving opportunities in logistics",
+        "Strengthened data governance for future ML initiatives"
+      ],
+      "es": [
+        "Estrategia de transformación de IA de 3 años definida",
+        "Identificación de oportunidades inmediatas de ahorro de costos en logística",
+        "Gobernanza de datos fortalecida para futuras iniciativas de ML"
+      ]
+    },
+    "date": { "en": "Jan 2024 - Present", "es": "Ene 2024 - Actualidad" },
+    "client": { "en": "Antamina / Multinational", "es": "Antamina / Multinacional" },
+    "role": { "en": "Strategic AI Consultant", "es": "Consultor Estratégico de IA" },
+    "link": "#"
+  },
+  {
     "id": 7,
     "title": { "en": "Alliafood - WhatsApp Ecosystem", "es": "Alliafood - Ecosistema WhatsApp" },
     "description": {
@@ -306,6 +642,118 @@
     },
     "date": { "en": "May 2024", "es": "Mayo 2024" },
     "client": { "en": "Private Client", "es": "Cliente Privado" },
+    "role": { "en": "Full Stack Architect", "es": "Arquitecto Full Stack" },
+    "link": "#"
+  },
+  {
+    "id": 12,
+    "title": { "en": "Intelety - SaaS Intelligence", "es": "Intelety - Inteligencia SaaS" },
+    "description": {
+      "en": "Scalable SaaS platform for business intelligence, featuring data visualization and server-side automation.",
+      "es": "Plataforma SaaS escalable para inteligencia de negocios, con visualización de datos y automatización del lado del servidor."
+    },
+    "category": "web",
+    "categoryName": { "en": "web development", "es": "desarrollo web" },
+    "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
+    "fullDescription": {
+      "en": "Built a comprehensive business intelligence platform (Intelety) that aggregates data from multiple sources into a unified dashboard. The solution includes automated reporting engines and real-time visualization of key performance indicators.",
+      "es": "Construí una plataforma integral de inteligencia de negocios (Intelety) que agrega datos de múltiples fuentes en un panel unificado. La solución incluye motores de reporte automatizados y visualización en tiempo real de indicadores clave de desempeño."
+    },
+    "technologies": ["React", "TypeScript", "Node.js", "PostgreSQL", "Charts.js", "Redis"],
+    "challenges": {
+      "en": [
+        "Managing large datasets with high performance",
+        "Creating a flexible and intuitive dashboard builder",
+        "Real-time data synchronization"
+      ],
+      "es": [
+        "Gestión de grandes conjuntos de datos con alto rendimiento",
+        "Creación de un constructor de paneles flexible e intuitivo",
+        "Sincronización de datos en tiempo real"
+      ]
+    },
+    "solutions": {
+      "en": [
+        "Optimized database queries and indexing",
+        "Component-based UI architecture",
+        "WebSocket integration for live updates"
+      ],
+      "es": [
+        "Consultas de base de datos e indexación optimizadas",
+        "Arquitectura de UI basada en componentes",
+        "Integración de WebSockets para actualizaciones en vivo"
+      ]
+    },
+    "results": {
+      "en": [
+        "Improved data visibility for executive leadership",
+        "Reduction in time spent on manual reporting",
+        "Scalable foundation for future analytics features"
+      ],
+      "es": [
+        "Visibilidad de datos mejorada para el liderazgo ejecutivo",
+        "Reducción en el tiempo dedicado a informes manuales",
+        "Base escalable para futuras funciones de analítica"
+      ]
+    },
+    "date": { "en": "Feb 2024 - Present", "es": "Feb 2024 - Actualidad" },
+    "client": { "en": "Alliasoft Partners", "es": "Socios de Alliasoft" },
+    "role": { "en": "Full Stack Lead", "es": "Líder Full Stack" },
+    "link": "#"
+  },
+  {
+    "id": 13,
+    "title": { "en": "NickTravel - Tourism Ecosystem", "es": "NickTravel - Ecosistema de Turismo" },
+    "description": {
+      "en": "Intelligent tourism platform with automated WhatsApp booking and curated travel experiences.",
+      "es": "Plataforma de turismo inteligente con reserva automatizada por WhatsApp y experiencias de viaje curadas."
+    },
+    "category": "web",
+    "categoryName": { "en": "web development", "es": "desarrollo web" },
+    "image": "https://images.unsplash.com/photo-1503220317375-aaad61436b1b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
+    "fullDescription": {
+      "en": "Developed a boutique travel ecosystem for NickTravel. The platform simplifies the booking process for tourists using an automated WhatsApp agent, while providing a stunning web showcase for Medellín's top experiences.",
+      "es": "Desarrollé un ecosistema de viajes boutique para NickTravel. La plataforma simplifica el proceso de reserva para los turistas utilizando un agente de WhatsApp automatizado, mientras proporciona una vitrina web impresionante para las mejores experiencias de Medellín."
+    },
+    "technologies": ["React", "n8n", "WhatsApp Cloud API", "Firebase", "Tailwind CSS"],
+    "challenges": {
+      "en": [
+        "Integrating a natural flow for bookings via WhatsApp",
+        "Real-time availability management",
+        "High-quality visual presentation for mobile users"
+      ],
+      "es": [
+        "Integración de un flujo natural para reservas vía WhatsApp",
+        "Gestión de disponibilidad en tiempo real",
+        "Presentación visual de alta calidad para usuarios móviles"
+      ]
+    },
+    "solutions": {
+      "en": [
+        "Custom n8n workflows for automated chat booking",
+        "Centralized Firebase database for tour inventory",
+        "Mobile-first design with cinematic assets"
+      ],
+      "es": [
+        "Flujos de trabajo n8n personalizados para reservas de chat automatizadas",
+        "Base de datos Firebase centralizada para el inventario de tours",
+        "Diseño mobile-first con recursos cinemáticos"
+      ]
+    },
+    "results": {
+      "en": [
+        "Drastic increase in booking conversion rates",
+        "Simplified operational management for the agency",
+        "100% positive traveler feedback on the digital experience"
+      ],
+      "es": [
+        "Aumento drástico en las tasas de conversión de reservas",
+        "Gestión operativa simplificada para la agencia",
+        "100% de comentarios positivos de los viajeros sobre la experiencia digital"
+      ]
+    },
+    "date": { "en": "Dec 2023 - Mar 2024", "es": "Dic 2023 - Mar 2024" },
+    "client": { "en": "NickTravel Experience", "es": "NickTravel Experience" },
     "role": { "en": "Full Stack Architect", "es": "Arquitecto Full Stack" },
     "link": "#"
   }

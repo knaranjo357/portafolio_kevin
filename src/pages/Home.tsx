@@ -227,6 +227,60 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* Featured Projects */}
+      <section className="py-32 relative bg-white overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+            <div className="max-w-2xl">
+              <SectionTitle
+                title={t('home.featuredTitle')}
+                subtitle={t('home.featuredSubtitle')}
+              />
+            </div>
+            <Link to="/projects" className="btn btn-outline border-slate-200 text-slate-900 mb-2 group">
+              <span className="flex items-center gap-2">
+                {t('home.viewProjects')} <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {(t('projectsData', { returnObjects: true }) as any[]).slice(0, 3).map((project, index) => (
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                <Link to={`/projects/${project.id}`}>
+                  <div className="premium-card h-full bg-white flex flex-col border border-slate-50">
+                    <div className="relative h-48 overflow-hidden">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    </div>
+                    <div className="p-6">
+                      <p className="text-gold font-black text-[9px] uppercase tracking-[0.2em] mb-2">{project.categoryName}</p>
+                      <h3 className="text-xl font-black text-slate-900 mb-3 tracking-tight group-hover:text-gold transition-colors line-clamp-1">
+                        {project.title}
+                      </h3>
+                      <p className="text-slate-500 text-xs font-light leading-relaxed line-clamp-2">
+                        {project.description}
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Experience Highlights */}
       <section className="py-32 relative bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
