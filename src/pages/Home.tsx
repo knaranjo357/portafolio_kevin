@@ -10,14 +10,16 @@ import GeometricShapes from '../components/GeometricShapes';
 import ExperienceCounter from '../components/ExperienceCounter';
 import AnimatedText from '../components/AnimatedText';
 import LazyImage from '../components/LazyImage';
+import BackgroundParticles from '../components/BackgroundParticles';
 
 const Home: React.FC = () => {
   const { t } = useTranslation();
 
   return (
     <div className="mesh-gradient min-h-screen selection:bg-gold/30 selection:text-slate-900">
+      <BackgroundParticles />
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center relative overflow-hidden pt-20">
+      <section className="min-h-screen flex items-center relative overflow-hidden pt-20 pb-32">
         <GeometricShapes />
         
         {/* Animated Background Blur Elements */}
@@ -120,7 +122,7 @@ const Home: React.FC = () => {
                   initial={{ opacity: 0, x: 50, rotate: 10 }}
                   animate={{ opacity: 1, x: 0, rotate: 0 }}
                   transition={{ duration: 1, delay: 1.5 }}
-                  className="absolute -bottom-12 -right-12 glass-card p-10 rounded-[2.5rem] shadow-2xl border border-gold/20"
+                  className="absolute -bottom-10 -right-12 glass-card p-10 rounded-[2.5rem] shadow-2xl border border-gold/20"
                 >
                   <div className="flex items-center gap-8">
                     <div>

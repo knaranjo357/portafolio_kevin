@@ -8,12 +8,14 @@ import CVDownloadButton from '../components/CVDownloadButton';
 import GeometricShapes from '../components/GeometricShapes';
 import ExperienceCounter from '../components/ExperienceCounter';
 import AnimatedText from '../components/AnimatedText';
+import BackgroundParticles from '../components/BackgroundParticles';
 
 const About: React.FC = () => {
   const { t } = useTranslation();
 
   return (
     <div className="mesh-gradient min-h-screen selection:bg-gold/30 selection:text-slate-900">
+      <BackgroundParticles />
       <GeometricShapes />
       
       {/* Hero Section - Minimalist & Bold */}
