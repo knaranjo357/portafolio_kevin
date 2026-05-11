@@ -55,7 +55,7 @@ const About: React.FC = () => {
                 <div className="relative rounded-[3rem] overflow-hidden shadow-2xl h-[700px] border border-white/50 bg-white/10 backdrop-blur-sm p-2">
                   <div className="w-full h-full rounded-[2.8rem] overflow-hidden relative">
                     <img
-                      src="https://media.licdn.com/dms/image/v2/D4E03AQGz9Hn9h2qPrA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1694973929346?e=1746662400&v=beta&t=rWPTpX0hd9tBxU2lxPEeHNZk-MitLkGAcxJvBWnwCe8"
+                      src="/kevin.png"
                       alt="Kevin Naranjo"
                       className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
                     />

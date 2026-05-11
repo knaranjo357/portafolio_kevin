@@ -15,7 +15,7 @@ const SEOHelmet: React.FC<SEOHelmetProps> = ({
   title,
   description,
   keywords,
-  image = 'https://media.licdn.com/dms/image/v2/D4E03AQGz9Hn9h2qPrA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1694973929346?e=1746662400&v=beta&t=rWPTpX0hd9tBxU2lxPEeHNZk-MitLkGAcxJvBWnwCe8',
+  image = 'https://kevinnaranjo.com/kevin.png',
   type = 'website'
 }) => {
   const { t, i18n } = useTranslation();

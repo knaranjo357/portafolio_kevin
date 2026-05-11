@@ -109,7 +109,7 @@ const Home: React.FC = () => {
                 <div className="relative w-full h-[750px] rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/50 bg-white/10 backdrop-blur-sm p-2">
                   <div className="w-full h-full rounded-[2.3rem] overflow-hidden relative">
                     <LazyImage
-                      src="https://media.licdn.com/dms/image/v2/D4E03AQGz9Hn9h2qPrA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1694973929346?e=1746662400&v=beta&t=rWPTpX0hd9tBxU2lxPEeHNZk-MitLkGAcxJvBWnwCe8"
+                      src="/kevin.png"
                       alt="Kevin Alejandro Naranjo Reyes"
                       className="grayscale group-hover:grayscale-0 transition-all duration-1000 ease-out"
                     />
