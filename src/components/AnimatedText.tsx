@@ -5,32 +5,31 @@ interface AnimatedTextProps {
   text: string;
   className?: string;
   once?: boolean;
+  delay?: number;
 }
 
-const AnimatedText: React.FC<AnimatedTextProps> = ({
-  text,
-  className = '',
+const AnimatedText: React.FC<AnimatedTextProps> = ({ 
+  text, 
+  className = "", 
   once = true,
+  delay = 0 
 }) => {
-  // Split text into words
-  const words = text.split(' ');
+  const words = text.split(" ");
 
-  // Variants for container of words
   const container = {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
       opacity: 1,
-      transition: { staggerChildren: 0.12, delayChildren: 0.04 * i },
+      transition: { staggerChildren: 0.12, delayChildren: 0.04 * i + delay },
     }),
   };
 
-  // Variants for each word
   const child = {
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        type: 'spring',
+        type: "spring",
         damping: 12,
         stiffness: 100,
       },
@@ -39,7 +38,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
       opacity: 0,
       y: 20,
       transition: {
-        type: 'spring',
+        type: "spring",
         damping: 12,
         stiffness: 100,
       },
@@ -48,17 +47,18 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
 
   return (
     <motion.div
-      className={`overflow-hidden ${className}`}
+      style={{ overflow: "hidden", display: "flex", flexWrap: "wrap" }}
       variants={container}
       initial="hidden"
       whileInView="visible"
       viewport={{ once }}
+      className={className}
     >
       {words.map((word, index) => (
         <motion.span
-          key={index}
-          className="inline-block mr-1"
           variants={child}
+          style={{ marginRight: "0.25em" }}
+          key={index}
         >
           {word}
         </motion.span>

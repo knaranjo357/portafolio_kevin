@@ -12,6 +12,8 @@
   --slate-dark: #1e293b;
   --slate-light: #64748b;
   --silver: #94a3b8;
+  --gold: #d4af37;
+  --gold-light: #f7e08b;
 }
 
 @font-face {
@@ -101,6 +103,23 @@
     @apply bg-white outline-none;
     border-color: #d4af37;
     @apply shadow-[0_10px_30px_-10px_rgba(212,175,55,0.1)];
+  }
+
+  .glass-card {
+    @apply bg-white/40 backdrop-blur-xl border border-white/20 shadow-xl;
+  }
+
+  .glass-card-dark {
+    @apply bg-slate-900/40 backdrop-blur-xl border border-white/10 shadow-2xl;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 15px currentColor;
+  }
+
+  .border-glow-gold {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+    border-color: rgba(212, 175, 55, 0.3);
   }
 
   /* Custom Glow Effect */
