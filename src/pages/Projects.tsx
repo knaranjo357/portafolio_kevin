@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { Search, ArrowRight, X, LayoutGrid, List, Building2, Calendar } from 'lucide-react';
 import GeometricShapes from '../components/GeometricShapes';
 import BackgroundParticles from '../components/BackgroundParticles';
+import LazyImage from '../components/LazyImage';
 
 const Projects: React.FC = () => {
   const { t } = useTranslation();
@@ -231,10 +232,10 @@ const Projects: React.FC = () => {
                     <Link to={`/projects/${project.id}`}>
                       <div className="premium-card h-full bg-white flex flex-col">
                         <div className="relative h-56 overflow-hidden">
-                          <img
+                          <LazyImage
                             src={project.image}
                             alt={project.title}
-                            className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000"
+                            className="grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                           {/* Project number */}
@@ -317,10 +318,10 @@ const Projects: React.FC = () => {
                       <div className="bg-white border border-slate-100 rounded-2xl p-6 flex gap-6 items-start hover:border-gold/20 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
                         {/* Thumbnail */}
                         <div className="w-24 h-24 rounded-xl overflow-hidden shrink-0">
-                          <img
+                          <LazyImage
                             src={project.image}
                             alt={project.title}
-                            className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                            className="grayscale group-hover:grayscale-0 transition-all duration-700"
                           />
                         </div>
 

@@ -9,6 +9,7 @@ import CVDownloadButton from '../components/CVDownloadButton';
 import GeometricShapes from '../components/GeometricShapes';
 import ExperienceCounter from '../components/ExperienceCounter';
 import AnimatedText from '../components/AnimatedText';
+import LazyImage from '../components/LazyImage';
 
 const Home: React.FC = () => {
   const { t } = useTranslation();
@@ -105,10 +106,10 @@ const Home: React.FC = () => {
                 <div className="absolute -inset-4 bg-gradient-to-r from-gold via-gold-light to-gold rounded-[3rem] opacity-20 blur-2xl group-hover:opacity-40 transition-opacity duration-1000 animate-pulse"></div>
                 <div className="relative w-full h-[750px] rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/50 bg-white/10 backdrop-blur-sm p-2">
                   <div className="w-full h-full rounded-[2.3rem] overflow-hidden relative">
-                    <img
+                    <LazyImage
                       src="https://media.licdn.com/dms/image/v2/D4E03AQGz9Hn9h2qPrA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1694973929346?e=1746662400&v=beta&t=rWPTpX0hd9tBxU2lxPEeHNZk-MitLkGAcxJvBWnwCe8"
                       alt="Kevin Alejandro Naranjo Reyes"
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000 ease-out"
+                      className="grayscale group-hover:grayscale-0 transition-all duration-1000 ease-out"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-40 group-hover:opacity-20 transition-opacity duration-700"></div>
                   </div>
@@ -288,10 +289,10 @@ const Home: React.FC = () => {
                 <Link to={`/projects/${project.id}`}>
                   <div className="premium-card h-full bg-white flex flex-col border border-slate-100/50 hover:shadow-2xl hover:shadow-gold/10 group">
                     <div className="relative h-72 overflow-hidden">
-                      <img
+                      <LazyImage
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000 ease-out"
+                        className="grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000 ease-out"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                       <div className="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-700">

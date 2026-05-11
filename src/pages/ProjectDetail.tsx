@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import BackgroundParticles from '../components/BackgroundParticles';
+import LazyImage from '../components/LazyImage';
 
 interface ProjectData {
   id: number;
@@ -106,7 +107,7 @@ const ProjectDetail: React.FC = () => {
           transition={{ duration: 2.5, ease: [0.22, 1, 0.36, 1] }}
           className="absolute inset-0"
         >
-          <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+          <LazyImage src={project.image} alt={project.title} className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-white via-white/50 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-r from-white/30 to-transparent" />
         </motion.div>
@@ -399,7 +400,7 @@ const ProjectDetail: React.FC = () => {
             <Link to={`/projects/${prevProject.id}`} className="group">
               <div className="flex items-center gap-5 p-6 bg-white border border-slate-100 rounded-2xl hover:border-gold/20 hover:shadow-lg transition-all duration-300">
                 <div className="shrink-0 w-14 h-14 rounded-xl overflow-hidden">
-                  <img src={prevProject.image} alt={prevProject.title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                  <LazyImage src={prevProject.image} alt={prevProject.title} className="grayscale group-hover:grayscale-0 transition-all duration-500" />
                 </div>
                 <div className="min-w-0">
                   <p className="text-[9px] font-black uppercase tracking-widest text-slate-400 mb-0.5 flex items-center gap-1">
@@ -421,7 +422,7 @@ const ProjectDetail: React.FC = () => {
                   <p className="text-sm font-black text-slate-900 group-hover:text-gold transition-colors truncate">{nextProject.title}</p>
                 </div>
                 <div className="shrink-0 w-14 h-14 rounded-xl overflow-hidden">
-                  <img src={nextProject.image} alt={nextProject.title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                  <LazyImage src={nextProject.image} alt={nextProject.title} className="grayscale group-hover:grayscale-0 transition-all duration-500" />
                 </div>
               </div>
             </Link>
@@ -454,7 +455,7 @@ const ProjectDetail: React.FC = () => {
                   <Link to={`/projects/${rel.id}`}>
                     <div className="bg-white border border-slate-100 rounded-2xl overflow-hidden hover:border-gold/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                       <div className="h-36 overflow-hidden">
-                        <img src={rel.image} alt={rel.title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+                        <LazyImage src={rel.image} alt={rel.title} className="grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
                       </div>
                       <div className="p-5">
                         <p className="text-gold text-[9px] font-black uppercase tracking-wider mb-1">{rel.categoryName}</p>
