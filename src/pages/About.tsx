@@ -24,7 +24,7 @@ const About: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           >
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-8 text-slate-900 tracking-tighter leading-none">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-8 text-slate-900 tracking-tighter leading-none">
               <AnimatedText text={t('about.architect').split(' ').slice(0, 3).join(' ')} className="block" />
               <span className="text-gold italic text-glow-gold drop-shadow-2xl">
                 {t('about.architect').split(' ').slice(3).join(' ')}
@@ -69,7 +69,7 @@ const About: React.FC = () => {
                   viewport={{ once: true }}
                   className="absolute -bottom-12 -right-12 glass-card p-12 rounded-[2.5rem] shadow-2xl border border-gold/20"
                 >
-                  <ExperienceCounter className="text-6xl font-black text-gold mb-1" />
+                  <ExperienceCounter className="text-4xl font-black text-gold mb-1" />
                   <p className="text-slate-400 text-[10px] font-black uppercase tracking-[0.3em]">{t('about.experience')}</p>
                 </motion.div>
               </div>
@@ -120,7 +120,7 @@ const About: React.FC = () => {
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-32">
-            <h2 className="text-5xl md:text-7xl font-black text-white tracking-tighter uppercase mb-8">
+            <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter uppercase mb-8">
               {t('about.career').split(' ').map((word, i) => (
                 <span key={i} className={i === 1 ? 'text-gold' : ''}>{word} </span>
               ))}
@@ -217,7 +217,7 @@ const About: React.FC = () => {
             transition={{ duration: 1 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl md:text-8xl font-black mb-12 text-white tracking-tighter uppercase leading-none">
+            <h2 className="text-4xl md:text-6xl font-black mb-12 text-white tracking-tighter uppercase leading-none">
               {t('projects.projectIdea').split('?')[0]}<span className="text-gold">?</span>
             </h2>
             <Link

@@ -21,7 +21,7 @@ const SectionTitle: React.FC<SectionTitleProps> = ({
         viewport={{ once: true }}
         className="inline-block relative"
       >
-        <h2 className="text-5xl md:text-7xl font-black mb-8 text-slate-900 tracking-tighter uppercase leading-[0.9]">
+        <h2 className="text-4xl md:text-6xl font-black mb-8 text-slate-900 tracking-tighter uppercase leading-[0.9]">
           {title}
         </h2>
         <motion.div 

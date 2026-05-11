@@ -140,7 +140,7 @@ const Skills: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           >
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-8 text-slate-900 tracking-tighter leading-none">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-8 text-slate-900 tracking-tighter leading-none">
               <AnimatedText text={t('skills.expertToolset').split(' ').slice(0, 1).join(' ')} className="inline-block" />
               <span className="text-gold italic text-glow-gold drop-shadow-2xl">
                 {t('skills.expertToolset').split(' ').slice(1).join(' ')}
@@ -166,7 +166,7 @@ const Skills: React.FC = () => {
             >
               <div className="flex flex-col">
                 <span className="text-gold font-black text-2xl mb-2 tracking-widest">0{categoryIndex + 1}.</span>
-                <h2 className="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter uppercase leading-none">
+                <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter uppercase leading-none">
                   {category.title}
                 </h2>
                 <div className="h-2 w-full bg-gradient-to-r from-gold via-gold-light to-transparent mt-6 rounded-full opacity-60"></div>
@@ -201,7 +201,7 @@ const Skills: React.FC = () => {
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-24">
-            <h2 className="text-5xl md:text-7xl font-black text-white tracking-tighter uppercase mb-6">
+            <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter uppercase mb-6">
               {t('skills.technologies').split(' ').map((word, i) => (
                 <span key={i} className={i === 1 ? 'text-gold' : ''}>{word} </span>
               ))}
@@ -302,7 +302,7 @@ const Skills: React.FC = () => {
             transition={{ duration: 1 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl md:text-8xl font-black mb-12 text-white tracking-tighter uppercase leading-none">
+            <h2 className="text-4xl md:text-6xl font-black mb-12 text-white tracking-tighter uppercase leading-none">
               {t('home.readyToBuild').split('?')[0]}<span className="text-gold">?</span>
             </h2>
             <div className="flex flex-wrap justify-center gap-8">

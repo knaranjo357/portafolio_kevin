@@ -60,7 +60,7 @@ const Home: React.FC = () => {
                 {t('home.role')}
               </motion.div>
               
-              <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-8 leading-[0.9] tracking-tighter text-slate-900">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-8 leading-[0.9] tracking-tighter text-slate-900">
                 <AnimatedText text={t('home.title').split('|')[0].trim()} className="block" />
                 <span className="block text-gold text-glow-gold italic mt-2 drop-shadow-2xl">
                   {t('home.title').split('|')[1].trim()}
@@ -124,12 +124,12 @@ const Home: React.FC = () => {
                 >
                   <div className="flex items-center gap-8">
                     <div>
-                      <ExperienceCounter className="text-6xl font-black text-gold mb-1" />
+                      <ExperienceCounter className="text-4xl font-black text-gold mb-1" />
                       <p className="text-slate-400 text-[10px] font-black uppercase tracking-[0.3em]">{t('about.experience')}</p>
                     </div>
                     <div className="w-px h-16 bg-slate-100/50"></div>
                     <div>
-                      <p className="text-3xl font-black text-slate-900 mb-1">100+</p>
+                      <p className="text-2xl font-black text-slate-900 mb-1">100+</p>
                       <p className="text-slate-400 text-[10px] font-black uppercase tracking-[0.3em]">{t('home.projectsDelivered')}</p>
                     </div>
                   </div>
@@ -334,7 +334,7 @@ const Home: React.FC = () => {
               transition={{ duration: 1 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-5xl md:text-7xl font-black text-white tracking-tighter mb-10 leading-[0.95]">
+              <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter mb-10 leading-[0.95]">
                 {t('home.readyToWork').split('?')[0]}<span className="text-gold">?</span>
               </h2>
               <p className="text-slate-400 text-xl md:text-2xl mb-12 font-light leading-relaxed max-w-xl text-justify">

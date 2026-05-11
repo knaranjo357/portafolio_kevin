@@ -151,15 +151,15 @@ const ProjectDetail: React.FC = () => {
                 )}
               </div>
 
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-slate-900 tracking-tighter leading-none max-w-4xl drop-shadow-sm">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tighter leading-none max-w-4xl drop-shadow-sm">
                 {project.title}
               </h1>
             </motion.div>
           </div>
         </div>
 
-        {/* Prev / Next quick nav */}
-        <div className="absolute top-1/2 -translate-y-1/2 left-4 right-4 flex justify-between z-20 pointer-events-none">
+        {/* Prev / Next fixed nav */}
+        <div className="fixed top-1/2 -translate-y-1/2 left-4 right-4 flex justify-between z-[100] pointer-events-none">
           <AnimatePresence>
             {prevProject && (
               <motion.button
@@ -301,11 +301,11 @@ const ProjectDetail: React.FC = () => {
                     <motion.div
                       key={i}
                       whileHover={{ scale: 1.03, y: -4 }}
-                      className="p-5 bg-white/5 border border-white/10 rounded-2xl hover:border-gold/30 hover:bg-white/8 transition-all duration-300"
+                      className="p-5 bg-white/5 border border-white/10 rounded-2xl hover:border-gold/30 hover:bg-gold/10 transition-all duration-300 group/result"
                     >
                       <div className="flex items-start gap-3">
                         <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
-                        <p className="text-white/85 text-sm font-light leading-relaxed">{result}</p>
+                        <p className="text-white/85 text-sm font-light leading-relaxed group-hover/result:text-white group-hover/result:font-medium">{result}</p>
                       </div>
                     </motion.div>
                   ))}
@@ -477,7 +477,7 @@ const ProjectDetail: React.FC = () => {
           viewport={{ once: true }}
           className="mt-24 text-center"
         >
-          <h2 className="text-5xl md:text-7xl font-black mb-10 text-slate-900 tracking-tighter leading-none">
+          <h2 className="text-4xl md:text-6xl font-black mb-10 text-slate-900 tracking-tighter leading-none">
             {t('projects.buildEpic').split(' ').map((word, i) => (
               <span key={i} className={word.toLowerCase().includes('epic') || word.toLowerCase().includes('épi') ? 'text-gold italic' : ''}>
                 {word}{' '}

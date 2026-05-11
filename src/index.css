@@ -95,6 +95,10 @@
     background: linear-gradient(to bottom right, #ffffff, #fafafa);
   }
 
+  .premium-card.bg-slate-900:hover {
+    background: #0f172a;
+  }
+
   .premium-input {
     @apply bg-slate-50/50 border-b-2 border-slate-100 text-slate-900 transition-all duration-500 py-4 px-2;
   }

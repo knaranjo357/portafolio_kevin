@@ -37,7 +37,7 @@ const Contact: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           >
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-8 text-slate-900 tracking-tighter leading-none">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-8 text-slate-900 tracking-tighter leading-none">
               <AnimatedText text={t('contact.startConversation').split(' ').slice(0, 2).join(' ')} className="inline-block" />
               <span className="text-gold italic text-glow-gold drop-shadow-2xl">
                 {t('contact.startConversation').split(' ').slice(2).join(' ')}

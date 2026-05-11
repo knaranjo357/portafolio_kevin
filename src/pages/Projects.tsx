@@ -65,7 +65,7 @@ const Projects: React.FC = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
           >
-            <h1 className="text-5xl md:text-7xl font-black mb-6 text-slate-900 tracking-tighter">
+            <h1 className="text-4xl md:text-6xl font-black mb-6 text-slate-900 tracking-tighter">
               {t('projects.featuredSolutions').split(' ').map((word, i) => (
                 <span key={i} className={word.toLowerCase().includes('solu') || word.toLowerCase().includes('desta') ? 'text-gold italic' : ''}>
                   {word}{' '}
@@ -374,7 +374,7 @@ const Projects: React.FC = () => {
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-gold/5 blur-[80px] rounded-full translate-x-1/2 -translate-y-1/2" />
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-blue-50/50 blur-[60px] rounded-full -translate-x-1/2 translate-y-1/2" />
-            <h2 className="text-4xl md:text-6xl font-black mb-8 text-slate-900 tracking-tighter relative z-10">
+            <h2 className="text-3xl md:text-5xl font-black mb-8 text-slate-900 tracking-tighter relative z-10">
               {t('projects.projectIdea')}
             </h2>
             <p className="text-slate-500 text-lg max-w-2xl mx-auto mb-10 font-light relative z-10">
