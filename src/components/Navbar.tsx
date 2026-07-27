@@ -44,8 +44,8 @@ const Navbar: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-white/80 backdrop-blur-2xl border-b border-slate-100 py-3 shadow-sm'
-          : 'bg-transparent py-6'
+          ? 'bg-white/95 backdrop-blur-2xl border-b border-slate-100 py-3 shadow-sm'
+          : 'bg-white/90 backdrop-blur-xl border-b border-slate-100/80 py-4'
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -62,9 +62,8 @@ const Navbar: React.FC = () => {
               transition={{ duration: 0.6 }}
               className="flex items-center gap-3"
             >
-              <div className="relative">
-                <img src="/logo.png" alt="KN Logo" className="h-10 w-10 object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-gold/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="relative flex h-12 w-16 items-center justify-center">
+                <img src="/logo-kn.png" alt="Monograma KN" width="64" height="48" decoding="async" className="h-12 w-16 object-contain transition-transform duration-300 group-hover:scale-105" />
               </div>
               <span className="text-slate-900 text-2xl font-black tracking-tighter hidden lg:block">
                 KEVIN<span className="text-gold">NARANJO</span>
@@ -106,12 +105,12 @@ const Navbar: React.FC = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <a
-                  href="https://wa.me/573175816061"
+                  href="https://www.linkedin.com/in/kevin-alejandro-naranjo-reyes-2573351a2/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-slate-50 backdrop-blur-3xl border border-slate-100 text-slate-900 px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-widest hover:bg-gold hover:text-white hover:border-gold transition-all duration-500 shadow-sm"
                 >
-                  {t('home.whatsapp')}
+                  LinkedIn
                 </a>
               </motion.div>
             </motion.div>
@@ -175,13 +174,13 @@ const Navbar: React.FC = () => {
                   }}
                 >
                   <a
-                    href="https://wa.me/573175816061"
+                    href="https://www.linkedin.com/in/kevin-alejandro-naranjo-reyes-2573351a2/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block py-5 px-6 bg-slate-50 border border-slate-100 text-slate-900 rounded-2xl text-center font-black uppercase tracking-widest hover:bg-gold hover:text-white hover:border-gold transition-all duration-500 shadow-sm"
                     aria-label="WhatsApp"
                   >
-                    {t('home.whatsapp')}
+                    LinkedIn
                   </a>
                 </motion.li>
               </ul>

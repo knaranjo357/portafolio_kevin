@@ -174,7 +174,7 @@ const ContactForm: React.FC = () => {
               whileTap={{ scale: 0.98 }}
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-slate-900 text-white py-7 rounded-[1.5rem] font-black uppercase tracking-[0.3em] text-xs flex items-center justify-center gap-4 hover:bg-gold transition-all duration-700 shadow-2xl hover:shadow-gold/30 disabled:opacity-50"
+              className="w-full bg-slate-900 text-white py-7 rounded-[1.5rem] font-black uppercase tracking-[0.3em] text-xs flex items-center justify-center gap-4 hover:bg-gold transition-all duration-300 shadow-2xl hover:shadow-gold/30 disabled:opacity-50"
             >
               {isSubmitting ? (
                 <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>

@@ -51,13 +51,13 @@ const About: React.FC = () => {
               className="relative order-2 lg:order-1"
             >
               <div className="relative group">
-                <div className="absolute -inset-6 bg-gradient-to-tr from-gold/30 via-gold-light/10 to-transparent rounded-[3.5rem] blur-3xl opacity-50 group-hover:opacity-80 transition-opacity duration-1000"></div>
+                <div className="absolute -inset-6 bg-gradient-to-tr from-gold/30 via-gold-light/10 to-transparent rounded-[3.5rem] blur-3xl opacity-50 group-hover:opacity-80 transition-opacity duration-500"></div>
                 <div className="relative rounded-[3rem] overflow-hidden shadow-2xl h-[700px] border border-white/50 bg-white/10 backdrop-blur-sm p-2">
                   <div className="w-full h-full rounded-[2.8rem] overflow-hidden relative">
                     <img
-                      src="/kevin.png"
+                      src="/kevin.webp"
                       alt="Kevin Naranjo"
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
+                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-transparent opacity-60"></div>
                   </div>
@@ -151,7 +151,7 @@ const About: React.FC = () => {
                   className={`flex flex-col lg:flex-row items-center gap-12 ${i % 2 === 0 ? 'lg:flex-row-reverse' : ''}`}
                 >
                   <div className="lg:w-1/2 flex justify-center">
-                    <div className="glass-card-dark p-12 w-full hover:border-gold/40 transition-all duration-700 group">
+                    <div className="glass-card-dark p-12 w-full hover:border-gold/40 transition-all duration-300 group">
                       <p className="text-gold font-black text-xs uppercase tracking-[0.3em] mb-6 block lg:hidden">{job.date}</p>
                       <h3 className="text-3xl font-black text-white mb-6 tracking-tight group-hover:text-gold transition-colors">{job.title}</h3>
                       <p className="text-slate-400 font-light leading-relaxed text-justify">{job.desc}</p>
@@ -195,7 +195,7 @@ const About: React.FC = () => {
               >
                 <div className="absolute -right-16 -top-16 w-32 h-32 bg-gold/5 rounded-full blur-3xl group-hover:bg-gold/10 transition-colors"></div>
                 
-                <div className="w-24 h-24 bg-slate-50 border border-slate-100 rounded-[2rem] flex items-center justify-center mx-auto mb-10 group-hover:scale-110 group-hover:rotate-6 transition-all duration-700 shadow-sm group-hover:shadow-gold/20 group-hover:shadow-xl">
+                <div className="w-24 h-24 bg-slate-50 border border-slate-100 rounded-[2rem] flex items-center justify-center mx-auto mb-10 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-sm group-hover:shadow-gold/20 group-hover:shadow-xl">
                   <div className="text-gold">{box.icon}</div>
                 </div>
                 <h3 className="text-3xl font-black mb-6 text-slate-900 tracking-tight uppercase group-hover:text-gold transition-colors">{box.title}</h3>

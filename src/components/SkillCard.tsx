@@ -39,7 +39,7 @@ const SkillCard: React.FC<SkillCardProps> = ({
         <p className="text-slate-500 leading-relaxed font-light text-justify">{description}</p>
         
         {/* Decorative accent */}
-        <div className="mt-8 h-1 w-12 bg-gradient-to-r from-gold to-transparent rounded-full opacity-30 group-hover:w-full transition-all duration-700"></div>
+        <div className="mt-8 h-1 w-12 bg-gradient-to-r from-gold to-transparent rounded-full opacity-30 group-hover:w-full transition-all duration-300"></div>
       </div>
     </motion.div>
   );

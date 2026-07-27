@@ -1,287 +1,906 @@
 {
   "meta": {
     "keywords": {
-      "en": "Kevin Naranjo, Software Development, Artificial Intelligence, Machine Learning, Computer Vision, React Developer, Full Stack Developer, AI Expert, Colombia Developer, Mechatronics Engineer, Software Engineer, Tech Lead, Development Leader, Web Development, Python Developer, JavaScript Developer, TypeScript, Node.js, React.js, Computer Vision Expert, Machine Learning Engineer",
-      "es": "Kevin Naranjo, Desarrollo de Software, Inteligencia Artificial, Machine Learning, Visión por Computadora, Desarrollador React, Desarrollador Full Stack, Experto en IA, Desarrollador Colombia, Ingeniero Mecatrónico, Ingeniero de Software, Líder Técnico, Líder de Desarrollo, Desarrollo Web, Desarrollador Python, Desarrollador JavaScript, TypeScript, Node.js, React.js, Experto en Visión por Computadora, Ingeniero de Machine Learning"
+      "en": "Kevin Naranjo, Senior Software Engineer, Full-Stack Engineer, Applied AI, AI Automation, Solutions Engineering, React, TypeScript, Python, FastAPI, PostgreSQL, AWS, Docker, n8n, Colombia",
+      "es": "Kevin Naranjo, Ingeniero de Software Senior, Ingeniero Full Stack, IA aplicada, Automatización con IA, Ingeniería de Soluciones, React, TypeScript, Python, FastAPI, PostgreSQL, AWS, Docker, n8n, Colombia"
     }
   },
   "nav": {
-    "home": { "en": "Home", "es": "Inicio" },
-    "about": { "en": "About me", "es": "Sobre mí" },
-    "skills": { "en": "Skills", "es": "Habilidades" },
-    "projects": { "en": "Projects", "es": "Proyectos" },
-    "contact": { "en": "Contact", "es": "Contacto" }
+    "home": {
+      "en": "Home",
+      "es": "Inicio"
+    },
+    "about": {
+      "en": "Profile",
+      "es": "Perfil"
+    },
+    "skills": {
+      "en": "Capabilities",
+      "es": "Capacidades"
+    },
+    "projects": {
+      "en": "Case studies",
+      "es": "Casos de estudio"
+    },
+    "contact": {
+      "en": "Contact",
+      "es": "Contacto"
+    }
   },
   "home": {
-    "title": { "en": "Kevin Naranjo | Software Architect & AI Expert", "es": "Kevin Naranjo | Arquitecto de Software y Experto en IA" },
-    "subtitle": { "en": "Mechatronics Engineer and Technical Visionary", "es": "Ingeniero Mecatrónico y Visionario Técnico" },
-    "description": { 
-      "en": "I build high-performance digital ecosystems that bridge the gap between complex logic and human-centric design. Over 100+ projects delivered with an obsessive focus on speed, scalability, and disruptive innovation.",
-      "es": "Construyo ecosistemas digitales de alto rendimiento que unen la lógica compleja con un diseño centrado en el usuario. Más de 100 proyectos entregados con un enfoque obsesivo en la velocidad, escalabilidad e innovación disruptiva."
+    "title": {
+      "en": "Senior Full-Stack Engineer | Applied AI & Automation",
+      "es": "Ingeniero de Software Senior | IA y Automatización"
     },
-    "contactMe": { "en": "Start a Project", "es": "Iniciar un Proyecto" },
-    "viewProjects": { "en": "Explore Work", "es": "Explorar Trabajo" },
-    "downloadCV": { "en": "Download CV", "es": "Descargar CV" },
-    "aboutTitle": { "en": "About Me", "es": "Sobre Mí" },
+    "subtitle": {
+      "en": "Full Stack · Applied AI · Cloud · Automation",
+      "es": "Full Stack · IA aplicada · Cloud · Automatización"
+    },
+    "description": {
+      "en": "I turn business challenges into production-ready digital products: clear architectures, reliable software, measurable automation, and applied AI.",
+      "es": "Convierto retos de negocio en productos digitales listos para producción: arquitecturas claras, software confiable, automatizaciones medibles e IA aplicada."
+    },
+    "contactMe": {
+      "en": "Contact me",
+      "es": "Contactarme"
+    },
+    "viewProjects": {
+      "en": "View case studies",
+      "es": "Ver casos de estudio"
+    },
+    "downloadCV": {
+      "en": "Download CV",
+      "es": "Descargar CV"
+    },
+    "aboutTitle": {
+      "en": "Professional profile",
+      "es": "Perfil profesional"
+    },
     "aboutDescription1": {
-      "en": "Technological challenges are my fuel. My journey has taught me that code isn't just about syntax; it's about transforming lives and businesses through elegant, automated solutions. I don't just solve problems—I architect futures.",
-      "es": "Los desafíos tecnológicos son mi combustible. Mi trayectoria me ha enseñado que el código no se trata solo de sintaxis; se trata de transformar vidas y negocios mediante soluciones elegantes y automatizadas. No solo resuelvo problemas—arquitecturo futuros."
+      "en": "For more than five years, I have built software, automation, and applied AI solutions across energy, environmental, restaurant, and service operations.",
+      "es": "Durante más de cinco años he construido soluciones de software, automatización e IA aplicada para operaciones de los sectores energético, ambiental, gastronómico y de servicios."
     },
     "aboutDescription2": {
-      "en": "Beyond the terminal, I find precision in the gym and inspiration in global exploration. I believe that a peak physical state drives peak mental performance, allowing me to deliver exceptional results in every line of code.",
-      "es": "Más allá de la terminal, encuentro precisión en el gimnasio e inspiración en la exploración global. Creo que un estado físico máximo impulsa un rendimiento mental máximo, permitiéndome entregar resultados excepcionales en cada línea de código."
+      "en": "I work across the full product lifecycle—from discovery and architecture to implementation, deployment, production support, and continuous improvement.",
+      "es": "Trabajo en todo el ciclo de producto: descubrimiento, arquitectura, implementación, despliegue, soporte en producción y mejora continua."
     },
-    "learnMore": { "en": "My Story", "es": "Mi Historia" },
-    "skillsTitle": { "en": "Core Arsenal", "es": "Arsenal Principal" },
-    "skillsSubtitle": { 
-      "en": "A specialized stack designed for extreme productivity and architectural excellence.",
-      "es": "Un stack especializado diseñado para la productividad extrema y la excelencia arquitectónica."
+    "learnMore": {
+      "en": "View my profile",
+      "es": "Ver mi perfil"
     },
-    "softwareDev": { "en": "Software Engineering", "es": "Ingeniería de Software" },
+    "skillsTitle": {
+      "en": "Technical capabilities",
+      "es": "Capacidades técnicas"
+    },
+    "skillsSubtitle": {
+      "en": "The engineering capabilities I use to build products that are reliable, integrable, and ready to grow.",
+      "es": "Las capacidades de ingeniería que utilizo para construir productos confiables, integrables y preparados para crecer."
+    },
+    "softwareDev": {
+      "en": "Software Engineering",
+      "es": "Ingeniería de Software"
+    },
     "softwareDesc": {
-      "en": "Architecting robust, scalable applications using modern paradigms and high-performance technologies.",
-      "es": "Arquitectura de aplicaciones robustas y escalables utilizando paradigmas modernos y tecnologías de alto rendimiento."
+      "en": "End-to-end product engineering with maintainable architectures, tested APIs, and production-focused delivery.",
+      "es": "Ingeniería de producto de punta a punta con arquitecturas mantenibles, APIs probadas y entregas orientadas a producción."
     },
-    "machineLearning": { "en": "Machine Learning", "es": "Machine Learning" },
+    "machineLearning": {
+      "en": "Machine Learning",
+      "es": "Machine Learning"
+    },
     "mlDesc": {
-      "en": "Transforming raw data into predictive intelligence and optimized business workflows.",
-      "es": "Transformando datos brutos en inteligencia predictiva y flujos de trabajo empresariales optimizados."
+      "en": "Models and AI workflows applied where they improve decisions, reduce manual work, or unlock new product capabilities.",
+      "es": "Modelos y flujos de IA aplicados donde mejoran decisiones, reducen trabajo manual o habilitan nuevas capacidades de producto."
     },
-    "computerVision": { "en": "Computer Vision", "es": "Visión por Computadora" },
+    "computerVision": {
+      "en": "Computer Vision",
+      "es": "Visión por Computadora"
+    },
     "cvDesc": {
-      "en": "Implementing advanced visual recognition systems that automate human perception.",
-      "es": "Implementación de sistemas de reconocimiento visual avanzados que automatizan la percepción humana."
+      "en": "Computer vision systems for detection, tracking, classification, and operational analysis.",
+      "es": "Sistemas de visión por computadora para detección, seguimiento, clasificación y análisis operativo."
     },
-    "webDev": { "en": "Premium Web Platforms", "es": "Plataformas Web Premium" },
+    "webDev": {
+      "en": "Digital Products",
+      "es": "Productos Digitales"
+    },
     "webDevDesc": {
-      "en": "Crafting cinematic web experiences focused on seamless performance and user engagement.",
-      "es": "Creación de experiencias web cinematográficas enfocadas en un rendimiento fluido y compromiso del usuario."
+      "en": "Accessible, responsive web platforms designed around real users, clear workflows, and dependable performance.",
+      "es": "Plataformas web accesibles y responsive, diseñadas para usuarios reales, flujos claros y rendimiento confiable."
     },
-    "exploreSkills": { "en": "Full Tech Stack", "es": "Stack Tecnológico Completo" },
-    "readyToWork": { "en": "Ready to build the impossible?", "es": "¿Listo para construir lo imposible?" },
+    "exploreSkills": {
+      "en": "View capabilities",
+      "es": "Ver capacidades"
+    },
+    "readyToWork": {
+      "en": "Looking for someone who can design and execute?",
+      "es": "¿Buscas a alguien que pueda diseñar y ejecutar?"
+    },
     "contactDesc": {
-      "en": "Let's discuss how we can turn your most complex technical challenges into competitive advantages.",
-      "es": "Discutamos cómo podemos convertir tus desafíos técnicos más complejos en ventajas competitivas."
+      "en": "I am open to Senior Full-Stack, Applied AI, AI Automation, and Solutions Engineering roles with remote or international teams.",
+      "es": "Estoy abierto a roles Senior Full-Stack, Applied AI, AI Automation y Solutions Engineering en equipos remotos o internacionales."
     },
-    "whatsapp": { "en": "Direct Chat", "es": "Chat Directo" },
-    "readyToBuild": { "en": "Ready to Build?", "es": "¿Listo para Construir?" },
-    "role": { "en": "Software Lead & AI Expert", "es": "Líder de Software y Experto en IA" },
-    "projectsDelivered": { "en": "Projects Delivered", "es": "Proyectos Entregados" },
-    "aiCardTitle": { "en": "AI & Machine Learning", "es": "IA y Machine Learning" },
-    "aiCardDesc": { "en": "Predictive modeling, NLP, and deep learning architectures tailored for business impact.", "es": "Modelado predictivo, NLP y arquitecturas de deep learning adaptadas para el impacto empresarial." },
-    "cloudCardTitle": { "en": "Cloud Native Apps", "es": "Apps Cloud Native" },
-    "cloudCardDesc": { "en": "Scalable web ecosystems built with React, Node.js, and AWS infrastructure.", "es": "Ecosistemas web escalables construidos con React, Node.js e infraestructura AWS." },
-    "featuredTitle": { "en": "Impact Solutions", "es": "Soluciones de Impacto" },
-    "featuredSubtitle": { "en": "A selection of mission-critical projects delivered for global industry leaders.", "es": "Una selección de proyectos de misión crítica entregados para líderes globales de la industria." }
+    "whatsapp": {
+      "en": "Start a conversation",
+      "es": "Iniciar conversación"
+    },
+    "readyToBuild": {
+      "en": "Let’s talk",
+      "es": "Hablemos"
+    },
+    "role": {
+      "en": "Senior Software Engineer · Applied AI",
+      "es": "Ingeniero de Software Senior · IA aplicada"
+    },
+    "projectsDelivered": {
+      "en": "Projects Delivered",
+      "es": "Proyectos Entregados"
+    },
+    "aiCardTitle": {
+      "en": "AI & Machine Learning",
+      "es": "IA y Machine Learning"
+    },
+    "aiCardDesc": {
+      "en": "Predictive models, language workflows, and AI agents integrated into real products and operational processes.",
+      "es": "Modelos predictivos, flujos de lenguaje y agentes de IA integrados en productos y procesos operativos reales."
+    },
+    "cloudCardTitle": {
+      "en": "Cloud & Product Platforms",
+      "es": "Cloud y Plataformas de Producto"
+    },
+    "cloudCardDesc": {
+      "en": "Web systems designed for secure deployment, observability, integration, and sustainable growth.",
+      "es": "Sistemas web diseñados para despliegues seguros, observabilidad, integración y crecimiento sostenible."
+    },
+    "featuredTitle": {
+      "en": "Featured case studies",
+      "es": "Casos de estudio destacados"
+    },
+    "featuredSubtitle": {
+      "en": "A selection of products and systems where I contributed to architecture, implementation, and delivery.",
+      "es": "Una selección de productos y sistemas donde participé en la arquitectura, implementación y entrega."
+    }
   },
   "about": {
-    "title": { "en": "My Profile", "es": "Mi Perfil" },
-    "subtitle": { "en": "Mechatronics Engineer | Digital Architect | Technical Leader", "es": "Ingeniero Mecatrónico | Arquitecto Digital | Líder Técnico" },
-    "architect": { "en": "The Architect Behind the Code", "es": "El Arquitecto Detrás del Código" },
-    "name": { "en": "Kevin Alejandro Naranjo Reyes", "es": "Kevin Alejandro Naranjo Reyes" },
+    "title": {
+      "en": "Professional Profile",
+      "es": "Perfil Profesional"
+    },
+    "subtitle": {
+      "en": "Software Engineering · Applied AI · Automation · Cloud",
+      "es": "Ingeniería de Software · IA aplicada · Automatización · Cloud"
+    },
+    "architect": {
+      "en": "From business problem to production product",
+      "es": "Del problema de negocio al producto en producción"
+    },
+    "name": {
+      "en": "Kevin Alejandro Naranjo Reyes",
+      "es": "Kevin Alejandro Naranjo Reyes"
+    },
     "bio1": {
-      "en": "I am a Mechatronics Engineer with an obsessive passion for technical excellence. My career is defined by a relentless drive to build what others deem impossible, working around the clock to deliver high-impact results with unmatched speed.",
-      "es": "Soy Ingeniero Mecatrónico con una pasión obsesiva por la excelencia técnica. Mi carrera se define por un impulso implacable para construir lo que otros consideran imposible, trabajando sin descanso para entregar resultados de alto impacto con una velocidad inigualable."
+      "en": "I am a Mechatronics Engineer with more than five years of experience building software, automation, and applied AI solutions for energy, environmental, restaurant, and service operations.",
+      "es": "Soy Ingeniero Mecatrónico con más de cinco años de experiencia construyendo soluciones de software, automatización e IA aplicada para operaciones de los sectores energético, ambiental, gastronómico y de servicios."
     },
     "bio2": {
-      "en": "As the creator of Alliafood—a revolutionary restaurant ecosystem—and a Lead Architect for global AWS projects (ENEL, Xactus, Wiltech), I specialize in bridging the gap between hardware and high-level software.",
-      "es": "Como creador de Alliafood —un ecosistema revolucionario para restaurantes— y Arquitecto Líder en proyectos globales de AWS (ENEL, Xactus, Wiltech), me especializo en cerrar la brecha entre el hardware y el software de alto nivel."
+      "en": "I am the technical founder of Alliafood, a restaurant platform that connects WhatsApp ordering, AI agents, real-time operations, thermal printing, and analytics.",
+      "es": "Soy fundador técnico de Alliafood, una plataforma para restaurantes que conecta pedidos por WhatsApp, agentes de IA, operación en tiempo real, impresión térmica y analítica."
     },
     "bio3": {
-      "en": "With a portfolio of over 100 GitHub projects, my focus is on extreme automation. I leverage AI and Cloud infrastructure to solve real business bottlenecks, from the first line of code to global deployment.",
-      "es": "Con un portafolio de más de 100 proyectos en GitHub, mi enfoque está en la automatización extrema. Aprovecho la IA y la infraestructura Cloud para resolver cuellos de botella empresariales reales, desde la primera línea de código hasta el despliegue global."
+      "en": "My core stack includes Python, FastAPI, React, TypeScript, PostgreSQL, AWS, Docker, n8n, and AI models. I select tools based on the product context, not on trends.",
+      "es": "Mi stack principal incluye Python, FastAPI, React, TypeScript, PostgreSQL, AWS, Docker, n8n y modelos de IA. Selecciono las herramientas según el contexto del producto, no por tendencia."
     },
     "bio4": {
-      "en": "Technical leadership isn't just a title; it's my standard. Whether I'm optimizing complex AI diagnostics or exploring the latest in cloud-native trends, my goal is always the same: generating measurable value through code.",
-      "es": "El liderazgo técnico no es solo un título; es mi estándar. Ya sea que esté optimizando diagnósticos complejos de IA o explorando las últimas tendencias en cloud-native, mi objetivo es siempre el mismo: generar valor medible a través del código."
+      "en": "I work best where engineering decisions stay connected to business context, users, and measurable outcomes. I can lead technical direction and remain close to implementation.",
+      "es": "Trabajo mejor donde las decisiones de ingeniería se conectan con el negocio, los usuarios y resultados medibles. Puedo liderar la dirección técnica y mantenerme cerca de la implementación."
     },
-    "cvSpanish": { "en": "ES Resume", "es": "CV Español" },
-    "cvEnglish": { "en": "EN Resume", "es": "CV Inglés" },
-    "experience": { "en": "Years of Experience", "es": "Años de experiencia" },
-    "career": { "en": "The Journey", "es": "La Trayectoria" },
-    "careerSubtitle": { "en": "Chronicle of high-impact leadership and technical milestones.", "es": "Crónica de liderazgo de alto impacto y hitos técnicos." },
-    "job1Title": { "en": "SOFTWARE & ML ARCHITECT (LEAD)", "es": "ARQUITECTO DE SOFTWARE Y ML (LEAD)" },
-    "job1Date": { "en": "Nov 2023 – Present", "es": "Nov 2023 – Actualidad" },
+    "cvSpanish": {
+      "en": "ES Resume",
+      "es": "CV Español"
+    },
+    "cvEnglish": {
+      "en": "EN Resume",
+      "es": "CV Inglés"
+    },
+    "experience": {
+      "en": "Years of Experience",
+      "es": "Años de experiencia"
+    },
+    "career": {
+      "en": "Experience",
+      "es": "Experiencia"
+    },
+    "careerSubtitle": {
+      "en": "Responsibilities, systems, and outcomes across my professional journey.",
+      "es": "Responsabilidades, sistemas y resultados a lo largo de mi trayectoria profesional."
+    },
+    "job1Title": {
+      "en": "SOFTWARE & ML LEAD",
+      "es": "LÍDER DE SOFTWARE Y ML"
+    },
+    "job1Date": {
+      "en": "Nov 2023 – Present",
+      "es": "Nov 2023 – Actualidad"
+    },
     "job1Desc": {
-      "en": "Leading the creation of disruptive AI diagnostics and expansive solution ecosystems. Architecting AWS infrastructures and automating complex business processes for peak efficiency.",
-      "es": "Liderando la creación de diagnósticos disruptivos de IA y ecosistemas de soluciones expansivos. Arquitecturando infraestructuras AWS y automatizando procesos empresariales complejos para una eficiencia máxima."
+      "en": "Technical leadership across AI-assisted diagnostics, software platforms, cloud infrastructure, and business-process automation—from solution design to production delivery.",
+      "es": "Liderazgo técnico en diagnósticos asistidos por IA, plataformas de software, infraestructura cloud y automatización de procesos, desde el diseño de solución hasta la entrega en producción."
     },
-    "job2Title": { "en": "FULL STACK DEVELOPMENT ENGINEER", "es": "INGENIERO DE DESARROLLO FULL STACK" },
-    "job2Date": { "en": "Jul 2021 – Nov 2023", "es": "Jul 2021 – Nov 2023" },
+    "job2Title": {
+      "en": "FULL STACK DEVELOPMENT ENGINEER",
+      "es": "INGENIERO DE DESARROLLO FULL STACK"
+    },
+    "job2Date": {
+      "en": "Jul 2021 – Nov 2023",
+      "es": "Jul 2021 – Nov 2023"
+    },
     "job2Desc": {
-      "en": "Designed and deployed critical software for IoT configuration and data visualization. Bridged the gap between product design and global distribution through scalable code.",
-      "es": "Diseñé y desplegué software crítico para configuración de IoT y visualización de datos. Cerré la brecha entre el diseño del producto y la distribución global mediante código escalable."
+      "en": "Designed and delivered software for IoT device configuration, firmware workflows, and environmental data visualization, connecting product requirements with scalable implementations.",
+      "es": "Diseñé y entregué software para configuración de dispositivos IoT, flujos de firmware y visualización de datos ambientales, conectando necesidades de producto con implementaciones escalables."
     },
-    "job3Title": { "en": "COMPUTER VISION RESEARCHER", "es": "INVESTIGADOR EN VISIÓN POR COMPUTADORA" },
-    "job3Date": { "en": "Jan 2021 – Jul 2021", "es": "Ene 2021 – Jul 2021" },
+    "job3Title": {
+      "en": "COMPUTER VISION RESEARCHER",
+      "es": "INVESTIGADOR EN VISIÓN POR COMPUTADORA"
+    },
+    "job3Date": {
+      "en": "Jan 2021 – Jul 2021",
+      "es": "Ene 2021 – Jul 2021"
+    },
     "job3Desc": {
-      "en": "Developed high-impact visual recognition solutions for industrial automation and data-driven analysis at K2 Ingeniería.",
-      "es": "Desarrollé soluciones de reconocimiento visual de alto impacto para automatización industrial y análisis basado en datos en K2 Ingeniería."
+      "en": "Developed computer vision solutions for vehicle and people counting, tracking, and environmental analysis on edge hardware.",
+      "es": "Desarrollé soluciones de visión por computadora para conteo y seguimiento de vehículos y personas, y análisis ambiental sobre hardware edge."
     },
-    "mission": { "en": "Mission", "es": "Misión" },
+    "mission": {
+      "en": "Focus",
+      "es": "Enfoque"
+    },
     "missionDesc": {
-      "en": "To lead the next wave of AI-driven innovation, simplifying the world through code that inspires and empowers.",
-      "es": "Liderar la próxima ola de innovación impulsada por la IA, simplificando el mundo a través de código que inspire y empodere."
+      "en": "Turn complex operational problems into reliable, understandable, and measurable software products.",
+      "es": "Convertir problemas operativos complejos en productos de software confiables, comprensibles y medibles."
     },
-    "vision": { "en": "Vision", "es": "Visión" },
+    "vision": {
+      "en": "Professional Goal",
+      "es": "Objetivo Profesional"
+    },
     "visionDesc": {
-      "en": "To be the global benchmark for technical excellence, creating solutions that redefine the boundaries of what's possible.",
-      "es": "Ser el referente global de excelencia técnica, creando soluciones que redefinan los límites de lo posible."
+      "en": "Build and lead products where software, automation, and applied AI create lasting value.",
+      "es": "Construir y liderar productos donde el software, la automatización y la IA aplicada generen valor sostenible."
     },
-    "values": { "en": "Values", "es": "Valores" },
+    "values": {
+      "en": "Principles",
+      "es": "Principios"
+    },
     "valuesDesc": {
-      "en": "Uncompromising innovation, relentless speed, and a commitment to architectural elegance.",
-      "es": "Innovación sin compromisos, velocidad implacable y un compromiso con la elegancia arquitectónica."
+      "en": "Clarity, technical judgment, ownership, collaboration, and continuous improvement.",
+      "es": "Claridad, criterio técnico, responsabilidad, colaboración y mejora continua."
     },
-    "projectsQuestion": { "en": "Ready to see the results?", "es": "¿Listo para ver los resultados?" },
+    "projectsQuestion": {
+      "en": "Want to see how I work?",
+      "es": "¿Quieres ver cómo trabajo?"
+    },
     "projectsDesc": {
-      "en": "Explore my featured works where complex logic meets high-impact business outcomes.",
-      "es": "Explora mis trabajos destacados donde la lógica compleja se encuentra con resultados empresariales de alto impacto."
+      "en": "Explore case studies that show the problem, the solution, my contribution, and the resulting value.",
+      "es": "Explora casos de estudio que muestran el problema, la solución, mi aporte y el valor generado."
     }
   },
   "skills": {
-    "title": { "en": "Technical Mastery", "es": "Maestría Técnica" },
-    "subtitle": { "en": "The tools and frameworks I use to engineer high-performance solutions.", "es": "Las herramientas y frameworks que utilizo para diseñar soluciones de alto rendimiento." },
-    "expertToolset": { "en": "Expert Toolset", "es": "Conjunto de Herramientas de Experto" },
-    "development": { "en": "Engineering", "es": "Ingeniería" },
-    "frontend": { "en": "Frontend Mastery", "es": "Maestría Frontend" },
-    "frontendDesc": { "en": "React, Vue, Angular, TypeScript, Modern CSS (Tailwind, SASS), Framer Motion", "es": "React, Vue, Angular, TypeScript, CSS Moderno (Tailwind, SASS), Framer Motion" },
-    "backend": { "en": "Backend Architecture", "es": "Arquitectura Backend" },
-    "backendDesc": { "en": "Node.js, Express, FastAPI, Django, GraphQL, REST APIs", "es": "Node.js, Express, FastAPI, Django, GraphQL, REST APIs" },
-    "databases": { "en": "Data Engines", "es": "Motores de Datos" },
-    "databasesDesc": { "en": "PostgreSQL, MongoDB, Firebase, Redis, SQL Optimization", "es": "PostgreSQL, MongoDB, Firebase, Redis, Optimización SQL" },
-    "mobile": { "en": "Mobile Ecosystems", "es": "Ecosistemas Móviles" },
-    "mobileDesc": { "en": "React Native, Flutter, PWA, Native Integrations", "es": "React Native, Flutter, PWA, Integraciones Nativas" },
-    "ai": { "en": "Inteligencia Artificial", "es": "Inteligencia Artificial" },
-    "machineLearning": { "en": "Predictive Intelligence", "es": "Inteligencia Predictiva" },
-    "mlDesc": { "en": "TensorFlow, PyTorch, Scikit-learn, Advanced Analytics", "es": "TensorFlow, PyTorch, Scikit-learn, Analítica Avanzada" },
-    "computerVision": { "en": "Visual Intelligence", "es": "Inteligencia Visual" },
-    "cvDesc": { "en": "OpenCV, YOLO, Object Detection, Biometrics", "es": "OpenCV, YOLO, Detección de Objetos, Biometría" },
-    "dataScience": { "en": "Data Engineering", "es": "Ingeniería de Datos" },
-    "dsDesc": { "en": "Pandas, NumPy, Statistical Modeling, Big Data", "es": "Pandas, NumPy, Modelado Estadístico, Big Data" },
-    "deepLearning": { "en": "Neural Networks", "es": "Redes Neuronales" },
-    "dlDesc": { "en": "CNN, RNN, Transformers, LLM Orchestration", "es": "CNN, RNN, Transformers, Orquestación de LLM" },
-    "devops": { "en": "DevOps & Cloud", "es": "DevOps y Cloud" },
-    "cloud": { "en": "Cloud Infrastructure", "es": "Infraestructura Cloud" },
-    "cloudDesc": { "en": "AWS Expert (Lambda, S3, RDS), Docker, Kubernetes, CI/CD", "es": "Experto en AWS (Lambda, S3, RDS), Docker, Kubernetes, CI/CD" },
-    "versionControl": { "en": "Agile & Git", "es": "Agile y Git" },
-    "vcDesc": { "en": "GitHub Actions, Automation Pipelines, Team Workflows", "es": "GitHub Actions, Pipelines de Automatización, Flujos de Trabajo en Equipo" },
-    "containers": { "en": "Microservices", "es": "Microservicios" },
-    "containersDesc": { "en": "Docker, Kubernetes, Scalable Orchestration", "es": "Docker, Kubernetes, Orquestación Escalable" },
-    "tools": { "en": "Efficiency Tools", "es": "Herramientas de Eficiencia" },
-    "toolsDesc": { "en": "Linux, Bash, Automated Testing, Performance Optimization", "es": "Linux, Bash, Pruebas Automatizadas, Optimización de Rendimiento" },
-    "technologies": { "en": "Core Stack", "es": "Stack Principal" },
-    "techSubtitle": { "en": "Languages and tools I use to build daily.", "es": "Lenguajes y herramientas con los que construyo a diario." },
-    "experience": { "en": "Highlighted Mastery", "es": "Maestría Destacada" },
-    "expSubtitle": { "en": "Significant milestones in AI and Software Engineering.", "es": "Hitos significativos en IA e Ingeniería de Software." },
-    "aiExp": { "en": "AI Innovation", "es": "Innovación en IA" },
-    "aiExp1": { "en": "Real-time environmental predictive modeling", "es": "Modelado predictivo ambiental en tiempo real" },
-    "aiExp2": { "en": "Enterprise-grade fraud detection engines", "es": "Motores de detección de fraude de nivel empresarial" },
-    "aiExp3": { "en": "High-speed traffic vision systems", "es": "Sistemas de visión de tráfico de alta velocidad" },
-    "softwareExp": { "en": "Software Excellence", "es": "Excelencia en Software" },
-    "softwareExp1": { "en": "Global IoT configuration platforms", "es": "Plataformas globales de configuración IoT" },
-    "softwareExp2": { "en": "Ultra-low latency web applications", "es": "Aplicaciones web de ultra baja latencia" },
-    "softwareExp3": { "en": "Autonomous report generation systems", "es": "Sistemas autónomos de generación de reportes" },
-    "leadershipExp": { "en": "Strategic Leadership", "es": "Liderazgo Estratégico" },
-    "leadershipExp1": { "en": "Managing high-performance technical teams", "es": "Gestión de equipos técnicos de alto rendimiento" },
-    "leadershipExp2": { "en": "Strategic AI consulting for enterprises", "es": "Consultoría estratégica de IA para empresas" },
-    "leadershipExp3": { "en": "Architecting disruptive product ecosystems", "es": "Arquitectura de ecosistemas de productos disruptivos" },
-    "skillsAction": { "en": "See the Arsenal in Action", "es": "Ver el Arsenal en Acción" },
-    "skillsActionDesc": { "en": "Browse my projects to see how these skills translate into real-world business value.", "es": "Explora mis proyectos para ver cómo estas habilidades se traducen en valor empresarial real." }
+    "title": {
+      "en": "Technical Capabilities",
+      "es": "Capacidades Técnicas"
+    },
+    "subtitle": {
+      "en": "Languages, platforms, and engineering practices I use to take products from idea to production.",
+      "es": "Lenguajes, plataformas y prácticas de ingeniería que utilizo para llevar productos desde la idea hasta producción."
+    },
+    "expertToolset": {
+      "en": "Product Engineering",
+      "es": "Ingeniería de Producto"
+    },
+    "development": {
+      "en": "Engineering",
+      "es": "Ingeniería"
+    },
+    "frontend": {
+      "en": "Product Frontend",
+      "es": "Frontend de Producto"
+    },
+    "frontendDesc": {
+      "en": "React, Vue, Angular, TypeScript, Modern CSS (Tailwind, SASS), Framer Motion",
+      "es": "React, Vue, Angular, TypeScript, CSS Moderno (Tailwind, SASS), Framer Motion"
+    },
+    "backend": {
+      "en": "Backend & APIs",
+      "es": "Backend y APIs"
+    },
+    "backendDesc": {
+      "en": "Node.js, Express, FastAPI, Django, GraphQL, REST APIs",
+      "es": "Node.js, Express, FastAPI, Django, GraphQL, REST APIs"
+    },
+    "databases": {
+      "en": "Data & Persistence",
+      "es": "Datos y Persistencia"
+    },
+    "databasesDesc": {
+      "en": "PostgreSQL, MongoDB, Firebase, Redis, SQL Optimization",
+      "es": "PostgreSQL, MongoDB, Firebase, Redis, Optimización SQL"
+    },
+    "mobile": {
+      "en": "Cross-platform Experiences",
+      "es": "Experiencias Multiplataforma"
+    },
+    "mobileDesc": {
+      "en": "React Native, Flutter, PWA, Native Integrations",
+      "es": "React Native, Flutter, PWA, Integraciones Nativas"
+    },
+    "ai": {
+      "en": "Applied Artificial Intelligence",
+      "es": "Inteligencia Artificial Aplicada"
+    },
+    "machineLearning": {
+      "en": "Applied Machine Learning",
+      "es": "Machine Learning Aplicado"
+    },
+    "mlDesc": {
+      "en": "TensorFlow, PyTorch, Scikit-learn, Advanced Analytics",
+      "es": "TensorFlow, PyTorch, Scikit-learn, Analítica Avanzada"
+    },
+    "computerVision": {
+      "en": "Computer Vision",
+      "es": "Visión por Computadora"
+    },
+    "cvDesc": {
+      "en": "OpenCV, YOLO, Object Detection, Biometrics",
+      "es": "OpenCV, YOLO, Detección de Objetos, Biometría"
+    },
+    "dataScience": {
+      "en": "Data Analysis",
+      "es": "Análisis de Datos"
+    },
+    "dsDesc": {
+      "en": "Pandas, NumPy, Statistical Modeling, Big Data",
+      "es": "Pandas, NumPy, Modelado Estadístico, Big Data"
+    },
+    "deepLearning": {
+      "en": "Deep Learning & LLMs",
+      "es": "Deep Learning y LLMs"
+    },
+    "dlDesc": {
+      "en": "CNN, RNN, Transformers, LLM Orchestration",
+      "es": "CNN, RNN, Transformers, Orquestación de LLM"
+    },
+    "devops": {
+      "en": "DevOps & Cloud",
+      "es": "DevOps y Cloud"
+    },
+    "cloud": {
+      "en": "Cloud Infrastructure",
+      "es": "Infraestructura Cloud"
+    },
+    "cloudDesc": {
+      "en": "AWS (Lambda, S3, RDS), Docker, Kubernetes, CI/CD",
+      "es": "AWS (Lambda, S3, RDS), Docker, Kubernetes, CI/CD"
+    },
+    "versionControl": {
+      "en": "Delivery & Collaboration",
+      "es": "Entrega y Colaboración"
+    },
+    "vcDesc": {
+      "en": "GitHub Actions, Automation Pipelines, Team Workflows",
+      "es": "GitHub Actions, Pipelines de Automatización, Flujos de Trabajo en Equipo"
+    },
+    "containers": {
+      "en": "Containers & Services",
+      "es": "Contenedores y Servicios"
+    },
+    "containersDesc": {
+      "en": "Docker, Kubernetes, Scalable Orchestration",
+      "es": "Docker, Kubernetes, Orquestación Escalable"
+    },
+    "tools": {
+      "en": "Engineering Tools",
+      "es": "Herramientas de Ingeniería"
+    },
+    "toolsDesc": {
+      "en": "Linux, Bash, Automated Testing, Performance Optimization",
+      "es": "Linux, Bash, Pruebas Automatizadas, Optimización de Rendimiento"
+    },
+    "technologies": {
+      "en": "Core Stack",
+      "es": "Stack Principal"
+    },
+    "techSubtitle": {
+      "en": "Languages and tools I use to build daily.",
+      "es": "Lenguajes y herramientas con los que construyo a diario."
+    },
+    "experience": {
+      "en": "Applied Experience",
+      "es": "Experiencia Aplicada"
+    },
+    "expSubtitle": {
+      "en": "How these capabilities appear in products and systems I have built.",
+      "es": "Cómo estas capacidades aparecen en productos y sistemas que he construido."
+    },
+    "aiExp": {
+      "en": "Applied AI",
+      "es": "IA Aplicada"
+    },
+    "aiExp1": {
+      "en": "Real-time environmental predictive modeling",
+      "es": "Modelado predictivo ambiental en tiempo real"
+    },
+    "aiExp2": {
+      "en": "Fraud-risk classification for inspection prioritization",
+      "es": "Clasificación de riesgo de fraude para priorizar inspecciones"
+    },
+    "aiExp3": {
+      "en": "Edge computer vision for traffic analysis",
+      "es": "Visión por computadora en edge para análisis de tráfico"
+    },
+    "softwareExp": {
+      "en": "Software Products",
+      "es": "Productos de Software"
+    },
+    "softwareExp1": {
+      "en": "IoT device configuration and monitoring platforms",
+      "es": "Plataformas de configuración y monitoreo de dispositivos IoT"
+    },
+    "softwareExp2": {
+      "en": "Real-time operational web applications",
+      "es": "Aplicaciones web operativas en tiempo real"
+    },
+    "softwareExp3": {
+      "en": "Automated reporting and diagnostic systems",
+      "es": "Sistemas automatizados de reportes y diagnósticos"
+    },
+    "leadershipExp": {
+      "en": "Technical Leadership",
+      "es": "Liderazgo Técnico"
+    },
+    "leadershipExp1": {
+      "en": "Technical direction with hands-on implementation",
+      "es": "Dirección técnica con participación activa en la implementación"
+    },
+    "leadershipExp2": {
+      "en": "Business and technology diagnostics",
+      "es": "Diagnósticos de negocio y tecnología"
+    },
+    "leadershipExp3": {
+      "en": "Architecture and evolution of digital products",
+      "es": "Arquitectura y evolución de productos digitales"
+    },
+    "skillsAction": {
+      "en": "See these capabilities in context",
+      "es": "Ver estas capacidades en contexto"
+    },
+    "skillsActionDesc": {
+      "en": "Browse the case studies to see the decisions, integrations, and outcomes behind each solution.",
+      "es": "Explora los casos de estudio para conocer las decisiones, integraciones y resultados detrás de cada solución."
+    }
   },
   "projects": {
-    "title": { "en": "Selected Works", "es": "Trabajos Seleccionados" },
-    "featuredSolutions": { "en": "Featured Solutions", "es": "Soluciones Destacadas" },
-    "subtitle": { "en": "A showcase of engineering excellence, machine learning, and visual intelligence.", "es": "Una muestra de excelencia en ingeniería, machine learning e inteligencia visual." },
-    "search": { "en": "Filter solutions...", "es": "Filtrar soluciones..." },
-    "all": { "en": "All Solutions", "es": "Todas las Soluciones" },
-    "webDev": { "en": "Web Engineering", "es": "Ingeniería Web" },
-    "machineLearning": { "en": "AI & ML", "es": "IA y ML" },
-    "computerVision": { "en": "Visual IA", "es": "IA Visual" },
-    "automation": { "en": "Automation", "es": "Automatización" },
-    "consulting": { "en": "Consulting", "es": "Consultoría" },
-    "viewDetails": { "en": "View Details", "es": "Ver Detalles" },
-    "backToProjects": { "en": "Back to Projects", "es": "Volver a Proyectos" },
-    "executionDetails": { "en": "Execution Details", "es": "Detalles de Ejecución" },
-    "client": { "en": "Client", "es": "Cliente" },
-    "role": { "en": "Role", "es": "Rol" },
-    "exploreProject": { "en": "Explore Project", "es": "Explorar Proyecto" },
-    "buildEpic": { "en": "Build something Epic", "es": "Construye algo Épico" },
-    "projectNotFound": { "en": "Project Not Found", "es": "Proyecto no Encontrado" },
-    "projectNotFoundDesc": { "en": "The project you are looking for does not exist or has been removed.", "es": "El proyecto que estás buscando no existe o ha sido eliminado." },
-    "noResults": { "en": "No projects match your current filters.", "es": "Ningún proyecto coincide con los filtros actuales." },
-    "clearFilters": { "en": "Clear Filters", "es": "Limpiar Filtros" },
-    "resultCount": { "en": "solutions found", "es": "soluciones encontradas" },
-    "sortBy": { "en": "Sort by", "es": "Ordenar por" },
-    "sortNewest": { "en": "Newest", "es": "Más recientes" },
-    "gridView": { "en": "Grid", "es": "Cuadrícula" },
-    "listView": { "en": "List", "es": "Lista" },
-    "projectIdea": { "en": "Have a complex challenge?", "es": "¿Tienes un desafío complejo?" },
-    "projectDesc": { "en": "Let's collaborate to build a custom solution that drives your business forward.", "es": "Colaboremos para construir una solución personalizada que impulse tu negocio." }
+    "title": {
+      "en": "Projects & Case Studies",
+      "es": "Proyectos y Casos de Estudio"
+    },
+    "featuredSolutions": {
+      "en": "Selected Solutions",
+      "es": "Soluciones Seleccionadas"
+    },
+    "subtitle": {
+      "en": "Products, diagnostics, and automation that turn complex operations into measurable progress.",
+      "es": "Productos, diagnósticos y automatizaciones que convierten operaciones complejas en avances medibles."
+    },
+    "search": {
+      "en": "Search by project or technology...",
+      "es": "Buscar por proyecto o tecnología..."
+    },
+    "all": {
+      "en": "All",
+      "es": "Todos"
+    },
+    "webDev": {
+      "en": "Web Engineering",
+      "es": "Ingeniería Web"
+    },
+    "machineLearning": {
+      "en": "AI & ML",
+      "es": "IA y ML"
+    },
+    "computerVision": {
+      "en": "Computer Vision",
+      "es": "Visión por Computadora"
+    },
+    "automation": {
+      "en": "Automation",
+      "es": "Automatización"
+    },
+    "consulting": {
+      "en": "Consulting",
+      "es": "Consultoría"
+    },
+    "viewDetails": {
+      "en": "View case study",
+      "es": "Ver caso de estudio"
+    },
+    "backToProjects": {
+      "en": "Back to Projects",
+      "es": "Volver a Proyectos"
+    },
+    "executionDetails": {
+      "en": "Execution Details",
+      "es": "Detalles de Ejecución"
+    },
+    "client": {
+      "en": "Client",
+      "es": "Cliente"
+    },
+    "role": {
+      "en": "Role",
+      "es": "Rol"
+    },
+    "exploreProject": {
+      "en": "View solution",
+      "es": "Ver solución"
+    },
+    "buildEpic": {
+      "en": "Let’s discuss your next challenge",
+      "es": "Hablemos de tu próximo reto"
+    },
+    "projectNotFound": {
+      "en": "Project Not Found",
+      "es": "Proyecto no Encontrado"
+    },
+    "projectNotFoundDesc": {
+      "en": "The project you are looking for does not exist or has been removed.",
+      "es": "El proyecto que estás buscando no existe o ha sido eliminado."
+    },
+    "noResults": {
+      "en": "No projects match those filters. Try another term or browse all solutions.",
+      "es": "Ningún proyecto coincide con esos filtros. Prueba otro término o explora todas las soluciones."
+    },
+    "clearFilters": {
+      "en": "Clear Filters",
+      "es": "Limpiar Filtros"
+    },
+    "resultCount": {
+      "en": "solutions found",
+      "es": "soluciones encontradas"
+    },
+    "sortBy": {
+      "en": "Sort by",
+      "es": "Ordenar por"
+    },
+    "sortNewest": {
+      "en": "Newest",
+      "es": "Más recientes"
+    },
+    "gridView": {
+      "en": "Grid",
+      "es": "Cuadrícula"
+    },
+    "listView": {
+      "en": "List",
+      "es": "Lista"
+    },
+    "projectIdea": {
+      "en": "Want to know how I approach complex problems?",
+      "es": "¿Quieres conocer cómo abordo problemas complejos?"
+    },
+    "projectDesc": {
+      "en": "Explore the case studies or contact me about a role, product, or technical challenge.",
+      "es": "Explora los casos de estudio o conversemos sobre un rol, producto o reto técnico."
+    },
+    "impactLabel": {
+      "en": "Work grounded in real problems",
+      "es": "Trabajo basado en problemas reales"
+    },
+    "diagnosticsMetric": {
+      "en": "companies diagnosed",
+      "es": "empresas diagnosticadas"
+    },
+    "growthMetric": {
+      "en": "scalable products",
+      "es": "productos en crecimiento"
+    },
+    "optimizationMetric": {
+      "en": "process optimization",
+      "es": "optimización de procesos"
+    },
+    "heroEyebrow": {
+      "en": "Engineering portfolio · 13 case studies",
+      "es": "Portafolio de ingeniería · 13 casos"
+    },
+    "heroTitle": {
+      "en": "Products that turn complex operations into clear systems.",
+      "es": "Productos que convierten operaciones complejas en sistemas claros."
+    },
+    "heroDescription": {
+      "en": "These are not isolated demos. Each case connects a real problem with product decisions, architecture, implementation, and a result that can be explained.",
+      "es": "No son demos aisladas. Cada caso conecta un problema real con decisiones de producto, arquitectura, implementación y un resultado que se puede explicar."
+    },
+    "caseStudiesMetric": {
+      "en": "documented case studies",
+      "es": "casos documentados"
+    },
+    "industriesMetric": {
+      "en": "industries and operating contexts",
+      "es": "sectores y contextos operativos"
+    },
+    "deliveryMetric": {
+      "en": "from discovery to production",
+      "es": "del diagnóstico a producción"
+    },
+    "featuredLabel": {
+      "en": "Priority case studies",
+      "es": "Casos prioritarios"
+    },
+    "featuredTitle": {
+      "en": "Work where I owned the problem, not just the task.",
+      "es": "Trabajo donde asumí el problema, no solo la tarea."
+    },
+    "featuredDescription": {
+      "en": "Three examples that best represent my ability to connect business context, technical architecture, hands-on development, and continuous product evolution.",
+      "es": "Tres ejemplos que representan mejor mi capacidad de conectar contexto de negocio, arquitectura técnica, desarrollo directo y evolución continua del producto."
+    },
+    "featuredCase": {
+      "en": "Featured case study",
+      "es": "Caso destacado"
+    },
+    "impactTitle": {
+      "en": "Primary outcome",
+      "es": "Resultado principal"
+    },
+    "moreProjectsLabel": {
+      "en": "Project archive",
+      "es": "Archivo de proyectos"
+    },
+    "moreProjectsTitle": {
+      "en": "More systems. Different operating contexts.",
+      "es": "Más sistemas. Distintos contextos operativos."
+    },
+    "moreProjectsDescription": {
+      "en": "Software, applied AI, automation, and cloud projects built for energy, environmental, service, tourism, and event operations.",
+      "es": "Proyectos de software, IA aplicada, automatización y cloud construidos para operaciones de energía, ambiente, servicios, turismo y eventos."
+    },
+    "searchResultsTitle": {
+      "en": "Filtered portfolio",
+      "es": "Portafolio filtrado"
+    },
+    "searchResultsHeading": {
+      "en": "Projects that match your search.",
+      "es": "Proyectos que coinciden con tu búsqueda."
+    },
+    "searchResultsDescription": {
+      "en": "Search by problem, organization, role, technology, or outcome.",
+      "es": "Busca por problema, organización, rol, tecnología o resultado."
+    },
+    "ctaEyebrow": {
+      "en": "Roles · Products · Technical challenges",
+      "es": "Roles · Productos · Retos técnicos"
+    }
   },
   "projectDetail": {
-    "backToProjects": { "en": "Back to Portfolio", "es": "Volver al Portafolio" },
-    "period": { "en": "Timeline", "es": "Cronología" },
-    "client": { "en": "Partner", "es": "Socio" },
-    "role": { "en": "Contribution", "es": "Contribución" },
-    "description": { "en": "Case Summary", "es": "Resumen del Caso" },
-    "technologies": { "en": "Tech Stack", "es": "Stack Tecnológico" },
-    "challenges": { "en": "The Obstacles", "es": "Los Obstáculos" },
-    "solutions": { "en": "Our Approach", "es": "Nuestro Enfoque" },
-    "results": { "en": "The Impact", "es": "El Impacto" },
-    "similarProject": { "en": "Need a similar solution?", "es": "¿Necesitas una solución similar?" },
-    "helpDesc": { "en": "I can architect a custom-fit solution for your specific business needs.", "es": "Puedo arquitecturar una solución a medida para tus necesidades empresariales específicas." },
-    "moreProjects": { "en": "Other Case Studies", "es": "Otros Casos de Estudio" },
-    "allProjects": { "en": "Explore All Work", "es": "Explorar Todo el Trabajo" }
+    "backToProjects": {
+      "en": "Back to Portfolio",
+      "es": "Volver al Portafolio"
+    },
+    "period": {
+      "en": "Timeline",
+      "es": "Cronología"
+    },
+    "client": {
+      "en": "Partner",
+      "es": "Socio"
+    },
+    "role": {
+      "en": "Contribution",
+      "es": "Contribución"
+    },
+    "description": {
+      "en": "Case Summary",
+      "es": "Resumen del Caso"
+    },
+    "technologies": {
+      "en": "Tech Stack",
+      "es": "Stack Tecnológico"
+    },
+    "challenges": {
+      "en": "The Obstacles",
+      "es": "Los Obstáculos"
+    },
+    "solutions": {
+      "en": "Our Approach",
+      "es": "Nuestro Enfoque"
+    },
+    "results": {
+      "en": "The Impact",
+      "es": "El Impacto"
+    },
+    "similarProject": {
+      "en": "Need a similar solution?",
+      "es": "¿Necesitas una solución similar?"
+    },
+    "helpDesc": {
+      "en": "I can architect a custom-fit solution for your specific business needs.",
+      "es": "Puedo arquitecturar una solución a medida para tus necesidades empresariales específicas."
+    },
+    "moreProjects": {
+      "en": "Other Case Studies",
+      "es": "Otros Casos de Estudio"
+    },
+    "allProjects": {
+      "en": "Explore All Work",
+      "es": "Explorar Todo el Trabajo"
+    }
   },
   "contact": {
-    "title": { "en": "Connect", "es": "Conectar" },
-    "startConversation": { "en": "Start a Conversation", "es": "Inicia una Conversación" },
-    "subtitle": { "en": "Let's discuss your next breakthrough.", "es": "Discutamos tu próximo gran avance." },
-    "contactWhatsapp": { "en": "Connect via WhatsApp", "es": "Conectar por WhatsApp" },
-    "dontHesitate": { "en": "I'm always ready for a challenge", "es": "Siempre estoy listo para un desafío" },
-    "location": { "en": "Global / Colombia", "es": "Global / Colombia" },
-    "email": { "en": "Email", "es": "Email" },
-    "phone": { "en": "Direct Line", "es": "Línea Directa" },
-    "contactWhatsappBtn": { "en": "Start Conversation", "es": "Iniciar Conversación" },
-    "followSocial": { "en": "Digital Footprint", "es": "Huella Digital" },
-    "sendMessage": { "en": "Inquiry Form", "es": "Formulario de Consulta" },
-    "formSubtitle": { "en": "Share your vision and I'll get back to you within 24 hours.", "es": "Comparte tu visión y me pondré en contacto en menos de 24 horas." },
-    "name": { "en": "Full Name", "es": "Nombre Completo" },
-    "yourName": { "en": "Enter your name", "es": "Ingresa tu nombre" },
-    "phoneNumber": { "en": "Contact Number", "es": "Número de Contacto" },
-    "yourPhone": { "en": "Enter your number", "es": "Ingresa tu número" },
-    "yourEmail": { "en": "Business Email", "es": "Correo Corporativo" },
-    "writeMessage": { "en": "Project Overview", "es": "Resumen del Proyecto" },
-    "howCanIHelp": { "en": "How can I accelerate your project?", "es": "¿Cómo puedo acelerar tu proyecto?" },
-    "sending": { "en": "Processing...", "es": "Procesando..." },
-    "send": { "en": "Send Inquiry", "es": "Enviar Consulta" },
-    "successMessage": { "en": "Inquiry sent. I'll reach out shortly.", "es": "Consulta enviada. Me comunicaré pronto." },
-    "errorMessage": { "en": "Transmission error. Please try email or WhatsApp.", "es": "Error de transmisión. Por favor usa email o WhatsApp." },
-    "locationTitle": { "en": "Base of Operations", "es": "Base de Operaciones" },
-    "locationDesc": { "en": "Based in Colombia, serving partners globally with a remote-first mindset.", "es": "Ubicado en Colombia, sirviendo a socios globalmente con una mentalidad remota." },
-    "faq": { "en": "Insights", "es": "Perspectivas" },
-    "faqDesc": { "en": "Quick answers for your collaboration needs.", "es": "Respuestas rápidas para tus necesidades de colaboración." },
-    "faq1Q": { "en": "What architectures do you specialize in?", "es": "¿En qué arquitecturas te especializas?" },
-    "faq1A": { "en": "I specialize in cloud-native (AWS) architectures, AI-driven automation, and high-performance React-based ecosystems.", "es": "Me especializo en arquitecturas cloud-native (AWS), automatización impulsada por IA y ecosistemas de alto rendimiento basados en React." },
-    "faq2Q": { "en": "What is your delivery speed?", "es": "¿Cuál es tu velocidad de entrega?" },
-    "faq2A": { "en": "My workflow is optimized for extreme productivity, using automated pipelines to deliver results faster than traditional development cycles.", "es": "Mi flujo de trabajo está optimizado para la productividad extrema, utilizando pipelines automatizados para entregar resultados más rápido que los ciclos tradicionales." },
-    "faq3Q": { "en": "Do you offer technical consulting?", "es": "¿Ofreces consultoría técnica?" },
-    "faq3A": { "en": "Yes, I help businesses identify AI opportunities and architect long-term technical roadmaps.", "es": "Sí, ayudo a las empresas a identificar oportunidades de IA y a arquitecturar hojas de ruta técnicas a largo plazo." },
-    "faq4Q": { "en": "How do we start?", "es": "¿Cómo empezamos?" },
-    "faq4A": { "en": "The best way is to book a quick discovery call via the contact form or WhatsApp.", "es": "La mejor manera es programar una llamada rápida de descubrimiento a través del formulario de contacto o WhatsApp." }
+    "title": {
+      "en": "Contact",
+      "es": "Contacto"
+    },
+    "startConversation": {
+      "en": "Let’s talk",
+      "es": "Hablemos"
+    },
+    "subtitle": {
+      "en": "Open to remote and international roles where I can design and deliver complete software products.",
+      "es": "Abierto a oportunidades remotas e internacionales donde pueda diseñar y entregar productos de software completos."
+    },
+    "contactWhatsapp": {
+      "en": "Direct contact",
+      "es": "Contacto directo"
+    },
+    "dontHesitate": {
+      "en": "Direct channels for recruiters, product teams, and technical conversations.",
+      "es": "Canales directos para reclutadores, equipos de producto y conversaciones técnicas."
+    },
+    "location": {
+      "en": "Global / Colombia",
+      "es": "Global / Colombia"
+    },
+    "email": {
+      "en": "Email",
+      "es": "Email"
+    },
+    "phone": {
+      "en": "WhatsApp",
+      "es": "WhatsApp"
+    },
+    "contactWhatsappBtn": {
+      "en": "Message me",
+      "es": "Escríbeme"
+    },
+    "followSocial": {
+      "en": "Professional profiles",
+      "es": "Perfiles profesionales"
+    },
+    "sendMessage": {
+      "en": "Send a message",
+      "es": "Enviar un mensaje"
+    },
+    "formSubtitle": {
+      "en": "Tell me about the role, team, or technical challenge. I usually reply within 24 hours.",
+      "es": "Cuéntame sobre el rol, el equipo o el reto técnico. Normalmente respondo en menos de 24 horas."
+    },
+    "name": {
+      "en": "Name",
+      "es": "Nombre"
+    },
+    "yourName": {
+      "en": "Enter your name",
+      "es": "Ingresa tu nombre"
+    },
+    "phoneNumber": {
+      "en": "Phone",
+      "es": "Teléfono"
+    },
+    "yourPhone": {
+      "en": "Enter your number",
+      "es": "Ingresa tu número"
+    },
+    "yourEmail": {
+      "en": "Email address",
+      "es": "Correo electrónico"
+    },
+    "writeMessage": {
+      "en": "Message",
+      "es": "Mensaje"
+    },
+    "howCanIHelp": {
+      "en": "Tell me about the role, team, product, or technical challenge.",
+      "es": "Cuéntame sobre el rol, el equipo, el producto o el reto técnico."
+    },
+    "sending": {
+      "en": "Sending...",
+      "es": "Enviando..."
+    },
+    "send": {
+      "en": "Send message",
+      "es": "Enviar mensaje"
+    },
+    "successMessage": {
+      "en": "Message sent. I will get back to you shortly.",
+      "es": "Mensaje enviado. Te responderé pronto."
+    },
+    "errorMessage": {
+      "en": "The message could not be sent. Please try email or WhatsApp.",
+      "es": "No fue posible enviar el mensaje. Intenta por email o WhatsApp."
+    },
+    "locationTitle": {
+      "en": "Location",
+      "es": "Ubicación"
+    },
+    "locationDesc": {
+      "en": "Based in Colombia and available to collaborate with remote and international teams.",
+      "es": "Trabajo desde Colombia y estoy disponible para colaborar con equipos remotos e internacionales."
+    },
+    "faq": {
+      "en": "Before we talk",
+      "es": "Antes de conversar"
+    },
+    "faqDesc": {
+      "en": "A few quick answers about my profile and way of working.",
+      "es": "Respuestas breves sobre mi perfil y forma de trabajo."
+    },
+    "faq1Q": {
+      "en": "Which roles fit my experience?",
+      "es": "¿En qué roles encaja mi experiencia?"
+    },
+    "faq1A": {
+      "en": "Senior Full-Stack, Applied AI, AI Automation, Solutions Engineering, and technical product leadership roles.",
+      "es": "Roles Senior Full-Stack, Applied AI, AI Automation, Solutions Engineering y liderazgo técnico de producto."
+    },
+    "faq2Q": {
+      "en": "How do I work?",
+      "es": "¿Cómo trabajo?"
+    },
+    "faq2A": {
+      "en": "In short, visible delivery cycles with clear priorities, technical validation, and feedback from real use.",
+      "es": "En ciclos de entrega cortos y visibles, con prioridades claras, validación técnica y retroalimentación del uso real."
+    },
+    "faq3Q": {
+      "en": "Can I lead and stay hands-on?",
+      "es": "¿Puedo liderar y seguir desarrollando?"
+    },
+    "faq3A": {
+      "en": "Yes. I can define technical direction, align decisions with the business, and remain involved in implementation and delivery.",
+      "es": "Sí. Puedo definir la dirección técnica, alinear decisiones con el negocio y mantenerme involucrado en la implementación y entrega."
+    },
+    "faq4Q": {
+      "en": "What is the best way to reach me?",
+      "es": "¿Cuál es la mejor forma de contactarme?"
+    },
+    "faq4A": {
+      "en": "LinkedIn, email, or WhatsApp. Include context about the role or challenge so I can respond more usefully.",
+      "es": "LinkedIn, email o WhatsApp. Incluye contexto sobre el rol o el reto para que pueda responderte mejor."
+    }
   },
   "footer": {
     "description": {
-      "en": "Lead Software Architect & AI Expert. Obsessed with transforming complex challenges into high-performance digital realities with over {{count}} years of mastery.",
-      "es": "Arquitecto Líder de Software y Experto en IA. Obsesionado con transformar desafíos complejos en realidades digitales de alto rendimiento con más de {{count}} años de maestría."
+      "en": "Senior Software Engineer with {{count}}+ years building end-to-end software, automation, and applied AI products.",
+      "es": "Ingeniero de Software Senior con más de {{count}} años construyendo productos de software, automatización e IA aplicada de punta a punta."
     },
-    "navigation": { "en": "Sections", "es": "Secciones" },
-    "contact": { "en": "Let's Talk", "es": "Hablemos" },
-    "rights": { "en": "All technical rights reserved.", "es": "Todos los derechos técnicos reservados." }
+    "navigation": {
+      "en": "Sections",
+      "es": "Secciones"
+    },
+    "contact": {
+      "en": "Let's Talk",
+      "es": "Hablemos"
+    },
+    "rights": {
+      "en": "All rights reserved.",
+      "es": "Todos los derechos reservados."
+    }
   },
   "language": {
-    "en": { "en": "English", "es": "English" },
-    "es": { "en": "Spanish", "es": "Español" }
+    "en": {
+      "en": "English",
+      "es": "English"
+    },
+    "es": {
+      "en": "Spanish",
+      "es": "Español"
+    }
   }
 }

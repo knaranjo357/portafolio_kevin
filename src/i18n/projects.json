@@ -1,19 +1,33 @@
 [
   {
     "id": 1,
-    "title": { "en": "DatumX - IoT Datalogger & Config Platform", "es": "Datalogger DatumX y Plataforma de Configuración" },
+    "title": {
+      "en": "DatumX — IoT Configuration & Monitoring",
+      "es": "DatumX — Configuración y Monitoreo IoT"
+    },
     "description": {
-      "en": "Full-stack configuration ecosystem for environmental data acquisition devices, optimizing firmware updates and real-time monitoring.",
-      "es": "Ecosistema completo de configuración para dispositivos de adquisición de datos ambientales, optimizando actualizaciones de firmware y monitoreo en tiempo real."
+      "en": "Web platform for configuring environmental IoT devices, managing firmware workflows, and visualizing sensor data.",
+      "es": "Plataforma web para configurar dispositivos IoT ambientales, gestionar flujos de firmware y visualizar datos de sensores."
     },
     "category": "web",
-    "categoryName": { "en": "web engineering", "es": "ingeniería web" },
-    "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc48?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
-    "fullDescription": {
-      "en": "Engineered a robust web platform to manage and configure industrial IoT Dataloggers (DatumX). The system handles complex serial communication protocols, firmware deployment, and provides a sleek dashboard for environmental sensor data visualization.",
-      "es": "Diseñé una plataforma web robusta para gestionar y configurar Dataloggers IoT industriales (DatumX). El sistema maneja protocolos complejos de comunicación serial, despliegue de firmware y proporciona un panel intuitivo para la visualización de datos de sensores ambientales."
+    "categoryName": {
+      "en": "web engineering",
+      "es": "ingeniería web"
     },
-    "technologies": ["React", "Python", "Flask", "MQTT", "C++ (Firmware)", "PostgreSQL", "Docker"],
+    "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc48?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=68",
+    "fullDescription": {
+      "en": "Designed and developed a platform for managing DatumX environmental data loggers. The solution brings device configuration, serial communication, firmware deployment, and sensor-data visualization into one workflow for technical teams.",
+      "es": "Diseñé y desarrollé una plataforma para gestionar dataloggers ambientales DatumX. La solución integra configuración de dispositivos, comunicación serial, despliegue de firmware y visualización de datos de sensores en un solo flujo para los equipos técnicos."
+    },
+    "technologies": [
+      "React",
+      "Python",
+      "Flask",
+      "MQTT",
+      "C++ (Firmware)",
+      "PostgreSQL",
+      "Docker"
+    ],
     "challenges": {
       "en": [
         "Ensuring reliable serial communication with varied hardware revisions",
@@ -40,36 +54,58 @@
     },
     "results": {
       "en": [
-        "90% faster configuration cycle for new devices",
-        "Real-time monitoring of over 50 environmental variables",
-        "Successful deployment across critical industrial sites"
+        "Centralized device configuration and firmware workflows",
+        "Reduced manual steps in technical setup",
+        "Clearer visibility into environmental sensor data"
       ],
       "es": [
-        "Ciclo de configuración 90% más rápido para nuevos dispositivos",
-        "Monitoreo en tiempo real de más de 50 variables ambientales",
-        "Despliegue exitoso en sitios industriales críticos"
+        "Configuración de dispositivos y flujos de firmware centralizados",
+        "Menos pasos manuales durante la puesta a punto técnica",
+        "Mayor visibilidad sobre los datos de sensores ambientales"
       ]
     },
-    "date": { "en": "Feb 2023 - Present", "es": "Feb 2023 - Actualidad" },
-    "client": { "en": "Xactus S.A.S", "es": "Xactus S.A.S" },
-    "role": { "en": "Lead Developer & IoT Architect", "es": "Desarrollador Líder y Arquitecto IoT" },
+    "date": {
+      "en": "Feb 2023 - Present",
+      "es": "Feb 2023 - Actualidad"
+    },
+    "client": {
+      "en": "Xactus S.A.S",
+      "es": "Xactus S.A.S"
+    },
+    "role": {
+      "en": "Lead Developer & IoT Architect",
+      "es": "Desarrollador Líder y Arquitecto IoT"
+    },
     "link": "#"
   },
   {
     "id": 2,
-    "title": { "en": "SmartVision - Vehicle Counting AI", "es": "Cámara Adaptable para Conteo Vehicular" },
+    "title": {
+      "en": "Edge Vision — Vehicle & People Counting",
+      "es": "Visión Edge — Conteo Vehicular y Peatonal"
+    },
     "description": {
-      "en": "Advanced computer vision solution implemented for CAR Bogotá to correlate traffic patterns with air quality metrics.",
-      "es": "Solución avanzada de visión artificial implementada para la CAR Bogotá para correlacionar patrones de tráfico con métricas de calidad del aire."
+      "en": "Edge computer vision system for counting and tracking vehicles and people to support environmental analysis.",
+      "es": "Sistema de visión por computadora en edge para contar y seguir vehículos y personas como apoyo al análisis ambiental."
     },
     "category": "vision",
-    "categoryName": { "en": "computer vision", "es": "visión por computadora" },
-    "image": "https://images.unsplash.com/photo-1545179605-1296651e9d43?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
-    "fullDescription": {
-      "en": "Developed a custom computer vision system deployed on Jetson Nano hardware. Using YOLO and FastMOT, the system counts vehicles and people in real-time, providing crucial data to the CAR (Corporación Autónoma Regional) for environmental impact studies.",
-      "es": "Desarrollé un sistema de visión artificial personalizado desplegado en hardware Jetson Nano. Usando YOLO y FastMOT, el sistema cuenta vehículos y personas en tiempo real, proporcionando datos cruciales a la CAR para estudios de impacto ambiental."
+    "categoryName": {
+      "en": "computer vision",
+      "es": "visión por computadora"
     },
-    "technologies": ["Python", "YOLO", "OpenCV", "Jetson Nano", "FastMOT", "Deep Learning"],
+    "image": "https://images.unsplash.com/photo-1545179605-1296651e9d43?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=68",
+    "fullDescription": {
+      "en": "Developed a computer vision solution on Jetson Nano using YOLO and FastMOT. The system processes video at the edge, counts and tracks vehicles and people, and produces traffic information that can be compared with environmental measurements.",
+      "es": "Desarrollé una solución de visión por computadora sobre Jetson Nano utilizando YOLO y FastMOT. El sistema procesa video en edge, cuenta y sigue vehículos y personas, y genera información de tráfico que puede contrastarse con mediciones ambientales."
+    },
+    "technologies": [
+      "Python",
+      "YOLO",
+      "OpenCV",
+      "Jetson Nano",
+      "FastMOT",
+      "Deep Learning"
+    ],
     "challenges": {
       "en": [
         "Optimizing high-accuracy models for edge computing hardware",
@@ -96,36 +132,58 @@
     },
     "results": {
       "en": [
-        "98% accuracy in vehicle classification",
-        "Automated correlation between traffic density and CO2 levels",
-        "Permanent installation in strategic Bogotá corridors"
+        "Automated vehicle and people counting on edge hardware",
+        "Traffic data prepared for environmental correlation",
+        "A reusable pipeline for detection, tracking, and reporting"
       ],
       "es": [
-        "98% de precisión en la clasificación de vehículos",
-        "Correlación automatizada entre densidad de tráfico y niveles de CO2",
-        "Instalación permanente en corredores estratégicos de Bogotá"
+        "Conteo automatizado de vehículos y personas sobre hardware edge",
+        "Datos de tráfico preparados para correlación ambiental",
+        "Pipeline reutilizable de detección, seguimiento y reporte"
       ]
     },
-    "date": { "en": "Aug 2023 - Jan 2024", "es": "Ago 2023 - Ene 2024" },
-    "client": { "en": "CAR Bogotá", "es": "CAR Bogotá" },
-    "role": { "en": "AI & Computer Vision Engineer", "es": "Ingeniero de IA y Visión Artificial" },
+    "date": {
+      "en": "Aug 2023 - Jan 2024",
+      "es": "Ago 2023 - Ene 2024"
+    },
+    "client": {
+      "en": "CAR Bogotá",
+      "es": "CAR Bogotá"
+    },
+    "role": {
+      "en": "AI & Computer Vision Engineer",
+      "es": "Ingeniero de IA y Visión Artificial"
+    },
     "link": "#"
   },
   {
     "id": 3,
-    "title": { "en": "EcoForecast - Environmental ML", "es": "Pronóstico de Variables Ambientales" },
+    "title": {
+      "en": "EcoForecast — Environmental Forecasting",
+      "es": "EcoForecast — Pronóstico Ambiental"
+    },
     "description": {
-      "en": "Predictive modeling using LSTM and Deep Learning to forecast air quality and environmental contaminants.",
-      "es": "Modelado predictivo utilizando LSTM y Deep Learning para pronosticar la calidad del aire y contaminantes ambientales."
+      "en": "Time-series forecasting models for anticipating changes in air-quality and environmental variables.",
+      "es": "Modelos de pronóstico de series de tiempo para anticipar cambios en calidad del aire y variables ambientales."
     },
     "category": "ml",
-    "categoryName": { "en": "machine learning", "es": "machine learning" },
-    "image": "https://images.unsplash.com/photo-1498084393753-b411b2d26b34?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
-    "fullDescription": {
-      "en": "Implemented state-of-the-art Deep Learning models (LSTM) to predict air quality indices. The project involved processing massive historical datasets to provide government agencies with a 48-hour predictive window for environmental alerts.",
-      "es": "Implementé modelos de Deep Learning de vanguardia (LSTM) para predecir índices de calidad del aire. El proyecto involucró el procesamiento de conjuntos de datos históricos masivos para proporcionar a las agencias gubernamentales una ventana predictiva de 48 horas para alertas ambientales."
+    "categoryName": {
+      "en": "machine learning",
+      "es": "machine learning"
     },
-    "technologies": ["Python", "TensorFlow/Keras", "Pandas", "LSTM", "AWS EC2", "Scikit-learn"],
+    "image": "https://images.unsplash.com/photo-1498084393753-b411b2d26b34?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=68",
+    "fullDescription": {
+      "en": "Built and evaluated LSTM-based forecasting models using historical environmental data. The work covered data preparation, model training, validation, and generation of forecasts intended to support earlier analysis of air-quality conditions.",
+      "es": "Construí y evalué modelos de pronóstico basados en LSTM utilizando datos ambientales históricos. El trabajo incluyó preparación de datos, entrenamiento, validación y generación de pronósticos para apoyar el análisis anticipado de condiciones de calidad del aire."
+    },
+    "technologies": [
+      "Python",
+      "TensorFlow/Keras",
+      "Pandas",
+      "LSTM",
+      "AWS EC2",
+      "Scikit-learn"
+    ],
     "challenges": {
       "en": [
         "Handling missing or noisy data from distributed sensor networks",
@@ -152,36 +210,58 @@
     },
     "results": {
       "en": [
-        "85% accuracy in 24h particulate matter prediction",
-        "Early warning system for environmental emergencies",
-        "Used as a primary decision tool for local environmental authorities"
+        "Historical environmental data transformed into forecasting datasets",
+        "Models evaluated against measurable validation criteria",
+        "Forecast outputs prepared for operational analysis"
       ],
       "es": [
-        "85% de precisión en la predicción de material particulado a 24h",
-        "Sistema de alerta temprana para emergencias ambientales",
-        "Utilizado como herramienta principal de decisión por las autoridades ambientales locales"
+        "Datos ambientales históricos convertidos en conjuntos de pronóstico",
+        "Modelos evaluados con criterios medibles de validación",
+        "Resultados de pronóstico preparados para análisis operativo"
       ]
     },
-    "date": { "en": "Jan 2023 - Jun 2023", "es": "Ene 2023 - Jun 2023" },
-    "client": { "en": "Government Agencies / CAR", "es": "Agencias Gubernamentales / CAR" },
-    "role": { "en": "Lead Machine Learning Engineer", "es": "Ingeniero Líder de Machine Learning" },
+    "date": {
+      "en": "Jan 2023 - Jun 2023",
+      "es": "Ene 2023 - Jun 2023"
+    },
+    "client": {
+      "en": "Government Agencies / CAR",
+      "es": "Agencias Gubernamentales / CAR"
+    },
+    "role": {
+      "en": "Lead Machine Learning Engineer",
+      "es": "Ingeniero Líder de Machine Learning"
+    },
     "link": "#"
   },
   {
     "id": 4,
-    "title": { "en": "ENEL Perú - Fraud Detection Engine", "es": "Clasificación de Fraudes Eléctricos" },
+    "title": {
+      "en": "ENEL Perú — Fraud Risk Classification",
+      "es": "ENEL Perú — Clasificación de Riesgo de Fraude"
+    },
     "description": {
-      "en": "ML-driven classification system for ENEL Perú that drastically increased energy recovery via automated fraud detection.",
-      "es": "Sistema de clasificación basado en ML para ENEL Perú que aumentó drásticamente la recuperación de energía mediante la detección automatizada de fraudes."
+      "en": "Machine-learning classification for prioritizing electricity accounts with a higher probability of non-technical losses.",
+      "es": "Clasificación con machine learning para priorizar cuentas eléctricas con mayor probabilidad de pérdidas no técnicas."
     },
     "category": "ml",
-    "categoryName": { "en": "machine learning", "es": "machine learning" },
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
-    "fullDescription": {
-      "en": "Engineered a high-performance classification model to identify non-technical losses (fraud) in the electrical grid of ENEL Perú. The system analyzes consumption patterns of thousands of users to flag high-probability fraudulent accounts for technical inspection.",
-      "es": "Diseñé un modelo de clasificación de alto rendimiento para identificar pérdidas no técnicas (fraude) en la red eléctrica de ENEL Perú. El sistema analiza los patrones de consumo de miles de usuarios para marcar cuentas fraudulentas de alta probabilidad para inspección técnica."
+    "categoryName": {
+      "en": "machine learning",
+      "es": "machine learning"
     },
-    "technologies": ["Python", "XGBoost", "PostgreSQL", "Pandas", "ETL Pipelines", "Docker"],
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=68",
+    "fullDescription": {
+      "en": "Developed a classification workflow for ENEL Perú that analyzes consumption patterns and ranks accounts for technical inspection. The solution focused on turning historical data into a practical prioritization tool for the loss-control team.",
+      "es": "Desarrollé un flujo de clasificación para ENEL Perú que analiza patrones de consumo y prioriza cuentas para inspección técnica. La solución se enfocó en convertir datos históricos en una herramienta práctica para el equipo de control de pérdidas."
+    },
+    "technologies": [
+      "Python",
+      "XGBoost",
+      "PostgreSQL",
+      "Pandas",
+      "ETL Pipelines",
+      "Docker"
+    ],
     "challenges": {
       "en": [
         "Extremely imbalanced datasets (fraud vs normal users)",
@@ -208,46 +288,68 @@
     },
     "results": {
       "en": [
-        "150% increase in fraudulent account detection",
-        "Significant reduction in energy recovery time",
-        "Deployment as a core strategic tool for ENEL's loss control team"
+        "Inspection candidates prioritized through model scoring",
+        "Approximately 20% less manual analysis effort",
+        "A repeatable workflow for data preparation, prediction, and review"
       ],
       "es": [
-        "Aumento del 150% en la detección de cuentas fraudulentas",
-        "Reducción significativa en el tiempo de recuperación de energía",
-        "Despliegue como herramienta estratégica central para el equipo de control de pérdidas de ENEL"
+        "Candidatos a inspección priorizados mediante scoring del modelo",
+        "Aproximadamente 20% menos esfuerzo de análisis manual",
+        "Flujo repetible de preparación de datos, predicción y revisión"
       ]
     },
-    "date": { "en": "Oct 2023 - Present", "es": "Oct 2023 - Actualidad" },
-    "client": { "en": "ENEL Perú", "es": "ENEL Perú" },
-    "role": { "en": "ML Architect", "es": "Arquitecto de ML" },
+    "date": {
+      "en": "Oct 2023 - Present",
+      "es": "Oct 2023 - Actualidad"
+    },
+    "client": {
+      "en": "ENEL Perú",
+      "es": "ENEL Perú"
+    },
+    "role": {
+      "en": "ML Architect",
+      "es": "Arquitecto de ML"
+    },
     "link": "#"
   },
   {
     "id": 5,
-    "title": { "en": "AutoReport - Intelligent Automation", "es": "Automatización de Reportes Periódicos" },
+    "title": {
+      "en": "Xactus — Operational Automation",
+      "es": "Xactus — Automatización Operativa"
+    },
     "description": {
-      "en": "Automation ecosystem that reduced daily reporting time from 3 hours to minutes using Python and AI.",
-      "es": "Ecosistema de automatización que redujo el tiempo de reporte diario de 3 horas a minutos usando Python e IA."
+      "en": "Internal software and automation initiatives for data collection, validation, reporting, and operational traceability.",
+      "es": "Iniciativas internas de software y automatización para captura de datos, validación, reportes y trazabilidad operativa."
     },
     "category": "auto",
-    "categoryName": { "en": "automation", "es": "automatización" },
-    "image": "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
-    "fullDescription": {
-      "en": "Developed a comprehensive automation suite to handle complex reporting tasks for engineering teams. The system scrapes data, performs statistical analysis, and generates professional PDF/Excel reports autonomously, eliminating manual overhead.",
-      "es": "Desarrollé una suite de automatización integral para manejar tareas de reporte complejas para equipos de ingeniería. El sistema extrae datos, realiza análisis estadísticos y genera reportes profesionales en PDF/Excel de forma autónoma, eliminando la carga manual."
+    "categoryName": {
+      "en": "automation",
+      "es": "automatización"
     },
-    "technologies": ["Python", "Selenium", "Pandas", "OpenPyXL", "Matplotlib", "AI Prompting"],
+    "image": "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=68",
+    "fullDescription": {
+      "en": "At Xactus, I have delivered internal tools that automate data collection, validation, analysis, and generation of technical deliverables. The goal is consistent: replace repetitive work with traceable workflows that teams can understand, reuse, and improve.",
+      "es": "En Xactus he entregado herramientas internas que automatizan la captura, validación y análisis de datos, además de la generación de entregables técnicos. El objetivo es consistente: reemplazar trabajo repetitivo por flujos trazables que los equipos puedan entender, reutilizar y mejorar."
+    },
+    "technologies": [
+      "Python",
+      "Selenium",
+      "Pandas",
+      "OpenPyXL",
+      "Matplotlib",
+      "AI Prompting"
+    ],
     "challenges": {
       "en": [
-        "Parsing unstructured data from various legacy platforms",
-        "Ensuring 100% data accuracy in financial and technical reports",
-        "Creating a simple interface for scheduled execution"
+        "Connecting data from legacy and operational sources",
+        "Preserving accuracy across automated technical deliverables",
+        "Designing reusable tools for different internal teams"
       ],
       "es": [
-        "Análisis de datos no estructurados de varias plataformas heredadas",
-        "Garantizar el 100% de precisión de los datos en informes financieros y técnicos",
-        "Creación de una interfaz sencilla para la ejecución programada"
+        "Conectar datos de fuentes operativas y plataformas heredadas",
+        "Preservar la precisión en entregables técnicos automatizados",
+        "Diseñar herramientas reutilizables para distintos equipos internos"
       ]
     },
     "solutions": {
@@ -264,36 +366,56 @@
     },
     "results": {
       "en": [
-        "Reduced 3 hours of manual work to 2 minutes per report",
-        "Zero error rate in technical documentation",
-        "Implemented across multiple departments for peak efficiency"
+        "Reduced hours of repetitive work to minutes",
+        "More traceable and consistent internal processes",
+        "Reusable automations adopted across operational workflows"
       ],
       "es": [
-        "Reducción de 3 horas de trabajo manual a 2 minutos por reporte",
-        "Tasa de error cero en la documentación técnica",
-        "Implementado en múltiples departamentos para una eficiencia máxima"
+        "Reducción de horas de trabajo repetitivo a minutos",
+        "Procesos internos más trazables y consistentes",
+        "Automatizaciones reutilizables en distintos flujos operativos"
       ]
     },
-    "date": { "en": "Nov 2023 - Feb 2024", "es": "Nov 2023 - Feb 2024" },
-    "client": { "en": "Xactus / Internal", "es": "Xactus / Interno" },
-    "role": { "en": "Automation Specialist", "es": "Especialista en Automatización" },
+    "date": {
+      "en": "Nov 2023 - Present",
+      "es": "Nov 2023 - Actualidad"
+    },
+    "client": {
+      "en": "Xactus / Internal",
+      "es": "Xactus / Interno"
+    },
+    "role": {
+      "en": "Automation Specialist",
+      "es": "Especialista en Automatización"
+    },
     "link": "#"
   },
   {
     "id": 6,
-    "title": { "en": "Antamina - Strategic AI Consulting", "es": "Consultoría Personalizada en IA para Empresas" },
+    "title": {
+      "en": "Antamina — AI Opportunity Assessment",
+      "es": "Antamina — Diagnóstico de Oportunidades de IA"
+    },
     "description": {
-      "en": "High-level technical advisory for Antamina, identifying AI opportunities to add value to data infrastructure.",
-      "es": "Asesoría técnica de alto nivel para Antamina, identificando oportunidades de IA para agregar valor a la infraestructura de datos."
+      "en": "Business and technology assessment to identify viable AI opportunities and organize them into an actionable roadmap.",
+      "es": "Evaluación de negocio y tecnología para identificar oportunidades viables de IA y organizarlas en una hoja de ruta accionable."
     },
     "category": "consulting",
-    "categoryName": { "en": "consulting", "es": "consultoría" },
-    "image": "https://images.unsplash.com/photo-1454165833767-131ef24893bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
-    "fullDescription": {
-      "en": "Provided strategic consulting for major mining operations like Antamina. The goal was to audit existing data architectures and design roadmaps for implementing AI-driven predictive maintenance and operational optimization.",
-      "es": "Proporcioné consultoría estratégica para importantes operaciones mineras como Antamina. El objetivo fue auditar las arquitecturas de datos existentes y diseñar hojas de ruta para implementar mantenimiento predictivo y optimización operativa impulsados por IA."
+    "categoryName": {
+      "en": "consulting",
+      "es": "consultoría"
     },
-    "technologies": ["Strategic Planning", "AI Roadmaps", "Data Architecture", "Predictive Maintenance"],
+    "image": "https://images.unsplash.com/photo-1454165833767-131ef24893bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=68",
+    "fullDescription": {
+      "en": "Contributed to a strategic assessment for Antamina by reviewing processes, data conditions, and potential AI use cases. The work translated opportunities into priorities, dependencies, risks, and next steps for implementation.",
+      "es": "Participé en una evaluación estratégica para Antamina revisando procesos, condiciones de datos y posibles casos de uso de IA. El trabajo convirtió oportunidades en prioridades, dependencias, riesgos y siguientes pasos para su implementación."
+    },
+    "technologies": [
+      "Strategic Planning",
+      "AI Roadmaps",
+      "Data Architecture",
+      "Predictive Maintenance"
+    ],
     "challenges": {
       "en": [
         "Identifying high-ROI AI use cases in traditional mining environments",
@@ -320,36 +442,59 @@
     },
     "results": {
       "en": [
-        "Defined 3-year AI transformation strategy",
-        "Identified immediate cost-saving opportunities in logistics",
-        "Strengthened data governance for future ML initiatives"
+        "AI opportunities documented and compared",
+        "Priorities organized by feasibility and expected value",
+        "Technical dependencies and next steps made visible"
       ],
       "es": [
-        "Estrategia de transformación de IA de 3 años definida",
-        "Identificación de oportunidades inmediatas de ahorro de costos en logística",
-        "Gobernanza de datos fortalecida para futuras iniciativas de ML"
+        "Oportunidades de IA documentadas y comparadas",
+        "Prioridades organizadas por viabilidad y valor esperado",
+        "Dependencias técnicas y siguientes pasos visibles"
       ]
     },
-    "date": { "en": "Jan 2024 - Present", "es": "Ene 2024 - Actualidad" },
-    "client": { "en": "Antamina / Multinational", "es": "Antamina / Multinacional" },
-    "role": { "en": "Strategic AI Consultant", "es": "Consultor Estratégico de IA" },
+    "date": {
+      "en": "Jan 2024 - Present",
+      "es": "Ene 2024 - Actualidad"
+    },
+    "client": {
+      "en": "Antamina / Multinational",
+      "es": "Antamina / Multinacional"
+    },
+    "role": {
+      "en": "Strategic AI Consultant",
+      "es": "Consultor Estratégico de IA"
+    },
     "link": "#"
   },
   {
     "id": 7,
-    "title": { "en": "Alliafood - WhatsApp Ecosystem", "es": "Alliafood - Ecosistema WhatsApp" },
+    "title": {
+      "en": "Alliafood — Restaurant Operations Platform",
+      "es": "Alliafood — Plataforma Operativa para Restaurantes"
+    },
     "description": {
-      "en": "Comprehensive restaurant automation system integrating WhatsApp API, thermal hardware, and real-time analytics.",
-      "es": "Sistema integral de automatización para restaurantes que integra WhatsApp API, hardware térmico y analítica en tiempo real."
+      "en": "Restaurant operations platform that connects WhatsApp ordering, AI agents, kitchen workflows, thermal printing, delivery, and analytics.",
+      "es": "Plataforma operativa para restaurantes que conecta pedidos por WhatsApp, agentes de IA, flujos de cocina, impresión térmica, domicilios y analítica."
     },
     "category": "web",
-    "categoryName": { "en": "web development", "es": "desarrollo web" },
-    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
-    "fullDescription": {
-      "en": "Alliafood is a mission-critical system for modern gastronomy. It transforms WhatsApp into a powerful ordering engine, fully integrated with POS hardware and kitchen display systems. It handles the entire lifecycle of a restaurant order, from customer interaction to delivery tracking and revenue analytics.",
-      "es": "Alliafood es un sistema de misión crítica para la gastronomía moderna. Transforma WhatsApp en un potente motor de pedidos, totalmente integrado con hardware POS y sistemas de visualización en cocina. Maneja todo el ciclo de vida de un pedido, desde la interacción con el cliente hasta el seguimiento de entrega y analítica de ingresos."
+    "categoryName": {
+      "en": "web development",
+      "es": "desarrollo web"
     },
-    "technologies": ["React", "Node.js", "PostgreSQL", "WhatsApp API", "Socket.io", "Thermal Printing", "Docker"],
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=68",
+    "fullDescription": {
+      "en": "As technical founder, I have designed and built Alliafood as an evolving product for real restaurant operations. It turns WhatsApp conversations into structured orders and coordinates the flow between customer service, kitchen, thermal printers, delivery, and operational analytics. The architecture continues to evolve from production feedback and growing order volume.",
+      "es": "Como fundador técnico, he diseñado y construido Alliafood como un producto en evolución para operaciones reales de restaurantes. Convierte conversaciones de WhatsApp en pedidos estructurados y coordina el flujo entre atención, cocina, impresoras térmicas, domicilios y analítica operativa. La arquitectura evoluciona a partir de la retroalimentación de producción y del crecimiento en el volumen de pedidos."
+    },
+    "technologies": [
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "WhatsApp API",
+      "Socket.io",
+      "Thermal Printing",
+      "Docker"
+    ],
     "challenges": {
       "en": [
         "Real-time synchronization across multi-device environments",
@@ -380,50 +525,71 @@
     },
     "results": {
       "en": [
-        "40% reduction in order processing time",
-        "100% elimination of manual command errors",
-        "Significant increase in customer re-order rates",
-        "Successful deployment across multiple leading restaurants"
+        "Platform operating with real restaurants",
+        "WhatsApp, kitchen, printing, and delivery connected in one workflow",
+        "Real-time visibility into orders and operational status",
+        "Continuous product evolution based on production use"
       ],
       "es": [
-        "Reducción del 40% en el tiempo de procesamiento de pedidos",
-        "Eliminación del 100% de errores en comandas manuales",
-        "Aumento significativo en las tasas de repetición de pedidos",
-        "Despliegue exitoso en múltiples restaurantes líderes"
+        "Plataforma operando con restaurantes reales",
+        "WhatsApp, cocina, impresión y domicilios conectados en un solo flujo",
+        "Visibilidad en tiempo real de pedidos y estados operativos",
+        "Evolución continua del producto a partir del uso en producción"
       ]
     },
-    "date": { "en": "Oct 2023 - Present", "es": "Oct 2023 - Actualidad" },
-    "client": { "en": "Multiple Partners", "es": "Múltiples Socios" },
-    "role": { "en": "Architect & Lead Developer", "es": "Arquitecto y Desarrollador Líder" },
+    "date": {
+      "en": "Oct 2023 - Present",
+      "es": "Oct 2023 - Actualidad"
+    },
+    "client": {
+      "en": "Multiple Partners",
+      "es": "Múltiples Socios"
+    },
+    "role": {
+      "en": "Architect & Lead Developer",
+      "es": "Arquitecto y Desarrollador Líder"
+    },
     "link": "https://alliafood.com"
   },
   {
     "id": 8,
-    "title": { "en": "Xactus - AI Diagnostic Engine", "es": "Xactus - Motor de Diagnóstico IA" },
+    "title": {
+      "en": "Business Diagnostics & Strategic Roadmaps",
+      "es": "Diagnósticos Empresariales y Hojas de Ruta"
+    },
     "description": {
-      "en": "Enterprise-grade diagnostic tool leveraging LLMs to analyze business challenges and prioritize high-impact projects.",
-      "es": "Herramienta de diagnóstico empresarial que utiliza LLMs para analizar desafíos de negocio y priorizar proyectos de alto impacto."
+      "en": "Business and technology diagnostics that turn stakeholder input into findings, priorities, and actionable roadmaps.",
+      "es": "Diagnósticos empresariales y tecnológicos que convierten información de los equipos en hallazgos, prioridades y hojas de ruta accionables."
     },
     "category": "ml",
-    "categoryName": { "en": "machine learning", "es": "machine learning" },
-    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
-    "fullDescription": {
-      "en": "At Xactus, I engineered an AI-driven platform that decodes complex business qualitative data into strategic roadmaps. Using advanced NLP, the system evaluates organizational bottlenecks and generates interactive impact-effort matrices, allowing leaders to focus on truly disruptive initiatives.",
-      "es": "En Xactus, diseñé una plataforma impulsada por IA que decodifica datos cualitativos empresariales complejos en hojas de ruta estratégicas. Utilizando NLP avanzado, el sistema evalúa cuellos de botella organizacionales y genera matrices interactivas de impacto-esfuerzo, permitiendo a los líderes enfocarse en iniciativas verdaderamente disruptivas."
+    "categoryName": {
+      "en": "machine learning",
+      "es": "machine learning"
     },
-    "technologies": ["React", "Python", "OpenAI API", "n8n", "PostgreSQL", "Tailwind CSS", "Vite"],
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=68",
+    "fullDescription": {
+      "en": "Delivered diagnostics for Agroince, Ambienta Estudio, Garcia Vega, KOI Living, and KOI Constructora. The methodology combines stakeholder discovery, process analysis, and an AI-assisted platform to structure qualitative information, identify bottlenecks, compare initiatives through impact-effort matrices, and produce context-specific roadmaps.",
+      "es": "Realicé diagnósticos para Agroince, Ambienta Estudio, Garcia Vega, KOI Living y KOI Constructora. La metodología combina levantamiento con los equipos, análisis de procesos y una plataforma asistida por IA para estructurar información cualitativa, detectar cuellos de botella, comparar iniciativas mediante matrices de impacto-esfuerzo y producir hojas de ruta ajustadas a cada contexto."
+    },
+    "technologies": [
+      "React",
+      "Python",
+      "OpenAI API",
+      "n8n",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "Vite"
+    ],
     "challenges": {
       "en": [
-        "Processing unstructured qualitative data into structured logic",
-        "Dynamic visualization of strategic matrices",
-        "Ensuring enterprise-level data security and isolation",
-        "Optimizing prompt efficiency for cost-effective scaling"
+        "Understanding very different operating models",
+        "Turning qualitative findings into comparable priorities",
+        "Connecting business needs with feasible technology initiatives"
       ],
       "es": [
-        "Procesamiento de datos cualitativos no estructurados en lógica estructurada",
-        "Visualización dinámica de matrices estratégicas",
-        "Garantizar la seguridad y el aislamiento de datos corporativos",
-        "Optimización de la eficiencia de prompts para escalado rentable"
+        "Comprender modelos operativos muy diferentes",
+        "Convertir hallazgos cualitativos en prioridades comparables",
+        "Conectar necesidades de negocio con iniciativas tecnológicas viables"
       ]
     },
     "solutions": {
@@ -442,38 +608,60 @@
     },
     "results": {
       "en": [
-        "Complete automation of initial diagnostic phases",
-        "Strategic roadmap generation in under 60 seconds",
-        "60% improvement in project prioritization accuracy",
-        "Core tool for Xactus high-level consultancy"
+        "Diagnostics delivered across five organizations",
+        "Clear impact-effort prioritization for decision makers",
+        "Actionable roadmaps aligned with each company context",
+        "Reusable methodology strengthened through real-world cases"
       ],
       "es": [
-        "Automatización completa de las fases iniciales de diagnóstico",
-        "Generación de hojas de ruta estratégicas en menos de 60 segundos",
-        "Mejora del 60% en la precisión de priorización de proyectos",
-        "Herramienta core para la consultoría de alto nivel de Xactus"
+        "Diagnósticos ejecutados en cinco organizaciones",
+        "Priorización clara de impacto-esfuerzo para la toma de decisiones",
+        "Hojas de ruta accionables según el contexto de cada empresa",
+        "Metodología reutilizable fortalecida con casos reales"
       ]
     },
-    "date": { "en": "Nov 2023 - Present", "es": "Nov 2023 - Actualidad" },
-    "client": { "en": "Xactus S.A.S", "es": "Xactus S.A.S" },
-    "role": { "en": "Software Lead & AI Expert", "es": "Líder de Software y Experto en IA" },
+    "date": {
+      "en": "Nov 2023 - Present",
+      "es": "Nov 2023 - Actualidad"
+    },
+    "client": {
+      "en": "Agroince, Ambienta, Garcia Vega & KOI",
+      "es": "Agroince, Ambienta, Garcia Vega y KOI"
+    },
+    "role": {
+      "en": "Software & Applied AI Lead",
+      "es": "Líder de Software e IA Aplicada"
+    },
     "link": "https://xactus.com"
   },
   {
     "id": 9,
-    "title": { "en": "Wiltech - Technical Ecosystem", "es": "Wiltech - Ecosistema Técnico" },
+    "title": {
+      "en": "Wiltech — Guided Technical Diagnostics",
+      "es": "Wiltech — Diagnóstico Técnico Guiado"
+    },
     "description": {
-      "en": "High-precision diagnostic platform for mobile hardware repair, featuring dynamic logic flows and n8n integration.",
-      "es": "Plataforma de diagnóstico de alta precisión para reparación de hardware móvil, con flujos lógicos dinámicos e integración con n8n."
+      "en": "Guided diagnostic platform that standardizes mobile-device repair workflows through decision logic and automation.",
+      "es": "Plataforma de diagnóstico guiado que estandariza flujos de reparación de dispositivos móviles mediante lógica de decisión y automatización."
     },
     "category": "web",
-    "categoryName": { "en": "web development", "es": "desarrollo web" },
-    "image": "https://images.unsplash.com/photo-1512428559087-560fa5ceab42?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
-    "fullDescription": {
-      "en": "Developed a specialized diagnostic suite for Wiltech to standardize smartphone repairs. The platform guides technicians through complex hardware tests using interactive decision trees, drastically reducing diagnostic time and improving repair success rates globally.",
-      "es": "Desarrollé una suite de diagnóstico especializada para Wiltech para estandarizar las reparaciones de smartphones. La plataforma guía a los técnicos a través de pruebas de hardware complejas utilizando árboles de decisión interactivos, reduciendo drásticamente el tiempo de diagnóstico y mejorando las tasas de éxito de reparación a nivel global."
+    "categoryName": {
+      "en": "web development",
+      "es": "desarrollo web"
     },
-    "technologies": ["React", "TypeScript", "Node.js", "n8n", "Firebase", "Tailwind CSS"],
+    "image": "https://images.unsplash.com/photo-1512428559087-560fa5ceab42?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=68",
+    "fullDescription": {
+      "en": "Developed a specialized diagnostic platform for Wiltech. Interactive decision trees guide technicians through hardware tests, while n8n integrations connect supporting workflows and data. The product turns technical know-how into a repeatable process that is easier to follow and improve.",
+      "es": "Desarrollé una plataforma de diagnóstico especializada para Wiltech. Árboles de decisión interactivos guían a los técnicos en pruebas de hardware, mientras integraciones con n8n conectan flujos y datos de soporte. El producto convierte conocimiento técnico en un proceso repetible, más fácil de seguir y mejorar."
+    },
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "n8n",
+      "Firebase",
+      "Tailwind CSS"
+    ],
     "challenges": {
       "en": [
         "Creating a visual editor for technical logic flows",
@@ -504,38 +692,60 @@
     },
     "results": {
       "en": [
-        "50% faster hardware diagnostic cycles",
-        "Global standardization of repair procedures",
-        "Dramatically improved repair success metrics",
-        "Rapid onboarding for new technical staff"
+        "Repair procedures converted into guided diagnostic flows",
+        "More consistent execution across technicians",
+        "Faster onboarding through explicit decision logic",
+        "Automations integrated with supporting operational workflows"
       ],
       "es": [
-        "Ciclos de diagnóstico de hardware un 50% más rápidos",
-        "Estandarización global de procedimientos de reparación",
-        "Mejora drástica en las métricas de éxito de reparación",
-        "Incorporación rápida de nuevo personal técnico"
+        "Procedimientos de reparación convertidos en flujos de diagnóstico guiado",
+        "Ejecución más consistente entre técnicos",
+        "Incorporación más rápida mediante lógica de decisión explícita",
+        "Automatizaciones integradas con flujos operativos de soporte"
       ]
     },
-    "date": { "en": "Jan 2024 - Apr 2024", "es": "Ene 2024 - Abr 2024" },
-    "client": { "en": "Wiltech", "es": "Wiltech" },
-    "role": { "en": "Lead Developer", "es": "Desarrollador Líder" },
+    "date": {
+      "en": "Jan 2024 - Apr 2024",
+      "es": "Ene 2024 - Abr 2024"
+    },
+    "client": {
+      "en": "Wiltech",
+      "es": "Wiltech"
+    },
+    "role": {
+      "en": "Lead Developer",
+      "es": "Desarrollador Líder"
+    },
     "link": "https://wiltech.com"
   },
   {
     "id": 10,
-    "title": { "en": "ENEL - Global IoT Architecture", "es": "ENEL - Arquitectura IoT Global" },
+    "title": {
+      "en": "ENEL — Cloud Architecture for IoT",
+      "es": "ENEL — Arquitectura Cloud para IoT"
+    },
     "description": {
-      "en": "Scalable AWS-based infrastructure for real-time monitoring and configuration of energy grid IoT devices.",
-      "es": "Infraestructura escalable basada en AWS para el monitoreo y configuración en tiempo real de dispositivos IoT de la red eléctrica."
+      "en": "AWS-based architecture for remote configuration, monitoring, and management of energy-sector IoT devices.",
+      "es": "Arquitectura basada en AWS para configuración remota, monitoreo y gestión de dispositivos IoT del sector energético."
     },
     "category": "auto",
-    "categoryName": { "en": "automation & cloud", "es": "automatización y cloud" },
-    "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
-    "fullDescription": {
-      "en": "For ENEL, I architected a robust cloud-native ecosystem to manage thousands of IoT devices. The solution enables engineers to visualize critical grid data and perform remote configurations with ultra-low latency, ensuring high availability and security for critical national infrastructure.",
-      "es": "Para ENEL, arquitecturé un ecosistema cloud-native robusto para gestionar miles de dispositivos IoT. La solución permite a los ingenieros visualizar datos críticos de la red y realizar configuraciones remotas con ultra baja latencia, garantizando alta disponibilidad y seguridad para infraestructura nacional crítica."
+    "categoryName": {
+      "en": "automation & cloud",
+      "es": "automatización y cloud"
     },
-    "technologies": ["AWS (Lambda, IoT Core, DynamoDB)", "Node.js", "React", "Python", "Terraform", "Docker"],
+    "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=68",
+    "fullDescription": {
+      "en": "Designed a cloud architecture for managing distributed IoT devices in an energy context. The solution organizes device data, remote configuration, access control, and operational visibility, with an emphasis on scalability, security, and maintainability.",
+      "es": "Diseñé una arquitectura cloud para gestionar dispositivos IoT distribuidos en un contexto energético. La solución organiza datos de dispositivos, configuración remota, control de acceso y visibilidad operativa, con énfasis en escalabilidad, seguridad y mantenibilidad."
+    },
+    "technologies": [
+      "AWS (Lambda, IoT Core, DynamoDB)",
+      "Node.js",
+      "React",
+      "Python",
+      "Terraform",
+      "Docker"
+    ],
     "challenges": {
       "en": [
         "Managing massive data ingestion from thousands of concurrent sensors",
@@ -566,38 +776,60 @@
     },
     "results": {
       "en": [
-        "Successful management of 10,000+ IoT nodes",
-        "90% reduction in manual on-site maintenance calls",
-        "Enhanced real-time visibility for grid operations",
-        "Scalable foundation for future smart grid initiatives"
+        "Centralized visibility for distributed IoT operations",
+        "Remote configuration workflows defined for technical teams",
+        "Scalable foundation for adding devices and capabilities",
+        "Security and maintainability considered from the architecture stage"
       ],
       "es": [
-        "Gestión exitosa de más de 10,000 nodos IoT",
-        "Reducción del 90% en llamadas de mantenimiento manual en sitio",
-        "Visibilidad mejorada en tiempo real para operaciones de red",
-        "Base escalable para futuras iniciativas de redes inteligentes"
+        "Visibilidad centralizada para operaciones IoT distribuidas",
+        "Flujos de configuración remota definidos para equipos técnicos",
+        "Base escalable para incorporar dispositivos y capacidades",
+        "Seguridad y mantenibilidad consideradas desde la arquitectura"
       ]
     },
-    "date": { "en": "Jul 2021 - Nov 2023", "es": "Jul 2021 - Nov 2023" },
-    "client": { "en": "ENEL Global", "es": "ENEL Global" },
-    "role": { "en": "AWS Architect & Developer", "es": "Arquitecto AWS y Desarrollador" },
+    "date": {
+      "en": "Jul 2021 - Nov 2023",
+      "es": "Jul 2021 - Nov 2023"
+    },
+    "client": {
+      "en": "ENEL Global",
+      "es": "ENEL Global"
+    },
+    "role": {
+      "en": "AWS Architect & Developer",
+      "es": "Arquitecto AWS y Desarrollador"
+    },
     "link": "#"
   },
   {
     "id": 11,
-    "title": { "en": "Premium Baby Shower Platform", "es": "Plataforma Baby Shower Premium" },
+    "title": {
+      "en": "Reusable Event Management Platform",
+      "es": "Plataforma Reutilizable para Eventos"
+    },
     "description": {
-      "en": "High-fidelity digital ecosystem for event management, featuring guest tracking, gift registry, and automated WhatsApp invites.",
-      "es": "Ecosistema digital de alta fidelidad para gestión de eventos, con seguimiento de invitados, mesa de regalos e invitaciones automáticas."
+      "en": "Reusable event platform with invitations, RSVP, guest management, gift information, maps, and WhatsApp communication.",
+      "es": "Plataforma reutilizable para eventos con invitaciones, confirmación, gestión de invitados, regalos, mapas y comunicación por WhatsApp."
     },
     "category": "web",
-    "categoryName": { "en": "web engineering", "es": "ingeniería web" },
-    "image": "https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
-    "fullDescription": {
-      "en": "Developed a boutique event platform that redefines the digital invitation experience. The system includes a stunning public interface with countdowns and interactive maps, alongside a powerful administrative dashboard for guest list management and gift coordination via WhatsApp automation.",
-      "es": "Desarrollé una plataforma de eventos boutique que redefine la experiencia de invitación digital. El sistema incluye una interfaz pública impresionante con cuentas regresivas y mapas interactivos, junto con un potente panel administrativo para la gestión de invitados y coordinación de regalos mediante automatización de WhatsApp."
+    "categoryName": {
+      "en": "web engineering",
+      "es": "ingeniería web"
     },
-    "technologies": ["React", "Tailwind CSS", "Framer Motion", "Firebase", "n8n", "Lucide Icons"],
+    "image": "https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=68",
+    "fullDescription": {
+      "en": "Built a reusable platform that can adapt its visual identity and content to different events. It combines a guest-facing experience with an administrative dashboard for RSVP tracking, communication, locations, gift information, and WhatsApp-assisted invitations.",
+      "es": "Construí una plataforma reutilizable que adapta su identidad visual y contenido a distintos eventos. Combina una experiencia para invitados con un panel administrativo para gestionar confirmaciones, comunicación, ubicaciones, información de regalos e invitaciones asistidas por WhatsApp."
+    },
+    "technologies": [
+      "React",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Firebase",
+      "n8n",
+      "Lucide Icons"
+    ],
     "challenges": {
       "en": [
         "Creating a premium, cinematic UI for mobile devices",
@@ -628,38 +860,60 @@
     },
     "results": {
       "en": [
-        "Seamless coordination for 100+ guests",
-        "100% positive feedback on user experience",
-        "Drastic reduction in administrative overhead",
-        "Scalable architecture for future events"
+        "Reusable foundation for multiple types of events",
+        "Centralized guest confirmation and communication",
+        "Lower administrative workload for organizers",
+        "Responsive experience designed for every guest"
       ],
       "es": [
-        "Coordinación fluida para más de 100 invitados",
-        "100% de comentarios positivos sobre la experiencia de usuario",
-        "Reducción drástica en la carga administrativa",
-        "Arquitectura escalable para futuros eventos"
+        "Base reutilizable para múltiples tipos de eventos",
+        "Confirmación y comunicación con invitados centralizadas",
+        "Menor carga administrativa para los organizadores",
+        "Experiencia responsive pensada para todos los invitados"
       ]
     },
-    "date": { "en": "May 2024", "es": "Mayo 2024" },
-    "client": { "en": "Private Client", "es": "Cliente Privado" },
-    "role": { "en": "Full Stack Architect", "es": "Arquitecto Full Stack" },
+    "date": {
+      "en": "May 2024",
+      "es": "Mayo 2024"
+    },
+    "client": {
+      "en": "Event organizers",
+      "es": "Organizadores de eventos"
+    },
+    "role": {
+      "en": "Full Stack Architect",
+      "es": "Arquitecto Full Stack"
+    },
     "link": "#"
   },
   {
     "id": 12,
-    "title": { "en": "Intelety - SaaS Intelligence", "es": "Intelety - Inteligencia SaaS" },
+    "title": {
+      "en": "Intelety — Business Intelligence Platform",
+      "es": "Intelety — Plataforma de Inteligencia de Negocios"
+    },
     "description": {
-      "en": "Scalable SaaS platform for business intelligence, featuring data visualization and server-side automation.",
-      "es": "Plataforma SaaS escalable para inteligencia de negocios, con visualización de datos y automatización del lado del servidor."
+      "en": "Business intelligence platform that consolidates data, dashboards, indicators, and automated reporting in one product.",
+      "es": "Plataforma de inteligencia de negocios que consolida datos, paneles, indicadores y reportes automatizados en un solo producto."
     },
     "category": "web",
-    "categoryName": { "en": "web development", "es": "desarrollo web" },
-    "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
-    "fullDescription": {
-      "en": "Built a comprehensive business intelligence platform (Intelety) that aggregates data from multiple sources into a unified dashboard. The solution includes automated reporting engines and real-time visualization of key performance indicators.",
-      "es": "Construí una plataforma integral de inteligencia de negocios (Intelety) que agrega datos de múltiples fuentes en un panel unificado. La solución incluye motores de reporte automatizados y visualización en tiempo real de indicadores clave de desempeño."
+    "categoryName": {
+      "en": "web development",
+      "es": "desarrollo web"
     },
-    "technologies": ["React", "TypeScript", "Node.js", "PostgreSQL", "Charts.js", "Redis"],
+    "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=68",
+    "fullDescription": {
+      "en": "Built Intelety to bring data from multiple sources into a unified operational view. The platform combines data processing, KPI visualization, automated reporting, and server-side workflows so teams can access consistent information without rebuilding reports manually.",
+      "es": "Construí Intelety para reunir datos de múltiples fuentes en una vista operativa unificada. La plataforma combina procesamiento de datos, visualización de indicadores, reportes automatizados y flujos del lado del servidor para que los equipos accedan a información consistente sin reconstruir informes manualmente."
+    },
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "PostgreSQL",
+      "Charts.js",
+      "Redis"
+    ],
     "challenges": {
       "en": [
         "Managing large datasets with high performance",
@@ -696,26 +950,47 @@
         "Base escalable para futuras funciones de analítica"
       ]
     },
-    "date": { "en": "Feb 2024 - Present", "es": "Feb 2024 - Actualidad" },
-    "client": { "en": "Alliasoft Partners", "es": "Socios de Alliasoft" },
-    "role": { "en": "Full Stack Lead", "es": "Líder Full Stack" },
+    "date": {
+      "en": "Feb 2024 - Present",
+      "es": "Feb 2024 - Actualidad"
+    },
+    "client": {
+      "en": "Alliasoft Partners",
+      "es": "Socios de Alliasoft"
+    },
+    "role": {
+      "en": "Full Stack Lead",
+      "es": "Líder Full Stack"
+    },
     "link": "#"
   },
   {
     "id": 13,
-    "title": { "en": "NickTravel - Tourism Ecosystem", "es": "NickTravel - Ecosistema de Turismo" },
+    "title": {
+      "en": "NickTravel — Tourism & Booking Platform",
+      "es": "NickTravel — Plataforma de Turismo y Reservas"
+    },
     "description": {
-      "en": "Intelligent tourism platform with automated WhatsApp booking and curated travel experiences.",
-      "es": "Plataforma de turismo inteligente con reserva automatizada por WhatsApp y experiencias de viaje curadas."
+      "en": "Tourism platform that presents curated experiences and connects interested travelers with a WhatsApp-assisted booking flow.",
+      "es": "Plataforma de turismo que presenta experiencias seleccionadas y conecta viajeros interesados con un flujo de reserva asistido por WhatsApp."
     },
     "category": "web",
-    "categoryName": { "en": "web development", "es": "desarrollo web" },
-    "image": "https://images.unsplash.com/photo-1503220317375-aaad61436b1b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
-    "fullDescription": {
-      "en": "Developed a boutique travel ecosystem for NickTravel. The platform simplifies the booking process for tourists using an automated WhatsApp agent, while providing a stunning web showcase for Medellín's top experiences.",
-      "es": "Desarrollé un ecosistema de viajes boutique para NickTravel. La plataforma simplifica el proceso de reserva para los turistas utilizando un agente de WhatsApp automatizado, mientras proporciona una vitrina web impresionante para las mejores experiencias de Medellín."
+    "categoryName": {
+      "en": "web development",
+      "es": "desarrollo web"
     },
-    "technologies": ["React", "n8n", "WhatsApp Cloud API", "Firebase", "Tailwind CSS"],
+    "image": "https://images.unsplash.com/photo-1503220317375-aaad61436b1b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=68",
+    "fullDescription": {
+      "en": "Developed a digital platform for NickTravel focused on showcasing Medellín experiences and simplifying the path from discovery to conversation. The website organizes the offer clearly and connects each experience with an automated WhatsApp flow that supports booking inquiries.",
+      "es": "Desarrollé una plataforma digital para NickTravel enfocada en presentar experiencias de Medellín y simplificar el paso desde el descubrimiento hasta la conversación. El sitio organiza la oferta con claridad y conecta cada experiencia con un flujo automatizado de WhatsApp que apoya las solicitudes de reserva."
+    },
+    "technologies": [
+      "React",
+      "n8n",
+      "WhatsApp Cloud API",
+      "Firebase",
+      "Tailwind CSS"
+    ],
     "challenges": {
       "en": [
         "Integrating a natural flow for bookings via WhatsApp",
@@ -742,19 +1017,30 @@
     },
     "results": {
       "en": [
-        "Drastic increase in booking conversion rates",
-        "Simplified operational management for the agency",
-        "100% positive traveler feedback on the digital experience"
+        "Travel experiences organized in a clear digital catalog",
+        "Shorter path from discovery to booking inquiry",
+        "WhatsApp integrated into the customer journey",
+        "A reusable foundation for adding destinations and experiences"
       ],
       "es": [
-        "Aumento drástico en las tasas de conversión de reservas",
-        "Gestión operativa simplificada para la agencia",
-        "100% de comentarios positivos de los viajeros sobre la experiencia digital"
+        "Experiencias organizadas en un catálogo digital claro",
+        "Ruta más corta desde el descubrimiento hasta la solicitud de reserva",
+        "WhatsApp integrado al recorrido del cliente",
+        "Base reutilizable para añadir destinos y experiencias"
       ]
     },
-    "date": { "en": "Dec 2023 - Mar 2024", "es": "Dic 2023 - Mar 2024" },
-    "client": { "en": "NickTravel Experience", "es": "NickTravel Experience" },
-    "role": { "en": "Full Stack Architect", "es": "Arquitecto Full Stack" },
+    "date": {
+      "en": "Dec 2023 - Mar 2024",
+      "es": "Dic 2023 - Mar 2024"
+    },
+    "client": {
+      "en": "NickTravel Experience",
+      "es": "NickTravel Experience"
+    },
+    "role": {
+      "en": "Full Stack Architect",
+      "es": "Arquitecto Full Stack"
+    },
     "link": "#"
   }
 ]

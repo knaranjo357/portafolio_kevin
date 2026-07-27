@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Code, Brain, Monitor, Zap, Shield, Rocket, Globe } from 'lucide-react';
+import { ArrowRight, Code, Brain, Monitor, Zap, Shield, Globe } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import SectionTitle from '../components/SectionTitle';
 import SkillCard from '../components/SkillCard';
@@ -13,7 +13,8 @@ import LazyImage from '../components/LazyImage';
 import BackgroundParticles from '../components/BackgroundParticles';
 
 const Home: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isEnglish = i18n.language.toLowerCase().startsWith('en');
 
   return (
     <div className="mesh-gradient min-h-screen selection:bg-gold/30 selection:text-slate-900">
@@ -22,25 +23,9 @@ const Home: React.FC = () => {
       <section className="min-h-screen flex items-center relative overflow-hidden pt-20 pb-32">
         <GeometricShapes />
         
-        {/* Animated Background Blur Elements */}
-        <motion.div 
-          animate={{ 
-            scale: [1, 1.3, 1],
-            opacity: [0.3, 0.6, 0.3],
-            x: [0, 50, 0]
-          }}
-          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-          className="absolute top-1/4 -right-1/4 w-[800px] h-[800px] bg-blue-100/30 rounded-full blur-[150px]"
-        />
-        <motion.div 
-          animate={{ 
-            scale: [1, 1.2, 1],
-            opacity: [0.2, 0.4, 0.2],
-            x: [0, -30, 0]
-          }}
-          transition={{ duration: 12, repeat: Infinity, ease: "linear", delay: 2 }}
-          className="absolute -bottom-1/4 -left-1/4 w-[600px] h-[600px] bg-gold/10 rounded-full blur-[120px]"
-        />
+        {/* Static background depth */}
+        <div className="absolute top-1/4 -right-1/4 w-[800px] h-[800px] bg-blue-100/30 rounded-full blur-[150px]" />
+        <div className="absolute -bottom-1/4 -left-1/4 w-[600px] h-[600px] bg-gold/10 rounded-full blur-[120px]" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -56,7 +41,6 @@ const Home: React.FC = () => {
                 className="inline-flex items-center gap-3 px-6 py-2 bg-white/60 backdrop-blur-2xl border border-white/50 text-gold rounded-full text-xs font-black tracking-[0.2em] uppercase mb-10 shadow-xl shadow-gold/5"
               >
                 <span className="relative flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-gold"></span>
                 </span>
                 {t('home.role')}
@@ -73,7 +57,7 @@ const Home: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.8 }}
-                className="text-slate-500 text-xl md:text-2xl mb-12 max-w-2xl font-light leading-relaxed text-justify"
+                className="text-slate-600 text-xl md:text-2xl mb-12 max-w-2xl font-normal leading-relaxed text-left"
               >
                 {t('home.description')}
               </motion.p>
@@ -84,11 +68,7 @@ const Home: React.FC = () => {
                 transition={{ duration: 0.8, delay: 1.2 }}
                 className="flex flex-wrap gap-6"
               >
-                <Link to="/contact" className="btn btn-primary group px-10 py-5">
-                  <span className="relative z-10 flex items-center gap-3">
-                    {t('home.contactMe')} <Rocket size={20} className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
-                  </span>
-                </Link>
+                <CVDownloadButton className="btn btn-primary group px-10 py-5" />
                 <Link to="/projects" className="btn btn-outline border-slate-200 text-slate-900 hover:border-gold hover:text-gold transition-all duration-500 px-10 py-5 group">
                   <span className="flex items-center gap-2">
                     {t('home.viewProjects')} <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
@@ -105,15 +85,15 @@ const Home: React.FC = () => {
             >
               {/* Profile Image with Premium Frame */}
               <div className="relative group">
-                <div className="absolute -inset-4 bg-gradient-to-r from-gold via-gold-light to-gold rounded-[3rem] opacity-20 blur-2xl group-hover:opacity-40 transition-opacity duration-1000 animate-pulse"></div>
+                <div className="absolute -inset-4 bg-gradient-to-r from-gold via-gold-light to-gold rounded-[3rem] opacity-20 blur-2xl group-hover:opacity-30 transition-opacity duration-300"></div>
                 <div className="relative w-full h-[750px] rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/50 bg-white/10 backdrop-blur-sm p-2">
                   <div className="w-full h-full rounded-[2.3rem] overflow-hidden relative">
                     <LazyImage
-                      src="/kevin.png"
+                      src="/kevin.webp"
                       alt="Kevin Alejandro Naranjo Reyes"
-                      className="grayscale group-hover:grayscale-0 transition-all duration-1000 ease-out"
+                      className="grayscale group-hover:grayscale-0 transition-all duration-500 ease-out"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-40 group-hover:opacity-20 transition-opacity duration-700"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-40 group-hover:opacity-20 transition-opacity duration-300"></div>
                   </div>
                 </div>
 
@@ -131,27 +111,19 @@ const Home: React.FC = () => {
                     </div>
                     <div className="w-px h-16 bg-slate-100/50"></div>
                     <div>
-                      <p className="text-2xl font-black text-slate-900 mb-1">100+</p>
+                      <p className="text-2xl font-black text-slate-900 mb-1">13</p>
                       <p className="text-slate-400 text-[10px] font-black uppercase tracking-[0.3em]">{t('home.projectsDelivered')}</p>
                     </div>
                   </div>
                 </motion.div>
 
-                {/* Floating Tech Badges */}
-                <motion.div
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -top-10 -left-10 glass-card p-6 rounded-3xl border border-gold/10"
-                >
+                {/* Static tech accents */}
+                <div className="absolute -top-10 -left-10 glass-card p-6 rounded-3xl border border-gold/10">
                   <Code className="text-gold" size={32} />
-                </motion.div>
-                <motion.div
-                  animate={{ y: [0, 15, 0] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  className="absolute top-1/2 -left-20 glass-card p-6 rounded-3xl border border-gold/10"
-                >
+                </div>
+                <div className="absolute top-1/2 -left-20 glass-card p-6 rounded-3xl border border-gold/10">
                   <Brain className="text-gold" size={32} />
-                </motion.div>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -172,7 +144,7 @@ const Home: React.FC = () => {
                 title={t('home.aboutTitle')}
                 subtitle={t('home.aboutDescription1')}
               />
-              <p className="text-slate-500 text-xl mb-12 font-light leading-relaxed text-justify">
+              <p className="text-slate-600 text-xl mb-12 font-normal leading-relaxed text-left">
                 {t('home.aboutDescription2')}
               </p>
               <Link to="/about" className="btn btn-outline border-slate-200 text-slate-900 group px-10 py-5">
@@ -184,11 +156,11 @@ const Home: React.FC = () => {
             
             <div className="grid grid-cols-2 gap-8">
               {[
-                { label: 'Visionary', icon: <Monitor size={40} />, delay: 0.1 },
-                { label: 'Strategic', icon: <Brain size={40} />, delay: 0.2 },
-                { label: 'Technical', icon: <Code size={40} />, delay: 0.3 },
-                { label: 'Results', icon: <Zap size={40} />, delay: 0.4 }
-              ].map((item, index) => (
+                { label: isEnglish ? 'Product vision' : 'Visión de producto', icon: <Monitor size={40} />, delay: 0.1 },
+                { label: isEnglish ? 'Business context' : 'Contexto de negocio', icon: <Brain size={40} />, delay: 0.2 },
+                { label: isEnglish ? 'Technical execution' : 'Ejecución técnica', icon: <Code size={40} />, delay: 0.3 },
+                { label: isEnglish ? 'Measurable results' : 'Resultados medibles', icon: <Zap size={40} />, delay: 0.4 }
+              ].map((item) => (
                 <motion.div
                   key={item.label}
                   initial={{ opacity: 0, y: 30 }}
@@ -196,7 +168,7 @@ const Home: React.FC = () => {
                   transition={{ duration: 0.6, delay: item.delay }}
                   viewport={{ once: true }}
                   whileHover={{ y: -10, scale: 1.02 }}
-                  className="p-10 glass-card border-slate-100 rounded-[2.5rem] group hover:bg-slate-900 transition-all duration-700 hover:shadow-2xl hover:shadow-gold/20"
+                  className="p-10 glass-card border-slate-100 rounded-[2.5rem] group hover:bg-slate-900 transition-all duration-300 hover:shadow-2xl hover:shadow-gold/20"
                 >
                   <div className="text-gold group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 mb-6">{item.icon}</div>
                   <p className="text-slate-900 group-hover:text-white font-black uppercase tracking-[0.2em] text-xs transition-colors">{item.label}</p>
@@ -279,7 +251,7 @@ const Home: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            {(t('projectsData', { returnObjects: true }) as any[]).slice(0, 3).map((project, index) => (
+            {(t('projectsData', { returnObjects: true }) as any[]).filter((project) => [7, 8, 5].includes(project.id)).map((project, index) => (
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 50 }}
@@ -294,10 +266,10 @@ const Home: React.FC = () => {
                       <LazyImage
                         src={project.image}
                         alt={project.title}
-                        className="grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000 ease-out"
+                        className="grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500 ease-out"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                      <div className="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-700">
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <div className="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300">
                         <span className="bg-gold text-white px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest">
                           {t('projects.viewDetails')}
                         </span>
@@ -339,7 +311,7 @@ const Home: React.FC = () => {
               <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter mb-10 leading-[0.95]">
                 {t('home.readyToWork').split('?')[0]}<span className="text-gold">?</span>
               </h2>
-              <p className="text-slate-400 text-xl md:text-2xl mb-12 font-light leading-relaxed max-w-xl text-justify">
+              <p className="text-slate-200 text-xl md:text-2xl mb-12 font-normal leading-relaxed max-w-xl text-left">
                 {t('home.contactDesc')}
               </p>
               <div className="flex flex-col sm:flex-row gap-6">
@@ -356,11 +328,11 @@ const Home: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="glass-card-dark p-12 group hover:border-gold/30 transition-all duration-700"
+                className="glass-card-dark p-12 group hover:border-gold/30 transition-all duration-300"
               >
                 <div className="text-gold mb-8 group-hover:scale-110 transition-transform duration-500"><Brain size={56} /></div>
                 <h3 className="text-2xl font-black text-white mb-6 tracking-tight">{t('home.aiCardTitle')}</h3>
-                <p className="text-slate-400 font-light leading-relaxed text-sm text-justify">
+                <p className="text-slate-200 font-normal leading-relaxed text-sm text-left">
                   {t('home.aiCardDesc')}
                 </p>
               </motion.div>
@@ -369,11 +341,11 @@ const Home: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="glass-card-dark p-12 group hover:border-gold/30 transition-all duration-700"
+                className="glass-card-dark p-12 group hover:border-gold/30 transition-all duration-300"
               >
                 <div className="text-gold mb-8 group-hover:scale-110 transition-transform duration-500"><Code size={56} /></div>
                 <h3 className="text-2xl font-black text-white mb-6 tracking-tight">{t('home.cloudCardTitle')}</h3>
-                <p className="text-slate-400 font-light leading-relaxed text-sm text-justify">
+                <p className="text-slate-200 font-normal leading-relaxed text-sm text-left">
                   {t('home.cloudCardDesc')}
                 </p>
               </motion.div>

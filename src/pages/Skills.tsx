@@ -17,7 +17,6 @@ import {
   Zap,
   Globe,
   Cpu,
-  Shield,
   Activity,
   ArrowRight,
   Rocket
@@ -271,7 +270,7 @@ const Skills: React.FC = () => {
               >
                 <div className="absolute -left-16 -bottom-16 w-32 h-32 bg-gold/5 rounded-full blur-3xl group-hover:bg-gold/10 transition-colors"></div>
                 
-                <div className="w-20 h-20 bg-slate-50 border border-slate-100 rounded-3xl flex items-center justify-center mb-10 group-hover:bg-slate-900 group-hover:text-gold transition-all duration-700 shadow-sm group-hover:shadow-2xl">
+                <div className="w-20 h-20 bg-slate-50 border border-slate-100 rounded-3xl flex items-center justify-center mb-10 group-hover:bg-slate-900 group-hover:text-gold transition-all duration-300 shadow-sm group-hover:shadow-2xl">
                   {box.icon}
                 </div>
                 <h3 className="text-3xl font-black mb-10 text-slate-900 tracking-tight leading-tight">{box.title}</h3>

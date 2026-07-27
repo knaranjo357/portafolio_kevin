@@ -208,3 +208,82 @@
 .pb-safe {
   padding-bottom: env(safe-area-inset-bottom);
 }
+/* Ambient depth without a canvas animation engine. */
+.ambient-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  contain: strict;
+}
+
+.ambient-orb {
+  position: absolute;
+  display: block;
+  border-radius: 9999px;
+  filter: blur(2px);
+  opacity: 0.32;
+  will-change: auto;
+}
+
+.ambient-orb-one {
+  width: 22rem;
+  height: 22rem;
+  top: 8%;
+  right: -10rem;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.13), transparent 70%);
+}
+
+.ambient-orb-two {
+  width: 28rem;
+  height: 28rem;
+  top: 42%;
+  left: -16rem;
+  background: radial-gradient(circle, rgba(30, 58, 138, 0.07), transparent 70%);
+}
+
+.ambient-orb-three {
+  width: 18rem;
+  height: 18rem;
+  right: 18%;
+  bottom: -10rem;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.06), transparent 70%);
+}
+
+.lazy-image-shimmer {
+  background: linear-gradient(100deg, transparent 25%, rgba(255, 255, 255, 0.65) 50%, transparent 75%);
+  background-size: 200% 100%;
+  animation: image-shimmer 1.35s linear infinite;
+}
+
+@keyframes image-shimmer {
+  to { background-position-x: -200%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Accessibility contrast pass */
+p { text-align: left; }
+.text-slate-400 { color: #475569 !important; }
+.text-slate-500 { color: #475569 !important; }
+.bg-slate-900 .text-slate-400,
+.glass-card-dark .text-slate-400 { color: #cbd5e1 !important; }
+[class*="text-white/20"],
+[class*="text-white/30"],
+[class*="text-white/35"],
+[class*="text-white/40"],
+[class*="text-white/45"],
+[class*="text-white/50"] { color: rgba(255, 255, 255, 0.78) !important; }
+@media (max-width: 768px) {
+  .text-\[8px\], .text-\[9px\] { font-size: 0.6875rem !important; }
+  .text-\[10px\] { font-size: 0.75rem !important; }
+}

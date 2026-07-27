@@ -50,7 +50,7 @@ const CVDownloadButton: React.FC<CVDownloadButtonProps> = ({
             className="flex items-center gap-4 px-6 py-4 text-slate-500 hover:text-gold hover:bg-slate-50 transition-all duration-300 border-b border-slate-50"
             onClick={() => setIsOpen(false)}
           >
-            <span className="text-xl">🇪🇸</span>
+            <span className="text-xs font-black text-gold">ES</span>
             <span className="font-bold uppercase tracking-widest text-xs">{t('about.cvSpanish')}</span>
           </a>
           <a
@@ -60,7 +60,7 @@ const CVDownloadButton: React.FC<CVDownloadButtonProps> = ({
             className="flex items-center gap-4 px-6 py-4 text-slate-500 hover:text-gold hover:bg-slate-50 transition-all duration-300"
             onClick={() => setIsOpen(false)}
           >
-            <span className="text-xl">🇺🇸</span>
+            <span className="text-xs font-black text-gold">EN</span>
             <span className="font-bold uppercase tracking-widest text-xs">{t('about.cvEnglish')}</span>
           </a>
         </motion.div>

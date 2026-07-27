@@ -80,9 +80,9 @@ const Contact: React.FC = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: i * 0.1 }}
                     viewport={{ once: true }}
-                    className="flex items-start group p-8 glass-card border-slate-100 hover:border-gold/30 hover:bg-white/80 transition-all duration-700 rounded-[2rem]"
+                    className="flex items-start group p-8 glass-card border-slate-100 hover:border-gold/30 hover:bg-white/80 transition-all duration-300 rounded-[2rem]"
                   >
-                    <div className="w-20 h-20 bg-slate-50 border border-slate-100 rounded-[1.5rem] flex items-center justify-center text-gold group-hover:bg-slate-900 group-hover:text-gold transition-all duration-700 mr-8 shadow-sm flex-shrink-0">
+                    <div className="w-20 h-20 bg-slate-50 border border-slate-100 rounded-[1.5rem] flex items-center justify-center text-gold group-hover:bg-slate-900 group-hover:text-gold transition-all duration-300 mr-8 shadow-sm flex-shrink-0">
                       {item.icon}
                     </div>
                     <div>
@@ -132,7 +132,7 @@ const Contact: React.FC = () => {
                       href="https://wa.me/573175816061"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-grow flex items-center justify-center gap-4 bg-gold text-white rounded-2xl px-10 hover:bg-white hover:text-slate-900 transition-all duration-700 shadow-2xl shadow-gold/20 font-black uppercase tracking-widest text-xs"
+                      className="flex-grow flex items-center justify-center gap-4 bg-gold text-white rounded-2xl px-10 hover:bg-white hover:text-slate-900 transition-all duration-300 shadow-2xl shadow-gold/20 font-black uppercase tracking-widest text-xs"
                     >
                       <MessageSquare size={20} /> {t('contact.contactWhatsappBtn')}
                     </a>
@@ -151,8 +151,8 @@ const Contact: React.FC = () => {
             >
               <div className="premium-card p-16 bg-white relative overflow-hidden group">
                 {/* Decorative Elements */}
-                <div className="absolute -right-20 -top-20 w-64 h-64 bg-gold/5 rounded-full blur-[100px] group-hover:bg-gold/10 transition-colors duration-1000"></div>
-                <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-blue-500/5 rounded-full blur-[100px] group-hover:bg-blue-500/10 transition-colors duration-1000"></div>
+                <div className="absolute -right-20 -top-20 w-64 h-64 bg-gold/5 rounded-full blur-[100px] group-hover:bg-gold/10 transition-colors duration-500"></div>
+                <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-blue-500/5 rounded-full blur-[100px] group-hover:bg-blue-500/10 transition-colors duration-500"></div>
 
                 <div className="relative z-10">
                   <div className="flex items-center gap-4 mb-10">
@@ -174,7 +174,6 @@ const Contact: React.FC = () => {
                 className="mt-10 flex items-center justify-center gap-4 p-6 glass-card border-slate-100"
               >
                 <span className="relative flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                 </span>
                 <span className="text-slate-400 text-[10px] font-black uppercase tracking-[0.2em]">Currently available for disruptive projects</span>
@@ -210,7 +209,7 @@ const Contact: React.FC = () => {
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -10 }}
-                  className="premium-card p-12 hover:border-gold/30 transition-all duration-700 bg-white group"
+                  className="premium-card p-12 hover:border-gold/30 transition-all duration-300 bg-white group"
                 >
                   <div className="flex items-center gap-6 mb-8">
                     <div className="p-4 bg-slate-50 border border-slate-100 rounded-2xl text-gold group-hover:bg-slate-900 group-hover:text-gold transition-all duration-500">

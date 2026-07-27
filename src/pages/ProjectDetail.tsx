@@ -455,7 +455,7 @@ const ProjectDetail: React.FC = () => {
                   <Link to={`/projects/${rel.id}`}>
                     <div className="bg-white border border-slate-100 rounded-2xl overflow-hidden hover:border-gold/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                       <div className="h-36 overflow-hidden">
-                        <LazyImage src={rel.image} alt={rel.title} className="grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+                        <LazyImage src={rel.image} alt={rel.title} className="grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-300" />
                       </div>
                       <div className="p-5">
                         <p className="text-gold text-[9px] font-black uppercase tracking-wider mb-1">{rel.categoryName}</p>

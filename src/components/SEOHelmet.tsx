@@ -15,7 +15,7 @@ const SEOHelmet: React.FC<SEOHelmetProps> = ({
   title,
   description,
   keywords,
-  image = 'https://kevinnaranjo.com/kevin.png',
+  image = 'https://kevinnaranjo.com/kevin.webp',
   type = 'website'
 }) => {
   const { t, i18n } = useTranslation();
