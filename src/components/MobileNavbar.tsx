@@ -6,14 +6,15 @@ import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 
 const MobileNavbar: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isEnglish = i18n.language.toLowerCase().startsWith('en');
   
   const navItems = [
-    { path: '/', icon: <Home size={18} />, label: t('nav.home') },
-    { path: '/about', icon: <User size={18} />, label: t('nav.about') },
-    { path: '/skills', icon: <Code size={18} />, label: t('nav.skills') },
-    { path: '/projects', icon: <Briefcase size={18} />, label: t('nav.projects') },
-    { path: '/contact', icon: <MessageSquare size={18} />, label: t('nav.contact') },
+    { path: '/', icon: <Home size={18} />, label: t('nav.home'), shortLabel: t('nav.home') },
+    { path: '/about', icon: <User size={18} />, label: t('nav.about'), shortLabel: t('nav.about') },
+    { path: '/skills', icon: <Code size={18} />, label: t('nav.skills'), shortLabel: isEnglish ? 'Services' : 'Servicios' },
+    { path: '/projects', icon: <Briefcase size={18} />, label: t('nav.projects'), shortLabel: isEnglish ? 'Cases' : 'Casos' },
+    { path: '/contact', icon: <MessageSquare size={18} />, label: t('nav.contact'), shortLabel: t('nav.contact') },
   ];
 
   return (
@@ -38,9 +39,10 @@ const MobileNavbar: React.FC = () => {
               className={({ isActive }) =>
                 `mobile-nav-item ${isActive ? 'active' : ''}`
               }
+              aria-label={item.label}
             >
               {item.icon}
-              <span className="mt-1">{item.label}</span>
+              <span className="mt-1">{item.shortLabel}</span>
             </NavLink>
           ))}
         </div>

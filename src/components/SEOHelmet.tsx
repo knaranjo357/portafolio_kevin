@@ -15,47 +15,68 @@ const SEOHelmet: React.FC<SEOHelmetProps> = ({
   title,
   description,
   keywords,
-  image = 'https://kevinnaranjo.com/kevin.webp',
+  image = 'https://kevinnaranjo.com/og-kevin-naranjo.png',
   type = 'website'
 }) => {
   const { t, i18n } = useTranslation();
   const location = useLocation();
-  const currentUrl = `https://kevinnaranjo.com${location.pathname}`;
+  const language = i18n.language.toLowerCase().startsWith('en') ? 'en' : 'es';
+  const baseUrl = 'https://kevinnaranjo.com';
+  const spanishUrl = `${baseUrl}${location.pathname}`;
+  const englishUrl = `${spanishUrl}?lang=en`;
+  const currentUrl = language === 'en' ? englishUrl : spanishUrl;
 
-  const defaultTitle = t('home.title');
+  const defaultTitle = language === 'en'
+    ? 'Kevin Naranjo | Software, AI & Automation'
+    : 'Kevin Naranjo | Software, IA y Automatización';
   const defaultDescription = t('home.description');
   const defaultKeywords = t('meta.keywords', 'Kevin Naranjo, Software Development, Artificial Intelligence, Machine Learning, Computer Vision, Mechatronics Engineer, Colombia');
 
-  const pageTitle = title ? `${title} | ${defaultTitle}` : defaultTitle;
+  const pageTitle = title ? `${title} | Kevin Naranjo` : defaultTitle;
   const pageDescription = description || defaultDescription;
   const pageKeywords = keywords || defaultKeywords;
 
   // Schema.org structured data
   const schemaData = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Kevin Alejandro Naranjo Reyes",
-    "jobTitle": t('home.subtitle'),
-    "description": pageDescription,
-    "image": image,
-    "url": "https://kevinnaranjo.com",
-    "sameAs": [
-      "https://github.com/kevin0naranjo",
-      "https://www.linkedin.com/in/kevin-alejandro-naranjo-reyes-2573351a2/"
-    ],
-    "knowsAbout": [
-      "Software Development",
-      "Artificial Intelligence",
-      "Machine Learning",
-      "Computer Vision",
-      "Web Development"
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": `${baseUrl}/#person`,
+        "name": "Kevin Alejandro Naranjo Reyes",
+        "jobTitle": t('home.subtitle'),
+        "description": pageDescription,
+        "image": `${baseUrl}/kevin.webp`,
+        "url": baseUrl,
+        "sameAs": [
+          "https://github.com/kevin0naranjo",
+          "https://www.linkedin.com/in/kevin-alejandro-naranjo-reyes-2573351a2/"
+        ],
+        "knowsAbout": [
+          "Software product engineering",
+          "Applied artificial intelligence",
+          "Business process automation",
+          "Computer vision",
+          "Cloud platforms"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": `${baseUrl}/#engineering-service`,
+        "name": language === 'en'
+          ? "Software product engineering, applied AI, and automation"
+          : "Ingeniería de producto, IA aplicada y automatización",
+        "provider": { "@id": `${baseUrl}/#person` },
+        "areaServed": "Worldwide",
+        "url": `${baseUrl}/contact`
+      }
     ]
   };
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <html lang={i18n.language} />
+      <html lang={language} />
       <title>{pageTitle}</title>
       <meta name="description" content={pageDescription} />
       <meta name="keywords" content={pageKeywords} />
@@ -70,8 +91,8 @@ const SEOHelmet: React.FC<SEOHelmetProps> = ({
       <meta property="og:image" content={image} />
       <meta property="og:url" content={currentUrl} />
       <meta property="og:site_name" content="Kevin Naranjo" />
-      <meta property="og:locale" content={i18n.language} />
-      <meta property="og:locale:alternate" content={i18n.language === 'es' ? 'en' : 'es'} />
+      <meta property="og:locale" content={language === 'es' ? 'es_CO' : 'en_US'} />
+      <meta property="og:locale:alternate" content={language === 'es' ? 'en_US' : 'es_CO'} />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -88,14 +109,14 @@ const SEOHelmet: React.FC<SEOHelmetProps> = ({
       <link
         rel="alternate"
         hrefLang="es"
-        href={`https://kevinnaranjo.com${location.pathname}`}
+        href={spanishUrl}
       />
       <link
         rel="alternate"
         hrefLang="en"
-        href={`https://kevinnaranjo.com${location.pathname}`}
+        href={englishUrl}
       />
-      <link rel="alternate" hrefLang="x-default" href="https://kevinnaranjo.com" />
+      <link rel="alternate" hrefLang="x-default" href={spanishUrl} />
     </Helmet>
   );
 };

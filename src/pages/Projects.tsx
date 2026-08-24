@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { ArrowRight, Briefcase, CheckCircle2, Search, Sparkles, X } from 'lucide-react';
 import BackgroundParticles from '../components/BackgroundParticles';
 import LazyImage from '../components/LazyImage';
+import SEOHelmet from '../components/SEOHelmet';
 
 type PortfolioProject = {
   id: number;
@@ -19,8 +20,8 @@ type PortfolioProject = {
   results?: string[];
 };
 
-const featuredIds = [7, 8, 5];
-const projectPriority = [7, 8, 5, 10, 4, 1, 9, 12, 2, 3, 6, 11, 13];
+const featuredIds = [14, 7, 8];
+const projectPriority = [14, 7, 8, 5, 10, 4, 1, 9, 12, 2, 3, 6, 11, 13];
 
 const Projects: React.FC = () => {
   const { t } = useTranslation();
@@ -73,7 +74,8 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white pt-16">
+    <div className="min-h-screen bg-white">
+      <SEOHelmet title={t('projects.title')} description={t('projects.heroDescription')} />
       <BackgroundParticles />
 
       <section className="relative overflow-hidden border-b border-slate-100 bg-slate-950 py-24 text-white md:py-32">
@@ -92,8 +94,8 @@ const Projects: React.FC = () => {
               </p>
             </div>
             <div className="grid grid-cols-3 gap-3 lg:grid-cols-1">
-              <HeroMetric value="13" label={t('projects.caseStudiesMetric')} />
-              <HeroMetric value="5+" label={t('projects.industriesMetric')} />
+              <HeroMetric value={String(allProjects.length)} label={t('projects.caseStudiesMetric')} />
+              <HeroMetric value="6+" label={t('projects.industriesMetric')} />
               <HeroMetric value="01→PROD" label={t('projects.deliveryMetric')} compact />
             </div>
           </div>

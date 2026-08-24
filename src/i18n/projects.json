@@ -1042,5 +1042,94 @@
       "es": "Arquitecto Full Stack"
     },
     "link": "#"
+  },
+  {
+    "id": 14,
+    "title": {
+      "en": "CORTI-15 — Sales & Quoting Platform",
+      "es": "CORTI-15 — Plataforma Comercial y de Cotización"
+    },
+    "description": {
+      "en": "Production platform that unifies public acquisition, field visits, technical configuration, complex pricing, and commercial follow-up for custom window solutions.",
+      "es": "Plataforma en producción que unifica captación pública, visitas de campo, configuración técnica, precios complejos y seguimiento comercial para soluciones de ventana a medida."
+    },
+    "category": "web",
+    "categoryName": {
+      "en": "product engineering",
+      "es": "ingeniería de producto"
+    },
+    "image": "/corti15-case-study.png",
+    "fullDescription": {
+      "en": "I architected and built CORTI-15 as an end-to-end digital product for a real custom-curtain operation. The system combines a public brand experience with a secure workspace for advisors and administrators: customer visits, environments, measurements, photos, product configuration, pricing engines, catalogs, recurring customers, quote status, and export-ready commercial documents. Its architecture separates domain services and repositories, protects access with role-based HTTP-only sessions, and supports an auditable PostgreSQL deployment with migrations and portable recovery workflows.",
+      "es": "Arquitecté y construí CORTI-15 como un producto digital end-to-end para una operación real de cortinas a medida. El sistema combina una experiencia pública de marca con un espacio seguro para asesores y administradores: visitas de clientes, ambientes, medidas, fotos, configuración de producto, motores de precio, catálogos, clientes recurrentes, estados de cotización y documentos comerciales listos para exportar. Su arquitectura separa servicios de dominio y repositorios, protege el acceso con sesiones HTTP-only por rol y soporta un despliegue auditable sobre PostgreSQL con migraciones y flujos portables de recuperación."
+    },
+    "technologies": [
+      "React 19",
+      "TypeScript",
+      "Vite",
+      "FastAPI",
+      "Python",
+      "Pydantic",
+      "PostgreSQL 17",
+      "Alembic",
+      "Docker Compose",
+      "EasyPanel",
+      "jsPDF",
+      "html2canvas",
+      "OpenAPI",
+      "HTTP-only Sessions",
+      "Automated Testing"
+    ],
+    "challenges": {
+      "en": [
+        "Translating multi-variable pricing rules for custom products into a dependable commercial engine",
+        "Connecting public acquisition, field measurements, visual evidence, quoting, and administration in one responsive product",
+        "Moving historical SQLite data to PostgreSQL without losing records, identifiers, images, or operational continuity"
+      ],
+      "es": [
+        "Traducir reglas de precio con múltiples variables para productos a medida en un motor comercial confiable",
+        "Conectar captación pública, mediciones de campo, evidencia visual, cotización y administración en un solo producto responsive",
+        "Migrar datos históricos de SQLite a PostgreSQL sin perder registros, identificadores, imágenes ni continuidad operativa"
+      ]
+    },
+    "solutions": {
+      "en": [
+        "Domain-oriented FastAPI architecture with repositories, services, and separate pricing engines for CORTI-15 and Hunter Douglas",
+        "Responsive React workspace with role-based access, customer history, photos, technical alerts, and PDF/PNG commercial exports",
+        "PostgreSQL 17 and Alembic deployment with idempotent legacy import, automated sequence repair, Docker health checks, and portable backups"
+      ],
+      "es": [
+        "Arquitectura FastAPI orientada al dominio con repositorios, servicios y motores de precio separados para CORTI-15 y Hunter Douglas",
+        "Espacio responsive en React con acceso por roles, historial de clientes, fotos, alertas técnicas y exportación comercial a PDF/PNG",
+        "Despliegue con PostgreSQL 17 y Alembic, importación histórica idempotente, ajuste automático de secuencias, health checks en Docker y respaldos portables"
+      ]
+    },
+    "results": {
+      "en": [
+        "Production product available at corti15.com with public website, secure login, and responsive operational workspace",
+        "597 validated configurations across 19 Hunter Douglas families, plus 130 CORTI-15 fabrics and 590 pricing matrices",
+        "295 local catalog images and automated audit of 19 commercial source PDFs with zero invalid products or pending pages",
+        "73 backend tests and a verified production frontend build documented for release 0.4.6"
+      ],
+      "es": [
+        "Producto en producción disponible en corti15.com con sitio público, acceso seguro y espacio operativo responsive",
+        "597 configuraciones validadas de 19 familias Hunter Douglas, además de 130 telas CORTI-15 y 590 matrices de precio",
+        "295 imágenes locales de catálogo y auditoría automática de 19 PDF comerciales sin productos inválidos ni páginas pendientes",
+        "73 pruebas backend y build frontend de producción verificados y documentados para la versión 0.4.6"
+      ]
+    },
+    "date": {
+      "en": "Jul 2026 - Present",
+      "es": "Jul 2026 - Actualidad"
+    },
+    "client": {
+      "en": "CORTI-15",
+      "es": "CORTI-15"
+    },
+    "role": {
+      "en": "Product Architect & Lead Full-Stack Engineer",
+      "es": "Arquitecto de Producto y Líder Full Stack"
+    },
+    "link": "https://corti15.com"
   }
 ]

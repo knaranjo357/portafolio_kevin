@@ -9,12 +9,14 @@ import GeometricShapes from '../components/GeometricShapes';
 import ExperienceCounter from '../components/ExperienceCounter';
 import AnimatedText from '../components/AnimatedText';
 import BackgroundParticles from '../components/BackgroundParticles';
+import SEOHelmet from '../components/SEOHelmet';
 
 const About: React.FC = () => {
   const { t } = useTranslation();
 
   return (
     <div className="mesh-gradient min-h-screen selection:bg-gold/30 selection:text-slate-900">
+      <SEOHelmet title={t('about.title')} description={t('about.bio1')} />
       <BackgroundParticles />
       <GeometricShapes />
       
@@ -28,6 +30,7 @@ const About: React.FC = () => {
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-8 text-slate-900 tracking-tighter leading-none">
               <AnimatedText text={t('about.architect').split(' ').slice(0, 3).join(' ')} className="block" />
+              {' '}
               <span className="text-gold italic text-glow-gold drop-shadow-2xl">
                 {t('about.architect').split(' ').slice(3).join(' ')}
               </span>

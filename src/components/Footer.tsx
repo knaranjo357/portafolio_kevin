@@ -105,11 +105,11 @@ const Footer: React.FC = () => {
             <ul className="space-y-4">
               <li>
                 <p className="text-slate-400 text-[10px] font-black uppercase tracking-widest mb-1">Email</p>
-                <a href="mailto:alejandronaranjo357@gmail.com" className="text-slate-900 hover:text-gold text-sm font-bold transition-colors">alejandronaranjo357@gmail.com</a>
+                <a href="mailto:alejandronaranjo357@gmail.com" className="break-all text-sm font-bold text-slate-900 transition-colors hover:text-gold">alejandronaranjo357@gmail.com</a>
               </li>
               <li>
                 <p className="text-slate-400 text-[10px] font-black uppercase tracking-widest mb-1">WhatsApp</p>
-                <a href="https://wa.me/573175816061" target="_blank" rel="noopener noreferrer" className="text-slate-900 hover:text-gold text-sm font-bold transition-colors">+57 317 5816061</a>
+                <a href="https://wa.me/573175816061?text=Hola%20Kevin%2C%20quiero%20conversar%20sobre%20un%20proyecto." target="_blank" rel="noopener noreferrer" className="text-slate-900 hover:text-gold text-sm font-bold transition-colors">+57 317 5816061</a>
               </li>
             </ul>
           </div>
@@ -119,10 +119,7 @@ const Footer: React.FC = () => {
           <p className="text-slate-400 text-xs font-medium uppercase tracking-widest">
             © {currentYear} Kevin Naranjo. {t('footer.rights')}
           </p>
-          <div className="flex gap-8">
-            <a href="#" className="text-slate-400 hover:text-gold text-[10px] font-black uppercase tracking-widest transition-colors">Privacy Policy</a>
-            <a href="#" className="text-slate-400 hover:text-gold text-[10px] font-black uppercase tracking-widest transition-colors">Terms of Service</a>
-          </div>
+          <p className="text-[10px] font-black uppercase tracking-widest text-slate-500">{t('footer.builtWith')}</p>
         </div>
       </div>
     </footer>

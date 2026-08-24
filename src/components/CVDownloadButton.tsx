@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useId, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Download, ChevronDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -14,6 +14,7 @@ const CVDownloadButton: React.FC<CVDownloadButtonProps> = ({
 }) => {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
+  const menuId = useId();
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
@@ -25,10 +26,14 @@ const CVDownloadButton: React.FC<CVDownloadButtonProps> = ({
   return (
     <div className="relative">
       <motion.button
+        type="button"
         onClick={toggleDropdown}
         className={`flex items-center gap-2 ${className}`}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
+        aria-expanded={isOpen}
+        aria-controls={menuId}
+        aria-haspopup="menu"
       >
         <Download size={18} />
         {showLabel && <span>{t('home.downloadCV')}</span>}
@@ -42,6 +47,8 @@ const CVDownloadButton: React.FC<CVDownloadButtonProps> = ({
           exit={{ opacity: 0, y: 10 }}
           transition={{ duration: 0.2 }}
           className="absolute z-50 mt-4 w-56 bg-white rounded-xl shadow-2xl overflow-hidden border border-slate-100"
+          id={menuId}
+          role="menu"
         >
           <a
             href={cvLinks.es}
@@ -49,6 +56,7 @@ const CVDownloadButton: React.FC<CVDownloadButtonProps> = ({
             rel="noopener noreferrer"
             className="flex items-center gap-4 px-6 py-4 text-slate-500 hover:text-gold hover:bg-slate-50 transition-all duration-300 border-b border-slate-50"
             onClick={() => setIsOpen(false)}
+            role="menuitem"
           >
             <span className="text-xs font-black text-gold">ES</span>
             <span className="font-bold uppercase tracking-widest text-xs">{t('about.cvSpanish')}</span>
@@ -59,6 +67,7 @@ const CVDownloadButton: React.FC<CVDownloadButtonProps> = ({
             rel="noopener noreferrer"
             className="flex items-center gap-4 px-6 py-4 text-slate-500 hover:text-gold hover:bg-slate-50 transition-all duration-300"
             onClick={() => setIsOpen(false)}
+            role="menuitem"
           >
             <span className="text-xs font-black text-gold">EN</span>
             <span className="font-bold uppercase tracking-widest text-xs">{t('about.cvEnglish')}</span>

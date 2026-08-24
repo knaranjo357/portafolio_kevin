@@ -7,48 +7,56 @@ const ContactForm: React.FC = () => {
   const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
+    company: '',
     phone: '',
     email: '',
+    projectType: '',
     message: '',
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    setIsSubmitting(true);
-    
-    const form = e.target as HTMLFormElement;
-    
-    fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: {
-        'Accept': 'application/json'
-      }
-    }).then(response => {
-      setIsSubmitting(false);
-      if (response.ok) {
-        setSubmitSuccess(true);
-        setFormData({ name: '', phone: '', email: '', message: '' });
-      }
-    }).catch(error => {
-      setIsSubmitting(false);
-      console.error(error);
-    });
-
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitError(false);
+
+    const form = e.currentTarget;
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: {
+          Accept: 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error(`Contact request failed with status ${response.status}`);
+      }
+
+      setSubmitSuccess(true);
+      setFormData({ name: '', company: '', phone: '', email: '', projectType: '', message: '' });
+    } catch (error) {
+      setSubmitError(true);
+      console.error(error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <div className="relative">
+    <div className="relative" aria-live="polite">
       <AnimatePresence mode="wait">
         {submitSuccess ? (
           <motion.div 
@@ -68,13 +76,13 @@ const ContactForm: React.FC = () => {
             </motion.div>
             <h3 className="text-3xl font-black text-slate-900 mb-6 tracking-tight">{t('contact.successMessage')}</h3>
             <p className="text-slate-500 font-light mb-10 max-w-sm mx-auto">
-              I'll review your inquiry and get back to you within 24 hours. Let's build something epic!
+              {t('contact.successDetail')}
             </p>
             <button 
               onClick={() => setSubmitSuccess(false)}
               className="group flex items-center gap-3 mx-auto text-gold font-black uppercase tracking-[0.2em] text-xs hover:text-slate-900 transition-colors"
             >
-              {t('projects.clearFilters')} <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
+              {t('contact.sendAnother')} <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
             </button>
           </motion.div>
         ) : (
@@ -91,6 +99,7 @@ const ContactForm: React.FC = () => {
           >
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_subject" value="Nuevo contacto desde Portafolio!" />
+            <input type="hidden" name="_template" value="table" />
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               <div className="relative group">
@@ -101,6 +110,7 @@ const ContactForm: React.FC = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
+                  autoComplete="name"
                   className="w-full bg-transparent border-b-2 border-slate-100 px-0 py-5 text-slate-900 focus:outline-none focus:border-gold transition-all duration-500 peer placeholder-transparent font-medium"
                   placeholder={t('contact.name')}
                 />
@@ -114,11 +124,53 @@ const ContactForm: React.FC = () => {
 
               <div className="relative group">
                 <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleChange}
+                  autoComplete="organization"
+                  className="w-full bg-transparent border-b-2 border-slate-100 px-0 py-5 text-slate-900 focus:outline-none focus:border-gold transition-all duration-500 peer placeholder-transparent font-medium"
+                  placeholder={t('contact.company')}
+                />
+                <label
+                  htmlFor="company"
+                  className="absolute left-0 top-5 text-slate-400 text-lg transition-all duration-500 peer-focus:-top-6 peer-focus:text-gold peer-focus:text-[10px] peer-focus:font-black peer-focus:uppercase peer-not-placeholder-shown:-top-6 peer-not-placeholder-shown:text-[10px] peer-not-placeholder-shown:font-black peer-not-placeholder-shown:uppercase pointer-events-none"
+                >
+                  {t('contact.company')}
+                </label>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
+              <div className="relative group">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  autoComplete="email"
+                  className="w-full bg-transparent border-b-2 border-slate-100 px-0 py-5 text-slate-900 focus:outline-none focus:border-gold transition-all duration-500 peer placeholder-transparent font-medium"
+                  placeholder={t('contact.email')}
+                />
+                <label
+                  htmlFor="email"
+                  className="absolute left-0 top-5 text-slate-400 text-lg transition-all duration-500 peer-focus:-top-6 peer-focus:text-gold peer-focus:text-[10px] peer-focus:font-black peer-focus:uppercase peer-not-placeholder-shown:-top-6 peer-not-placeholder-shown:text-[10px] peer-not-placeholder-shown:font-black peer-not-placeholder-shown:uppercase pointer-events-none"
+                >
+                  {t('contact.email')}
+                </label>
+              </div>
+
+              <div className="relative group">
+                <input
                   type="tel"
                   id="phone"
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
+                  autoComplete="tel"
                   className="w-full bg-transparent border-b-2 border-slate-100 px-0 py-5 text-slate-900 focus:outline-none focus:border-gold transition-all duration-500 peer placeholder-transparent font-medium"
                   placeholder={t('contact.phoneNumber')}
                 />
@@ -131,23 +183,25 @@ const ContactForm: React.FC = () => {
               </div>
             </div>
 
-            <div className="relative group">
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
+            <div>
+              <label htmlFor="projectType" className="mb-3 block text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">
+                {t('contact.projectType')}
+              </label>
+              <select
+                id="projectType"
+                name="projectType"
+                value={formData.projectType}
                 onChange={handleChange}
                 required
-                className="w-full bg-transparent border-b-2 border-slate-100 px-0 py-5 text-slate-900 focus:outline-none focus:border-gold transition-all duration-500 peer placeholder-transparent font-medium"
-                placeholder={t('contact.email')}
-              />
-              <label
-                htmlFor="email"
-                className="absolute left-0 top-5 text-slate-400 text-lg transition-all duration-500 peer-focus:-top-6 peer-focus:text-gold peer-focus:text-[10px] peer-focus:font-black peer-focus:uppercase peer-not-placeholder-shown:-top-6 peer-not-placeholder-shown:text-[10px] peer-not-placeholder-shown:font-black peer-not-placeholder-shown:uppercase pointer-events-none"
+                className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-4 font-medium text-slate-900 outline-none transition-colors focus:border-gold focus:bg-white"
               >
-                {t('contact.email')}
-              </label>
+                <option value="" disabled>{t('contact.projectTypePlaceholder')}</option>
+                <option value="custom-product">{t('contact.projectTypeProduct')}</option>
+                <option value="automation-ai">{t('contact.projectTypeAutomation')}</option>
+                <option value="modernization">{t('contact.projectTypeModernization')}</option>
+                <option value="technical-role">{t('contact.projectTypeRole')}</option>
+                <option value="other">{t('contact.projectTypeOther')}</option>
+              </select>
             </div>
 
             <div className="relative group">
@@ -169,6 +223,15 @@ const ContactForm: React.FC = () => {
               </label>
             </div>
 
+            {submitError ? (
+              <div role="alert" className="rounded-2xl border border-red-200 bg-red-50 p-4 text-sm font-medium leading-relaxed text-red-800">
+                {t('contact.errorMessage')}{' '}
+                <a className="font-black underline underline-offset-2" href="mailto:alejandronaranjo357@gmail.com">{t('contact.email')}</a>
+                {' · '}
+                <a className="font-black underline underline-offset-2" href="https://wa.me/573175816061" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              </div>
+            ) : null}
+
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -180,7 +243,7 @@ const ContactForm: React.FC = () => {
                 <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
               ) : (
                 <>
-                  {t('contact.send')} <Send size={20} />
+                  {isSubmitting ? t('contact.sending') : t('contact.send')} <Send size={20} />
                 </>
               )}
             </motion.button>

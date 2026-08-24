@@ -105,7 +105,15 @@ i18n
   .init({
     resources,
     fallbackLng: 'es',
+    supportedLngs: ['es', 'en'],
+    load: 'languageOnly',
     debug: false,
+    detection: {
+      order: ['querystring', 'localStorage', 'navigator'],
+      lookupQuerystring: 'lang',
+      lookupLocalStorage: 'preferredLanguage',
+      caches: ['localStorage']
+    },
     interpolation: {
       escapeValue: false // not needed for react as it escapes by default
     }

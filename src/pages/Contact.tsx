@@ -1,15 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Mail, Phone, MessageSquare, Github, Linkedin, Globe, Shield, Sparkles } from 'lucide-react';
+import { MapPin, Mail, MessageSquare, Github, Linkedin, Globe, Shield, Sparkles } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import SectionTitle from '../components/SectionTitle';
 import ContactForm from '../components/ContactForm';
 import BackgroundParticles from '../components/BackgroundParticles';
 import GeometricShapes from '../components/GeometricShapes';
 import AnimatedText from '../components/AnimatedText';
+import SEOHelmet from '../components/SEOHelmet';
 
 const Contact: React.FC = () => {
   const { t } = useTranslation();
+  const whatsappUrl = 'https://wa.me/573175816061?text=Hola%20Kevin%2C%20quiero%20conversar%20sobre%20un%20proyecto.';
+  const sendMessageWords = t('contact.sendMessage').split(' ');
+  const sendMessageLead = sendMessageWords.slice(0, -1).join(' ');
+  const sendMessageAccent = sendMessageWords[sendMessageWords.length - 1];
   
   const socialLinks = [
     {
@@ -26,10 +31,11 @@ const Contact: React.FC = () => {
 
   return (
     <div className="mesh-gradient min-h-screen selection:bg-gold/30 selection:text-slate-900">
+      <SEOHelmet title={t('contact.title')} description={t('contact.subtitle')} />
       <BackgroundParticles />
       
       {/* Hero Section - The Connection */}
-      <section className="min-h-[60vh] flex items-center relative overflow-hidden pt-20">
+      <section className="relative flex min-h-[52vh] items-center overflow-hidden pb-16 pt-28 md:pt-32">
         <GeometricShapes />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <motion.div
@@ -39,6 +45,7 @@ const Contact: React.FC = () => {
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-8 text-slate-900 tracking-tighter leading-none">
               <AnimatedText text={t('contact.startConversation').split(' ').slice(0, 2).join(' ')} className="inline-block" />
+              {' '}
               <span className="text-gold italic text-glow-gold drop-shadow-2xl">
                 {t('contact.startConversation').split(' ').slice(2).join(' ')}
               </span>
@@ -46,22 +53,31 @@ const Contact: React.FC = () => {
             <p className="text-slate-500 text-xl md:text-3xl max-w-3xl mx-auto font-light leading-relaxed mt-10">
               {t('contact.subtitle')}
             </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <a href="#project-form" className="btn btn-primary px-7 py-4 sm:px-9">
+                {t('contact.formCta')}
+              </a>
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn btn-outline flex items-center gap-2 border-slate-200 px-7 py-4 sm:px-9">
+                <MessageSquare size={18} /> WhatsApp
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>
 
       {/* Main Contact Section */}
-      <section className="py-40 relative">
+      <section className="relative py-24 md:py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-32 items-start">
+          <div className="grid grid-cols-1 items-start gap-16 lg:grid-cols-2 lg:gap-20 xl:gap-24">
             {/* Contact Information Column */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
               viewport={{ once: true }}
+              className="order-2 lg:order-1"
             >
-              <div className="mb-20">
+              <div className="mb-12">
                 <SectionTitle
                   title={t('contact.contactWhatsapp')}
                   subtitle={t('contact.dontHesitate')}
@@ -70,9 +86,9 @@ const Contact: React.FC = () => {
               
               <div className="space-y-10 mt-16">
                 {[
-                  { icon: <MapPin size={32} />, title: t('contact.location'), value: "Global / Santander, Colombia", desc: t('contact.locationDesc') },
+                  { icon: <MapPin size={32} />, title: t('contact.locationTitle'), value: "Global / Santander, Colombia", desc: t('contact.locationDesc') },
                   { icon: <Mail size={32} />, title: t('contact.email'), value: "alejandronaranjo357@gmail.com", isLink: true, href: "mailto:alejandronaranjo357@gmail.com" },
-                  { icon: <Phone size={32} />, title: t('contact.phone'), value: "+57 3175816061", isLink: true, href: "tel:+573175816061" }
+                  { icon: <MessageSquare size={32} />, title: t('contact.phone'), value: "+57 3175816061", isLink: true, href: whatsappUrl }
                 ].map((item, i) => (
                   <motion.div
                     key={i}
@@ -80,15 +96,15 @@ const Contact: React.FC = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: i * 0.1 }}
                     viewport={{ once: true }}
-                    className="flex items-start group p-8 glass-card border-slate-100 hover:border-gold/30 hover:bg-white/80 transition-all duration-300 rounded-[2rem]"
+                    className="glass-card group flex items-start rounded-[2rem] border-slate-100 p-6 transition-all duration-300 hover:border-gold/30 hover:bg-white/80 md:p-8"
                   >
-                    <div className="w-20 h-20 bg-slate-50 border border-slate-100 rounded-[1.5rem] flex items-center justify-center text-gold group-hover:bg-slate-900 group-hover:text-gold transition-all duration-300 mr-8 shadow-sm flex-shrink-0">
+                    <div className="mr-5 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-[1.25rem] border border-slate-100 bg-slate-50 text-gold shadow-sm transition-all duration-300 group-hover:bg-slate-900 group-hover:text-gold md:mr-8 md:h-20 md:w-20">
                       {item.icon}
                     </div>
                     <div>
                       <h3 className="text-slate-400 text-[10px] font-black uppercase tracking-[0.3em] mb-3">{item.title}</h3>
                       {item.isLink ? (
-                        <a href={item.href} className="text-slate-900 font-black text-2xl hover:text-gold transition-colors tracking-tight">{item.value}</a>
+                        <a href={item.href} className="break-all text-lg font-black tracking-tight text-slate-900 transition-colors hover:text-gold sm:text-xl md:text-2xl">{item.value}</a>
                       ) : (
                         <p className="text-slate-900 font-black text-2xl tracking-tight">{item.value}</p>
                       )}
@@ -124,12 +140,13 @@ const Contact: React.FC = () => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.5, delay: 0.5 + (index * 0.1) }}
                         viewport={{ once: true }}
+                        aria-label={link.name}
                       >
                         {link.icon}
                       </motion.a>
                     ))}
                     <a
-                      href="https://wa.me/573175816061"
+                      href={whatsappUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex-grow flex items-center justify-center gap-4 bg-gold text-white rounded-2xl px-10 hover:bg-white hover:text-slate-900 transition-all duration-300 shadow-2xl shadow-gold/20 font-black uppercase tracking-widest text-xs"
@@ -147,9 +164,10 @@ const Contact: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
               viewport={{ once: true }}
-              className="sticky top-32"
+              id="project-form"
+              className="order-1 scroll-mt-28 lg:order-2 lg:sticky lg:top-32"
             >
-              <div className="premium-card p-16 bg-white relative overflow-hidden group">
+              <div className="premium-card group relative overflow-hidden bg-white p-6 sm:p-10 xl:p-12">
                 {/* Decorative Elements */}
                 <div className="absolute -right-20 -top-20 w-64 h-64 bg-gold/5 rounded-full blur-[100px] group-hover:bg-gold/10 transition-colors duration-500"></div>
                 <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-blue-500/5 rounded-full blur-[100px] group-hover:bg-blue-500/10 transition-colors duration-500"></div>
@@ -159,7 +177,9 @@ const Contact: React.FC = () => {
                     <div className="p-3 bg-slate-50 rounded-xl text-gold">
                       <Sparkles size={24} />
                     </div>
-                    <h2 className="text-4xl font-black text-slate-900 tracking-tighter uppercase leading-none">{t('contact.sendMessage').split(' ')[0]} <span className="text-gold italic">{t('contact.sendMessage').split(' ')[1]}</span></h2>
+                    <h2 className="text-3xl font-black uppercase leading-none tracking-tighter text-slate-900 sm:text-4xl">
+                      {sendMessageLead} <span className="text-gold italic">{sendMessageAccent}</span>
+                    </h2>
                   </div>
                   <p className="text-slate-500 mb-12 font-light text-lg leading-relaxed max-w-sm">{t('contact.formSubtitle')}</p>
                   <ContactForm />
@@ -176,7 +196,7 @@ const Contact: React.FC = () => {
                 <span className="relative flex h-3 w-3">
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                 </span>
-                <span className="text-slate-400 text-[10px] font-black uppercase tracking-[0.2em]">Currently available for disruptive projects</span>
+                <span className="text-slate-500 text-[10px] font-black uppercase tracking-[0.16em]">{t('contact.availability')}</span>
               </motion.div>
             </motion.div>
           </div>
@@ -184,10 +204,10 @@ const Contact: React.FC = () => {
       </section>
 
       {/* FAQ / Discovery Section */}
-      <section className="py-40 relative bg-slate-50/50 border-y border-slate-100 overflow-hidden">
+      <section className="relative overflow-hidden border-y border-slate-100 bg-slate-50/50 py-24 md:py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-32">
+            <div className="mb-16 text-center md:mb-20">
               <SectionTitle
                 title={t('contact.faq')}
                 subtitle={t('contact.faqDesc')}
@@ -209,7 +229,7 @@ const Contact: React.FC = () => {
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -10 }}
-                  className="premium-card p-12 hover:border-gold/30 transition-all duration-300 bg-white group"
+                  className="premium-card group bg-white p-8 transition-all duration-300 hover:border-gold/30 md:p-10"
                 >
                   <div className="flex items-center gap-6 mb-8">
                     <div className="p-4 bg-slate-50 border border-slate-100 rounded-2xl text-gold group-hover:bg-slate-900 group-hover:text-gold transition-all duration-500">

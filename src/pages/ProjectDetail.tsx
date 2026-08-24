@@ -9,6 +9,7 @@ import {
 import { useTranslation } from 'react-i18next';
 import BackgroundParticles from '../components/BackgroundParticles';
 import LazyImage from '../components/LazyImage';
+import SEOHelmet from '../components/SEOHelmet';
 
 interface ProjectData {
   id: number;
@@ -96,7 +97,13 @@ const ProjectDetail: React.FC = () => {
   const colorClass = CATEGORY_COLORS[project.category] || 'bg-slate-100 text-slate-600 border-slate-200';
 
   return (
-    <div className="pt-16 mesh-gradient min-h-screen">
+    <div className="mesh-gradient min-h-screen">
+      <SEOHelmet
+        title={project.title}
+        description={project.description}
+        image={project.image.startsWith('http') ? project.image : `https://kevinnaranjo.com${project.image}`}
+        type="article"
+      />
       <BackgroundParticles />
 
       {/* ── Cinematic Hero ── */}
@@ -120,13 +127,14 @@ const ProjectDetail: React.FC = () => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400 mb-6"
+              className="mb-5 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-600"
+              aria-label={t('projects.backToProjects')}
             >
-              <Link to="/" className="hover:text-gold transition-colors">Home</Link>
-              <ChevronRight size={10} />
+              <Link to="/" className="hidden transition-colors hover:text-gold sm:inline">{t('nav.home')}</Link>
+              <ChevronRight size={10} className="hidden sm:block" />
               <Link to="/projects" className="hover:text-gold transition-colors">{t('projects.title')}</Link>
-              <ChevronRight size={10} />
-              <span className="text-slate-600 line-clamp-1 max-w-xs">{project.title}</span>
+              <ChevronRight size={10} className="hidden sm:block" />
+              <span className="hidden max-w-xs text-slate-600 line-clamp-1 sm:block">{project.title}</span>
             </motion.div>
 
             <motion.div
@@ -159,7 +167,7 @@ const ProjectDetail: React.FC = () => {
         </div>
 
         {/* Prev / Next fixed nav */}
-        <div className="fixed top-1/2 -translate-y-1/2 left-4 right-4 flex justify-between z-[100] pointer-events-none">
+        <div className="pointer-events-none absolute left-4 right-4 top-1/2 z-20 hidden -translate-y-1/2 justify-between md:flex">
           <AnimatePresence>
             {prevProject && (
               <motion.button
@@ -489,7 +497,7 @@ const ProjectDetail: React.FC = () => {
               {t('home.contactMe')}
             </Link>
             <a
-              href="https://wa.me/573175816061"
+              href="https://wa.me/573175816061?text=Hola%20Kevin%2C%20quiero%20conversar%20sobre%20un%20proyecto."
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-outline border-slate-200 text-slate-900 px-10 py-4 hover:border-gold hover:text-gold transition-all"
