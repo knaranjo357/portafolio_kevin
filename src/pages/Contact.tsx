@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Mail, MessageSquare, Github, Linkedin, Globe, Shield, Sparkles } from 'lucide-react';
+import { MapPin, Mail, MessageSquare, Facebook, Github, Instagram, Linkedin, Globe, Shield, Sparkles } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import SectionTitle from '../components/SectionTitle';
 import ContactForm from '../components/ContactForm';
@@ -8,6 +8,7 @@ import BackgroundParticles from '../components/BackgroundParticles';
 import GeometricShapes from '../components/GeometricShapes';
 import AnimatedText from '../components/AnimatedText';
 import SEOHelmet from '../components/SEOHelmet';
+import { SOCIAL_URLS } from '../config/site';
 
 const Contact: React.FC = () => {
   const { t } = useTranslation();
@@ -20,12 +21,22 @@ const Contact: React.FC = () => {
     {
       name: 'GitHub',
       icon: <Github size={32} />,
-      url: 'https://github.com/kevin0naranjo',
+      url: SOCIAL_URLS.github,
     },
     {
       name: 'LinkedIn',
       icon: <Linkedin size={32} />,
-      url: 'https://www.linkedin.com/in/kevin-alejandro-naranjo-reyes-2573351a2/',
+      url: SOCIAL_URLS.linkedin,
+    },
+    {
+      name: 'Instagram',
+      icon: <Instagram size={32} />,
+      url: SOCIAL_URLS.instagram,
+    },
+    {
+      name: 'Facebook',
+      icon: <Facebook size={32} />,
+      url: SOCIAL_URLS.facebook,
     }
   ];
 

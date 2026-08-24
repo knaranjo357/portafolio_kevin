@@ -10,6 +10,7 @@ import { useTranslation } from 'react-i18next';
 import BackgroundParticles from '../components/BackgroundParticles';
 import LazyImage from '../components/LazyImage';
 import SEOHelmet from '../components/SEOHelmet';
+import { SITE_URL } from '../config/site';
 
 interface ProjectData {
   id: number;
@@ -101,7 +102,7 @@ const ProjectDetail: React.FC = () => {
       <SEOHelmet
         title={project.title}
         description={project.description}
-        image={project.image.startsWith('http') ? project.image : `https://kevinnaranjo.com${project.image}`}
+        image={project.image.startsWith('http') ? project.image : `${SITE_URL}${project.image}`}
         type="article"
       />
       <BackgroundParticles />

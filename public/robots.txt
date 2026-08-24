@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kevinnaranjo.com/sitemap.xml
+Sitemap: https://kevinnaranjo.netlify.app/sitemap.xml

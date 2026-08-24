@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
+import { SITE_URL, SOCIAL_URLS } from '../config/site';
 
 interface SEOHelmetProps {
   title?: string;
@@ -15,13 +16,13 @@ const SEOHelmet: React.FC<SEOHelmetProps> = ({
   title,
   description,
   keywords,
-  image = 'https://kevinnaranjo.com/og-kevin-naranjo.png',
+  image = `${SITE_URL}/og-kevin-naranjo.png`,
   type = 'website'
 }) => {
   const { t, i18n } = useTranslation();
   const location = useLocation();
   const language = i18n.language.toLowerCase().startsWith('en') ? 'en' : 'es';
-  const baseUrl = 'https://kevinnaranjo.com';
+  const baseUrl = SITE_URL;
   const spanishUrl = `${baseUrl}${location.pathname}`;
   const englishUrl = `${spanishUrl}?lang=en`;
   const currentUrl = language === 'en' ? englishUrl : spanishUrl;
@@ -49,8 +50,10 @@ const SEOHelmet: React.FC<SEOHelmetProps> = ({
         "image": `${baseUrl}/kevin.webp`,
         "url": baseUrl,
         "sameAs": [
-          "https://github.com/kevin0naranjo",
-          "https://www.linkedin.com/in/kevin-alejandro-naranjo-reyes-2573351a2/"
+          SOCIAL_URLS.facebook,
+          SOCIAL_URLS.github,
+          SOCIAL_URLS.instagram,
+          SOCIAL_URLS.linkedin
         ],
         "knowsAbout": [
           "Software product engineering",

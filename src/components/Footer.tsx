@@ -1,10 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Github, Linkedin } from 'lucide-react';
+import { Facebook, Github, Instagram, Linkedin } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 import { calculateExperience } from '../utils/experienceCalculator';
+import { SOCIAL_URLS } from '../config/site';
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
@@ -22,12 +23,22 @@ const Footer: React.FC = () => {
     {
       name: 'GitHub',
       icon: <Github size={20} />,
-      url: 'https://github.com/kevin0naranjo',
+      url: SOCIAL_URLS.github,
     },
     {
       name: 'LinkedIn',
       icon: <Linkedin size={20} />,
-      url: 'https://www.linkedin.com/in/kevin-alejandro-naranjo-reyes-2573351a2/',
+      url: SOCIAL_URLS.linkedin,
+    },
+    {
+      name: 'Instagram',
+      icon: <Instagram size={20} />,
+      url: SOCIAL_URLS.instagram,
+    },
+    {
+      name: 'Facebook',
+      icon: <Facebook size={20} />,
+      url: SOCIAL_URLS.facebook,
     },
   ];
 

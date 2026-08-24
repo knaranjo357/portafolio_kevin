@@ -6,7 +6,17 @@ import App from './App';
 import './i18n';
 import './index.css';
 
-createRoot(document.getElementById('root')!).render(
+const rootElement = document.getElementById('root');
+
+if (!rootElement) {
+  throw new Error('Root element not found');
+}
+
+// Replace the progressive no-JavaScript/SEO shell before mounting the app.
+// Crawlers that do not execute JavaScript still receive that complete content.
+rootElement.replaceChildren();
+
+createRoot(rootElement).render(
   <StrictMode>
     <HelmetProvider>
       <BrowserRouter>
